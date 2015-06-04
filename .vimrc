@@ -21,7 +21,7 @@ if exists("&undodir")
 endif
 
 " Set other
-set autoident " Copy indent from last line when starting new line
+set autoindent " Copy indent from last line when starting new line
 set esckeys " Allow cursor keys in insert mode
 set backspace=indent,eol,start " Allow backspace in insert mode
 set cursorline " Highlight current line
@@ -134,7 +134,7 @@ augroup END
 augroup filetype_javascript
 	autocmd!
 	let g:javascript_conceal = 1
-autgroup END
+augroup END
 
 " JSON
 augroup filetype_json
@@ -168,7 +168,7 @@ augroup airline_config
 	let g:airline_powerline_fonts = 1
 	let g:airline_enable_syntastic = 1
 	let g:airline#extensions#tabline#buffer_nr_format = '%s '
-	let g:airline#extensions#tabline#buffer)nr_show = 1
+	let g:airline#extensions#tabline#buffer_nr_show = 1
 	let g:airline#extensions#tabline#enabled = 1
 	let g:airline#extensions#tabline#fnamecollapse = 0
 	let g:airline#extensions#tabline#fnamemod = ':t'

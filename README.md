@@ -4,6 +4,8 @@ I'm forking dotfiles from [Matthias](https://github.com/mathiasbynens/dotfiles/)
 
 ## Setup
 
+![Dang Thanh's dotfiles](http://i.imgur.com/K4Peh1n.png)
+
 ### Install
 
 - You can clone the repository
@@ -15,13 +17,20 @@ git clone https://github.com/dangvanthanh/dotfiles.git
 Then `cd` to `dotfiles` and run `bootstrap`
 
 ```
-cd dotfiles && source bootstrap.sh
+cd dotfiles &&  ./bootstrap.sh
 ```
 
 ### Sensible OS X Defaults
 
 ```
 ./.osx
+```
+
+### Setup Brew and Application
+
+```
+./brew.sh
+./brew-cask.sh
 ```
 
 ### Overview to files
@@ -47,5 +56,4 @@ cd dotfiles && source bootstrap.sh
 #### Git
 - `.gitattributes`
 - `.gitconfig`
-- `gitignore`
-
+- `.gitignore`
