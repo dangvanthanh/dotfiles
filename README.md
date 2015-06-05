@@ -35,7 +35,7 @@ cd dotfiles &&  ./bootstrap.sh
 
 ### Overview to files
 
-### Manual Install
+#### Manual Install
 - `bootstrap.sh` - Overwrite files in system
 - `brew.sh` - Package manager
 - `brew-cask` - Install application
@@ -45,13 +45,14 @@ cd dotfiles &&  ./bootstrap.sh
 - `.inputrc `
 
 #### Shell Enviroment
-- `.aliases`
+- `.aliases` - Shortcuts in command line
 - `.bash_profile`
 - `.bash_prompt`
 - `.bashrc`
 - `.exports`
 - `.functions`
-- `.extra`
+- `.path` - Contains all path configuragion
+- `.extra` - Contains private configuration
 
 #### Git
 - `.gitattributes`
