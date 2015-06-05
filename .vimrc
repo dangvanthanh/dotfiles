@@ -17,39 +17,98 @@ let mapleader=","
 set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
 if exists("&undodir")
-	set undodir=~/.vim/undo
+  set undodir=~/.vim/undo
 endif
 
-" Set other
-set autoindent " Copy indent from last line when starting new line
-set esckeys " Allow cursor keys in insert mode
-set backspace=indent,eol,start " Allow backspace in insert mode
-set cursorline " Highlight current line
-set encoding=utf-8 nobomb " Use UTF-8 without BOMB
-set expandtab " Expand tabs to spaces
-set gdefault " By default add g to flag to search/replace. Add g to toggle
-set hidden " When a buffer is brought to foreground, remember undo history and marks
-set history=1000 " Increase history from 20 default to 1000
-set hlsearch " Highlight searches
-set ignorecase " Ignore case of searches
-set incsearch " Highlight dynamically as pattern is typed
-set laststatus=2 " Always show status line
-set magic " Enable extended regex
-set mouse=a " Enable mouse in all modes
-set noerrorbells " Disable error bells
-set nostartofline " Don't reset cursor to start of line when moving around
-set showmode " Show the current mode
-set nu " Enable line numbers
-set ruler " Show the cursor position
-set scrolloff=3 " Start scrolling three lines before horizontal border of window
-set sidescrolloff=3 " Starting scrolling three lines before vertical border of window
-set shiftwidth=2 " The # of spaces for indenting
-set showtabline=2 " Alway show tab bar
-set smartcase " Ignore 'ignorecase' if search patter contains uppercase characters
-set smarttab " At start of line, <Tab> inserts shiftwidth spaces, <Bs> deletes shiftwidth spaces
-set softtabstop=2 " Tab key results in 2 spaces
+" Copy indent from last line when starting new line
+set autoindent
+set smartindent
+" Allow cursor keys in insert mode
+set esckeys
+" Allow backspace in insert mode
+set backspace=indent,eol,start
+" Use UTF-8 without BOMB
+set encoding=utf-8 nobomb
+" Highlight current line
+set cursorline
+" By default add g to flag to search/replace. Add g to toggle
+set gdefault
+" When a buffer is brought to foreground, remember undo history and marks
+set hidden
+" Increase history from 20 default to 1000
+set history=1000
+" Highlight searches and incremental searching
+set hlsearch
+set incsearch
+" Smart casing when search (ignore case unless an uppercase is found)
+set ignorecase
+set smartcase
+" Always show status line
+set laststatus=2
+" Enable extended regex
+set magic
+" Enable mouse in all modes
+set mouse=a
+" Disable error bells
+set noerrorbells
+" Don't reset cursor to start of line when moving around
+set nostartofline
+" Show the current mode
+set showmode
+" Enable line numbers
+set nu
+set numberwidth=5
+" Show the cursor position
+set ruler
+" Start scrolling three lines before horizontal border of window
+set scrolloff=3
+" Tab key results in 2 spaces
+set shiftwidth=2
+set tabstop=2
+set softtabstop=2
+set expandtab
+" Display tabs and trailing spaces visually
+set list listchars=tab:»·,trail:·,nbsp:·
+" Formatting options
+set formatoptions=
+set formatoptions+=c " Auto-wrap comments
+set formatoptions+=r " Insert comment leader after <CR> in insert mode
+set formatoptions+=q " Allow formatting of comments with gq
+set formatoptions+=l " Long lines are not broken in insert mode
+set formatoptions+=j " Remove comment leader when joining, if applies
+" Status line
+set statusline=
+set statusline+=%1*\ [%2*%2n%1*]  " Buffer number
+set statusline+=%<  " Truncate the path if needed
+set statusline+=%3*\ %f  " File name
+set statusline+=%4*%5r  " ReadOnly flag
+set statusline+=%5*\ %y  " File type
+set statusline+=%6*\ %m  " Modified flag
 
-" Configuration ---------------------------------------------
+set statusline+=%=  " Separation
+
+set statusline+=%1*\ [col\ %3*%v%1*]  " Virtual column number
+set statusline+=%1*\ [row\ %2*%l%1*/%2*%L%1*\ %p%%]  " Current/total line
+set statusline+=%1*\ [byte\ %5*%o%1*]  " Byte number in file
+
+hi User1 ctermfg=255 guifg=#eeeeee ctermbg=235 guibg=#262626
+hi User2 ctermfg=167 guifg=#d75757 ctermbg=235 guibg=#262626
+hi User3 ctermfg=107 guifg=#87af5f ctermbg=235 guibg=#262626
+hi User4 ctermfg=33 guifg=#0087ff ctermbg=235 guibg=#262626
+hi User5 ctermfg=221 guifg=#ffd75f ctermbg=235 guibg=#262626
+hi User6 ctermfg=133 guifg=#af5faf ctermbg=235 guibg=#262626
+
+" Strip trailing whitespace (,ss)
+function! StripWhitespace()
+	let save_cursor = getpos(".")
+	let old_query = getreg('/')
+	:%s/\s\+$//e
+	call setpos('.', save_cursor)
+	call setreg('/', old_query)
+endfunction
+noremap <leader>ss :call StripWhitespace()<CR>
+
+" Configuration --------------------------------------------
 
 " FastEscape
 " Speed up transition from modes
@@ -166,7 +225,6 @@ augroup END
 augroup airline_config
 	autocmd!
 	let g:airline_powerline_fonts = 1
-	let g:airline_enable_syntastic = 1
 	let g:airline#extensions#tabline#buffer_nr_format = '%s '
 	let g:airline#extensions#tabline#buffer_nr_show = 1
 	let g:airline#extensions#tabline#enabled = 1
@@ -197,8 +255,17 @@ augroup END
 " Syntastic.vim
 augroup syntastic_config
 	autocmd!
-	let g:syntastic_error_symbol = '✗'
-	let g:syntastic_warning_symbold = '⚠'
+	let g:syntastic_always_populate_loc_list = 1
+	let g:syntastic_auto_loc_list = 1
+	let g:syntastic_check_on_open = 1
+	let g:syntastic_check_on_wq = 0
+augroup END
+
+" Ultisnips.vim
+augroup ultisnips_config
+	let g:UltiSnipsExpandTrigger='<tab>'
+	let g:UltiSnipsJumpForwardTrigger='<c-b>'
+	let g:UltiSnipsJumpBackwardTrigger='<c-z'
 augroup END
 
 " Plugins ---------------------------------------------------
@@ -216,5 +283,8 @@ Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-scripts/jade.vim', { 'for': 'jade' }
 Plug 'wavded/vim-stylus', { 'for': 'stylus' }
+Plug 'mattn/emmet-vim'
+Plug 'SirVer/ultisnips'
+Plug 'editorconfig/editorconfig-vim'
 
 call plug#end()
