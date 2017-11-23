@@ -4,6 +4,7 @@ dotfiles="$HOME/Code/dev/dotfiles"
 
 # zshrc
 echo "Setting up zsh...\n"
+ln -svf $dotfiles/aliases $HOME/.aliases
 ln -svf $dotfiles/zshrc $HOME/.zshrc
 
 # vim

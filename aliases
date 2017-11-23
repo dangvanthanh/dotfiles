@@ -1,0 +1,7 @@
+# Git
+alias ga='git add'
+alias gp='git push'
+alias gs='git status'
+alias gm='git commit -m'
+alias gma='git commit -am'
+alias gc='git checkout'
