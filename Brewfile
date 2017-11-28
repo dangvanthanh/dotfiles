@@ -4,6 +4,8 @@ cask_args appdir: '/Applications'
 brew 'wget'
 brew 'node'
 brew 'git'
+brew 'the_silver_searcher'
+brew 'tmux'
 
 # Apps
 tap 'caskroom/cask'

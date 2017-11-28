@@ -1,4 +1,5 @@
-set nocompatible    
+set nocompatible 
+set encoding=utf8
 filetype off
       
 " Plugins
@@ -16,12 +17,14 @@ Plug 'pangloss/vim-javascript'
 Plug 'ap/vim-css-color'
 Plug 'posva/vim-vue'
 
+" Themes
 Plug 'tpope/vim-surround'
 Plug 'rking/ag.vim'
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
-Plug 'junegunn/fzf', { 'dir': '~//.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'editorconfig/editorconfig-vim'
 
@@ -32,7 +35,9 @@ filetype indent plugin on
 syntax on
 color dracula
 
+set laststatus=2
 set t_RV=
+set t_Co=256
 set number
 set showmatch
 set visualbell
@@ -52,4 +57,14 @@ set ruler
 set undolevels=1000
 set backspace=indent,eol,start
 
+" Airline
+let g:airline#extension#tabline#enabledi = 1
+let g:airline_powerline_fonts = 1
+let g:airline_theme='simple'
+
 map <F2> :NERDTreeToggle<CR>
+
+nnoremap <C-b> :Buffers<CR>
+nnoremap <C-g> :Ag<CR>
+nnoremap <leader><leader> :Commands<CR>
+nnoremap <C-p> :Files<CR>
