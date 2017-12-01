@@ -8,22 +8,30 @@ call plug#begin('~/.vim/plugged')
 " Themes
 Plug 'dracula/vim'
 
-" Languages
+" Frontend
 Plug 'othree/html5.vim'
-Plug 'leshill/vim-json'
-Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
-Plug 'slashmili/alchemist.vim', { 'for': 'elixir' }
-Plug 'pangloss/vim-javascript'
+Plug 'elzr/vim-json'
 Plug 'ap/vim-css-color'
+Plug 'prettier/vim-prettier'
+Plug 'pangloss/vim-javascript'
 Plug 'posva/vim-vue'
 
+" Elixir
+Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
+Plug 'slashmili/alchemist.vim', { 'for': 'elixir' }
+
+
 " Themes
-Plug 'tpope/vim-surround'
-Plug 'rking/ag.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'scrooloose/nerdtree'
+
+" Miscellaneous
+Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
+Plug 'vim-syntastic/syntastic'
+Plug 'Shougo/deoplete.nvim'
+Plug 'scrooloose/nerdtree'
+Plug 'rking/ag.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'editorconfig/editorconfig-vim'
@@ -57,13 +65,31 @@ set ruler
 set undolevels=1000
 set backspace=indent,eol,start
 
+" Prettier
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.jsx,*.js,*.json,*.css,*.scss,*.less,*.graphql Prettier
+
 " Airline
-let g:airline#extension#tabline#enabledi = 1
+let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme='simple'
 
+" NERDTree
 map <F2> :NERDTreeToggle<CR>
 
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" Deoplete
+let g:deoplete#enable_at_startup = 1
+
+" Fzf
 nnoremap <C-b> :Buffers<CR>
 nnoremap <C-g> :Ag<CR>
 nnoremap <leader><leader> :Commands<CR>
