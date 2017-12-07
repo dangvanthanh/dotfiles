@@ -6,6 +6,7 @@ brew 'node'
 brew 'git'
 brew 'the_silver_searcher'
 brew 'tmux'
+brew 'python3'
 
 # Apps
 tap 'caskroom/cask'

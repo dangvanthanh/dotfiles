@@ -29,12 +29,12 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-syntastic/syntastic'
-Plug 'Shougo/deoplete.nvim'
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'rking/ag.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'sheerun/vim-polyglot'
 
 call plug#end()
 
@@ -43,6 +43,7 @@ filetype indent plugin on
 syntax on
 color dracula
 
+set guifont=Hack:h16
 set laststatus=2
 set t_RV=
 set t_Co=256
@@ -85,9 +86,6 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-
-" Deoplete
-let g:deoplete#enable_at_startup = 1
 
 " Fzf
 nnoremap <C-b> :Buffers<CR>
