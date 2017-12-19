@@ -43,7 +43,7 @@ filetype indent plugin on
 syntax on
 color dracula
 
-set guifont=Hack:h16
+set guifont=Fira\ Code:h16
 set laststatus=2
 set t_RV=
 set t_Co=256
