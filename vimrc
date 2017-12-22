@@ -26,6 +26,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 " Miscellaneous
+Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-syntastic/syntastic'
@@ -45,6 +46,7 @@ color dracula
 
 set guifont=Fira\ Code:h16
 set laststatus=2
+
 set t_RV=
 set t_Co=256
 set number
