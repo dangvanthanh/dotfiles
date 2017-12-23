@@ -36,6 +36,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'sheerun/vim-polyglot'
+Plug 'mattn/emmet-vim'
 
 call plug#end()
 
@@ -94,3 +95,7 @@ nnoremap <C-b> :Buffers<CR>
 nnoremap <C-g> :Ag<CR>
 nnoremap <leader><leader> :Commands<CR>
 nnoremap <C-p> :Files<CR>
+
+" Emmet
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
