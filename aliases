@@ -2,7 +2,9 @@
 alias ga='git add'
 alias gp='git push'
 alias gs='git status'
-alias gm='git commit -m'
-alias gma='git commit -am'
+alias gcm='git commit -m'
+alias gca='git commit -am'
 alias gc='git checkout'
 alias gd='git diff'
+
+alias ds='cd ~/Code/dev/'
