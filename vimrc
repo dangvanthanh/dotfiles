@@ -79,6 +79,7 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme='simple'
 
 " NERDTree
+let NERDTreeIgnore=['node_modules$', '\~$']
 map <F2> :NERDTreeToggle<CR>
 
 " Syntastic
@@ -91,6 +92,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 " Fzf
+let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 nnoremap <C-b> :Buffers<CR>
 nnoremap <C-g> :Ag<CR>
 nnoremap <leader><leader> :Commands<CR>
