@@ -100,4 +100,5 @@ nnoremap <C-p> :Files<CR>
 
 " Emmet
 let g:user_emmet_install_global = 0
+imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 autocmd FileType html,css EmmetInstall
