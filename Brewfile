@@ -7,6 +7,7 @@ brew 'git'
 brew 'the_silver_searcher'
 brew 'tmux'
 brew 'python3'
+brew 'asciinema'
 
 # Apps
 tap 'caskroom/cask'

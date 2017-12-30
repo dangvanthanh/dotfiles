@@ -13,8 +13,8 @@ alias gc='git checkout'
 alias gd='git diff'
 
 # Tmux
-alias tmux="t"
-alias killtmux="tmux kill-server"
+alias t="tmux"
+alias killt="tmux kill-server"
 
 # Cwd
 alias dev='cd ~/Code/dev/'
