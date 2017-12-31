@@ -68,7 +68,10 @@ set ruler
 set undolevels=1000
 set backspace=indent,eol,start
 
-set laststatus=2
+set nobackup
+set nowritebackup
+set noswapfile
+set noundofile
 
 " Prettier
 let g:prettier#autoformat = 0

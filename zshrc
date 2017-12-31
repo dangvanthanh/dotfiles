@@ -91,4 +91,4 @@ source $ZSH/oh-my-zsh.sh
 
 [[ -f ~/.aliases ]] && source ~/.aliases
 
-source "/Users/dangvanthanh/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
+source "$ZSH/custom/themes/spaceship.zsh-theme"
