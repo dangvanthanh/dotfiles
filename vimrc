@@ -78,8 +78,15 @@ set noundofile
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.jsx,*.js,*.json,*.css,*.scss,*.less,*.graphql Prettier
 
+" Easy split navigation
+nnoremap <C-w> <C-w>w
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
 " NERDTree
-let NERDTreeIgnore=['node_modules$', '\~$']
+let NERDTreeIgnore = ['.DS_Store', 'node_modules$', '.git$', '\~$']
 let NERDTreeShowHidden = 1
 map <F2> :NERDTreeToggle<CR>
 
@@ -99,5 +106,5 @@ nnoremap <C-p> :Files<CR>
 
 " Emmet
 let g:user_emmet_install_global = 0
-imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+let g:user_emmet_leader_key=','
 autocmd FileType html,css EmmetInstall
