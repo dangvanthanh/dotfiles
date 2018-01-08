@@ -4,6 +4,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
+export TERM="screen-256color"
 export EDITOR=vim
 
 # Set name of the theme to load. Optionally, if you set this to "random"

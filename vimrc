@@ -16,6 +16,9 @@ Plug 'prettier/vim-prettier'
 Plug 'pangloss/vim-javascript'
 Plug 'posva/vim-vue'
 
+" Elm
+Plug 'elmcast/elm-vim'
+
 " Elixir
 Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
 Plug 'slashmili/alchemist.vim', { 'for': 'elixir' }
@@ -73,6 +76,10 @@ set nobackup
 set nowritebackup
 set noswapfile
 set noundofile
+
+" Elm
+let g:polyglot_disabled = ['elm']
+let g:elm_setup_keybindings = 0
 
 " Prettier
 let g:prettier#autoformat = 0
