@@ -85,7 +85,7 @@ let g:elm_format_autosave = 1
 
 " Markdown
 autocmd BufNewFile,BufRead *.md set spell | set lbr | set nonu
-let:markdown_fenced_languages = ['html', 'javascript', 'json', 'css', 'elm', 'vim']
+let g:markdown_fenced_languages = ['html', 'javascript', 'json', 'css', 'elm', 'vim']
 
 " Prettier
 let g:prettier#autoformat = 0
