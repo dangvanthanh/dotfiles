@@ -89,7 +89,7 @@ let g:markdown_fenced_languages = ['html', 'javascript', 'json', 'css', 'elm', '
 
 " Prettier
 let g:prettier#autoformat = 0
-autocmd BufWritePre *.jsx,*.js,*.json,*.css,*.scss,*.less,*.graphql Prettier
+autocmd BufWritePre *.jsx,*.js,*.json,*.css,*.scss,*.less,*.graphql,*.vue Prettier
 
 " Easy split navigation
 nnoremap <C-w> <C-w>w
