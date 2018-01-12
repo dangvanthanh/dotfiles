@@ -83,6 +83,9 @@ let g:elm_setup_keybindings = 0
 let g:elm_detailed_complete = 1
 let g:elm_format_autosave = 1
 
+" Vue
+let g:vue_disable_pre_processors = 1
+
 " Markdown
 autocmd BufNewFile,BufRead *.md set spell | set lbr | set nonu
 let g:markdown_fenced_languages = ['html', 'javascript', 'json', 'css', 'elm', 'vim']
