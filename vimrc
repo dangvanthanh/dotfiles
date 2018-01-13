@@ -23,6 +23,9 @@ Plug 'elmcast/elm-vim'
 Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
 Plug 'slashmili/alchemist.vim', { 'for': 'elixir' }
 
+" Markdown
+Plug 'tpope/vim-markdown'
+
 " Themes
 Plug 'itchyny/lightline.vim'
 
@@ -87,7 +90,7 @@ let g:elm_format_autosave = 1
 let g:vue_disable_pre_processors = 1
 
 " Markdown
-autocmd BufNewFile,BufRead *.md set spell | set lbr | set nonu
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 let g:markdown_fenced_languages = ['html', 'javascript', 'json', 'css', 'elm', 'vim']
 
 " Prettier
