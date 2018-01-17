@@ -24,7 +24,7 @@ Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
 Plug 'slashmili/alchemist.vim', { 'for': 'elixir' }
 
 " Markdown
-Plug 'tpope/vim-markdown'
+Plug 'rhysd/vim-gfm-syntax'
 
 " Themes
 Plug 'itchyny/lightline.vim'
@@ -90,12 +90,14 @@ let g:elm_format_autosave = 1
 let g:vue_disable_pre_processors = 1
 
 " Markdown
-autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-let g:markdown_fenced_languages = ['html', 'javascript', 'json', 'css', 'elm', 'vim']
+autocmd BufNewFile,BufRead,BufNew *.md setlocal ft=markdown.gfm
+let g:gfm_syntax_enable_always = 0
+let g:gfm_syntax_enable_filetypes = ['markdown.gfm']
+let g:markdown_fenced_languages = ['html', 'javascript', 'json', 'css', 'elm', 'vim', 'elixir']
 
 " Prettier
-let g:prettier#autoformat = 0
 autocmd BufWritePre *.jsx,*.js,*.json,*.css,*.scss,*.less,*.graphql,*.vue Prettier
+let g:prettier#autoformat = 0
 
 " Easy split navigation
 nnoremap <C-w> <C-w>w
@@ -105,6 +107,8 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 " NERDTree
+autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd p
 let NERDTreeIgnore = ['.DS_Store', 'node_modules$', '.git$', '\~$']
 let NERDTreeShowHidden = 1
 map <F2> :NERDTreeToggle<CR>
@@ -124,6 +128,6 @@ nnoremap <leader><leader> :Commands<CR>
 nnoremap <C-p> :Files<CR>
 
 " Emmet
+autocmd FileType html,css EmmetInstall
 let g:user_emmet_install_global = 0
 let g:user_emmet_leader_key=','
-autocmd FileType html,css EmmetInstall
