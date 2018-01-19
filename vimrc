@@ -96,7 +96,7 @@ let g:gfm_syntax_enable_filetypes = ['markdown.gfm']
 let g:markdown_fenced_languages = ['html', 'javascript', 'json', 'css', 'elm', 'vim', 'elixir']
 
 " Prettier
-autocmd BufWritePre *.jsx,*.js,*.json,*.css,*.scss,*.less,*.graphql,*.vue Prettier
+autocmd BufWritePre *.jsx,*.js,*.json,*.css,*.scss,*.less,*.graphql Prettier
 let g:prettier#autoformat = 0
 
 " Easy split navigation
