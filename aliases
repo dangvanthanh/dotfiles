@@ -17,6 +17,8 @@ alias t="tmux"
 alias killt="tmux kill-server"
 
 # Cwd
+alias cls="clear"
 alias dev='cd ~/Code/dev/'
 alias dotfiles='cd ~/Code/dev/dotfiles/'
 alias til='cd ~/Code/dev/til/'
+alias ssg='cd ~/Code/surge/'
