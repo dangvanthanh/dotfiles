@@ -3,6 +3,9 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 
+# Neovim
+alias vim="nvim"
+
 # Git
 alias ga='git add'
 alias gp='git push'
