@@ -1,3 +1,5 @@
+language en_US
+
 " Easy split navigation
 nnoremap <C-w> <C-w>w
 nnoremap <C-h> <C-w>h
