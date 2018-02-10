@@ -16,7 +16,7 @@ syntax on
 set guifont=Fira\ Code:h16
 set laststatus=2
 
-set clipboard+=unnamedplus
+set clipboard^=unnamed,unnamedplus
 set t_RV=
 set t_Co=256
 set number
@@ -98,6 +98,13 @@ let g:vue_disable_pre_processors = 1
 " Prettier
 autocmd BufWritePre *.jsx,*.js,*.json,*.css,*.scss,*.less,*.graphql Prettier
 let g:prettier#autoformat = 0
+
+" Ale
+let g:ale_fixers = {}
+let g:ale_fixers['javascript'] = ['prettier_standard']
+let g:ale_linters = {'javascript': ['']}
+let g:ale_fix_on_save = 1
+let g:ale_javascript_prettier_use_local_config = 1
 
 " Deoplete
 let g:deoplete#enable_at_startup = 1
