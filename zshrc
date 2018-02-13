@@ -1,6 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-
+DEFAULT_USER=$USER
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
@@ -10,7 +10,6 @@ export EDITOR='nvim'
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="agnoster"
-SPACESHIP_BATTERY_SHOW=false
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -91,11 +90,10 @@ source $ZSH/oh-my-zsh.sh
 
 [[ -f ~/.aliases ]] && source ~/.aliases
 
-#source "$ZSH/custom/themes/spaceship.zsh-theme"
-
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
+SERVERLESS_PATH="/usr/local/lib/node_modules/serverless/node_modules/tabtab"
+[[ -f $SERVERLESS_PATH/.completions/serverless.zsh ]] && . $SERVERLESS_PATH/.completions/serverless.zsh
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
+[[ -f $SERVERLESS_PATH/.completions/sls.zsh ]] && . $SERVERLESS_PATH/.completions/sls.zsh
