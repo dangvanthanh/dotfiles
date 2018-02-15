@@ -1,3 +1,4 @@
+" Language display
 language en_US
 
 " Easy split navigation

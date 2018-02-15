@@ -1,6 +1,5 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-DEFAULT_USER=$USER
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
@@ -10,7 +9,9 @@ export EDITOR='nvim'
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="agnoster"
+DEFAULT_USER=$USER
 
+# Path to your oh-my-zsh installation.
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
