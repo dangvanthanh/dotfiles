@@ -98,3 +98,5 @@ SERVERLESS_PATH="/usr/local/lib/node_modules/serverless/node_modules/tabtab"
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [[ -f $SERVERLESS_PATH/.completions/sls.zsh ]] && . $SERVERLESS_PATH/.completions/sls.zsh
+
+# Custom Prompt
