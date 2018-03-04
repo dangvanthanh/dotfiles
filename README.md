@@ -1,5 +1,7 @@
 # Dang Thanh’s dotfiles
 
+![](screenshot.png)
+
 ## Getting Started 
 
 - Clone or download this repository
