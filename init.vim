@@ -83,8 +83,6 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 call plug#end()
 
 " Nerdtree
-autocmd VimEnter * NERDTree
-autocmd VimEnter * wincmd p
 let NERDTreeIgnore = ['.DS_Store', 'node_modules$', '.git$', '\~$']
 let NERDTreeShowHidden = 1
 map <F2> :NERDTreeToggle<CR>
