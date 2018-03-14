@@ -8,3 +8,10 @@
 - `chmod +x install.sh`
 - `./install.sh`
 
+## Homebrew
+
+Install Homebrew and Brewfile
+
+```shell
+./brew.sh
+```
