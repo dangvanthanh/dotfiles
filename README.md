@@ -4,9 +4,7 @@
 
 ## Getting Started
 
-You need install [Git](https://git-scm.com/)
-
-- Clone or [download](https://github.com/dangvanthanh/dotfiles/archive/master.zip) this repository
+You need install [Git](https://git-scm.com/). Clone or [download](https://github.com/dangvanthanh/dotfiles/archive/master.zip) this repository
 
 ```shell
 $ git clone https://github.com/dangvanthanh/dotfiles.git
