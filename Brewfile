@@ -8,20 +8,26 @@ brew 'the_silver_searcher'
 brew 'tmux'
 brew 'python3'
 brew 'asciinema'
+brew 'neovim'
 
 # Apps
 tap 'caskroom/cask'
 
+cask 'google-chrome'
+cask 'firefox'
+
+cask 'iterm2'
+cask 'visual-studio-code'
+cask 'sequel-pro'
+cask 'dash'
+
 cask 'blender'
 cask 'xquartz'
 cask 'inkscape'
+
 cask 'teamviewer'
 cask 'dropbox'
-cask 'google-chrome'
 cask 'skype'
-cask 'visual-studio-code'
-cask 'firefox'
-cask 'iterm2'
 cask 'spectacle'
 cask 'keycastr'
 cask 'caffeine'
