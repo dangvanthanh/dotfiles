@@ -1,4 +1,3 @@
-" Language display
 language en_US
 
 " Easy split navigation
@@ -69,6 +68,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-commentary'
 Plug 'airblade/vim-gitgutter'
 Plug 'w0rp/ale'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
@@ -121,3 +121,6 @@ nnoremap <C-p> :Files<CR>
 autocmd FileType html,css EmmetInstall
 let g:user_emmet_install_global = 0
 let g:user_emmet_leader_key=','
+
+" Commentary
+autocmd FileType apache setlocal commentstring=#\ %s
