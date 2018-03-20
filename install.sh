@@ -6,6 +6,7 @@ dotfiles="$HOME/Code/dev/dotfiles"
 echo "Setting up zsh..."
 ln -svf $dotfiles/aliases $HOME/.aliases
 ln -svf $dotfiles/zshrc $HOME/.zshrc
+ln -svf $dotfiles/functions $HOME/.functions
 
 # Vim
 echo "Setting up nvim..."

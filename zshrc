@@ -88,31 +88,9 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 [[ -f ~/.aliases ]] && source ~/.aliases
+[[ -f ~/.functions ]] && source ~/.functions
 
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
 SERVERLESS_PATH="/usr/local/lib/node_modules/serverless/node_modules/tabtab"
 [[ -f $SERVERLESS_PATH/.completions/serverless.zsh ]] && . $SERVERLESS_PATH/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
 [[ -f $SERVERLESS_PATH/.completions/sls.zsh ]] && . $SERVERLESS_PATH/.completions/sls.zsh
-
-# Custom Prompt
-function powerline_precmd() {
-    PS1="$(powerline-shell --shell zsh $?)"
-}
-
-function install_powerline_precmd() {
-  for s in "${precmd_functions[@]}"; do
-    if [ "$s" = "powerline_precmd" ]; then
-      return
-    fi
-  done
-  precmd_functions+=(powerline_precmd)
-}
-
-if [ "$TERM" != "linux" ]; then
-  install_powerline_precmd
-fi
