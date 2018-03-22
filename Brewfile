@@ -9,6 +9,7 @@ brew 'tmux'
 brew 'python3'
 brew 'asciinema'
 brew 'neovim'
+brew 'redis'
 
 # Apps
 tap 'caskroom/cask'
