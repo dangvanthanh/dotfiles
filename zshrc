@@ -2,7 +2,6 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
-
 export EDITOR='nvim'
 
 # Set name of the theme to load. Optionally, if you set this to "random"
@@ -57,7 +56,6 @@ DEFAULT_USER=$USER
 plugins=(git zsh-completions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
-
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
