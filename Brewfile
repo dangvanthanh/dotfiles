@@ -36,3 +36,4 @@ cask 'typora'
 
 cask 'font-fira-code'
 cask 'kap'
+cask 'karabiner'
