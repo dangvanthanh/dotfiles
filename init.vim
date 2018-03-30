@@ -50,7 +50,9 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'othree/html5.vim'
 Plug 'elzr/vim-json'
 Plug 'ap/vim-css-color'
-Plug 'prettier/vim-prettier'
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
 Plug 'pangloss/vim-javascript'
 Plug 'posva/vim-vue'
 
@@ -97,12 +99,12 @@ let g:elm_format_autosave = 1
 let g:vue_disable_pre_processors = 1
 
 " Prettier
-autocmd BufWritePre *.jsx,*.js,*.json,*.css,*.scss,*.less,*.graphql Prettier
+autocmd BufWritePre *.jsx,*.js,*.ts,*.json,*.css,*.scss,*.less,*.graphql,*.md,*.vue Prettier
 let g:prettier#autoformat = 0
 
 " Ale
 let g:ale_fixers = {}
-let g:ale_fixers['javascript'] = ['prettier_standard']
+let g:ale_fixers['javascript'] = ['prettier']
 let g:ale_linters = {'javascript': ['']}
 let g:ale_fix_on_save = 1
 let g:ale_javascript_prettier_use_local_config = 1
