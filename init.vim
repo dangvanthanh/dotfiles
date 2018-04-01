@@ -1,4 +1,64 @@
-}
+language en_US
+
+" Easy split navigation
+nnoremap <C-w> <C-w>w
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+set nocompatible 
+set encoding=utf8
+filetype plugin indent on
+
+syntax on
+
+set guifont=Fira\ Code:h16
+set laststatus=2
+
+set clipboard^=unnamed,unnamedplus
+set t_RV=
+set t_Co=256
+set number
+set showmatch
+set visualbell
+
+set hlsearch
+set smartcase
+set ignorecase
+set incsearch
+
+set autoindent
+set shiftwidth=2
+set smartindent
+set smarttab
+set softtabstop=2
+
+set ruler
+set undolevels=1000
+set backspace=indent,eol,start
+
+set nobackup
+set nowritebackup
+set noswapfile
+set noundofile
+
+" Plugins
+call plug#begin('~/.config/nvim/plugged')
+
+" Frontend
+Plug 'othree/html5.vim'
+Plug 'elzr/vim-json'
+Plug 'ap/vim-css-color'
+Plug 'prettier/vim-prettier', { 'do': 'npm install' }
+Plug 'pangloss/vim-javascript'
+Plug 'posva/vim-vue'
+
+" Elm
+Plug 'elmcast/elm-vim'
+
+" Elixir
+Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
 Plug 'slashmili/alchemist.vim', { 'for': 'elixir' }
 
 " Themes
@@ -39,6 +99,7 @@ let g:vue_disable_pre_processors = 1
 " Prettier
 autocmd BufWritePre *.jsx,*.js,*.ts,*.json,*.css,*.scss,*.less,*.graphql,*.md Prettier
 let g:prettier#autoformat = 0
+let g:prettier#config#single_quote = 'true'
 
 " Ale
 let g:ale_fixers = {}
