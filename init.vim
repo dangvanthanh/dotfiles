@@ -110,6 +110,7 @@ let g:ale_javascript_prettier_use_local_config = 1
 
 " Deoplete
 let g:deoplete#enable_at_startup = 1
+let g:deoplete#num_processes = 1
 
 " Fzf
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
