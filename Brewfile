@@ -25,6 +25,7 @@ cask 'dash'
 cask 'blender'
 cask 'xquartz'
 cask 'inkscape'
+cask 'reaper'
 
 cask 'teamviewer'
 cask 'dropbox'
