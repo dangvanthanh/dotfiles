@@ -79,6 +79,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'mattn/emmet-vim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'sbdchd/neoformat'
 
 call plug#end()
 
@@ -101,12 +102,17 @@ autocmd BufWritePre *.jsx,*.js,*.ts,*.json,*.css,*.scss,*.less,*.graphql,*.md Pr
 let g:prettier#autoformat = 0
 let g:prettier#config#single_quote = 'true'
 
+" Neoformat
+autocmd FileType javascript setlocal formatprg=prettier\ --stdin\ --parser\ flow\ --single-quote\ --trailing-comma\ es5
+let g:neoformat_try_formatprg = 1
+
 " Ale
 let g:ale_fixers = {}
 let g:ale_fixers['javascript'] = ['prettier']
 let g:ale_linters = {'javascript': ['']}
 let g:ale_fix_on_save = 1
 let g:ale_javascript_prettier_use_local_config = 1
+let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5'
 
 " Deoplete
 let g:deoplete#enable_at_startup = 1
