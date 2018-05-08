@@ -33,7 +33,6 @@ cask 'skype'
 cask 'spectacle'
 cask 'keycastr'
 cask 'caffeine'
-cask 'typora'
 
 cask 'font-fira-code'
 cask 'kap'
