@@ -12,7 +12,7 @@ set encoding=utf8
 filetype plugin indent on
 
 syntax on
-
+color dracula
 set guifont=Fira\ Code:h16
 set laststatus=2
 
@@ -45,6 +45,8 @@ set noundofile
 
 " Plugins
 call plug#begin('~/.config/nvim/plugged')
+
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 " Frontend
 Plug 'othree/html5.vim'
