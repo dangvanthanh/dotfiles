@@ -110,6 +110,7 @@ let g:neoformat_try_formatprg = 1
 
 " Ale
 let g:ale_fixers = {}
+let g:ale_fixers['elixir'] = ['mix_format']
 let g:ale_fixers['javascript'] = ['prettier']
 let g:ale_linters = {'javascript': ['']}
 let g:ale_fix_on_save = 1
