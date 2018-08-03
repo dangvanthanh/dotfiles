@@ -12,7 +12,11 @@ set encoding=utf8
 filetype plugin indent on
 
 syntax on
-color dracula
+set termguicolors
+colorscheme gruvbox
+highlight link cssPositioningProp GruvboxAqua
+highlight link cssBorderProp GruvboxAqua
+set background=dark
 set guifont=Fira\ Code:h16
 set laststatus=2
 
@@ -47,10 +51,12 @@ set noundofile
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'morhetz/gruvbox'
 
 " Frontend
 Plug 'othree/html5.vim'
 Plug 'elzr/vim-json'
+Plug 'JulesWang/css.vim'
 Plug 'ap/vim-css-color'
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 Plug 'pangloss/vim-javascript'
