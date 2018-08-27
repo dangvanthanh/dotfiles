@@ -53,7 +53,7 @@ DEFAULT_USER=$USER
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-completions zsh-syntax-highlighting)
+plugins=(git zsh-completions zsh-syntax-highlighting z)
 
 source $ZSH/oh-my-zsh.sh
 # User configuration
@@ -87,7 +87,7 @@ export PATH=$PATH:$GOROOT/bin
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
+. /usr/local/etc/profile.d/z.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [[ -f ~/.aliases ]] && source ~/.aliases
 [[ -f ~/.functions ]] && source ~/.functions

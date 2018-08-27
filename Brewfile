@@ -11,6 +11,7 @@ brew 'asciinema'
 brew 'neovim'
 brew 'redis'
 brew 'tree'
+brew 'z'
 
 # Apps
 tap 'caskroom/cask'
