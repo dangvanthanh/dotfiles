@@ -10,6 +10,7 @@ brew 'python3'
 brew 'asciinema'
 brew 'neovim'
 brew 'redis'
+brew 'tree'
 
 # Apps
 tap 'caskroom/cask'
