@@ -62,7 +62,8 @@ source $ZSH/oh-my-zsh.sh
 export PATH="$HOME/.cargo/bin:$PATH"
 export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOROOT/bin
-
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+export ANDROID_HOME=/usr/local/share/android-sdk
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -98,3 +99,8 @@ export PATH=$PATH:$GOROOT/bin
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
+###-tns-completion-start-###
+if [ -f /Users/dangvanthanh/.tnsrc ]; then 
+    source /Users/dangvanthanh/.tnsrc 
+fi
+###-tns-completion-end-###
