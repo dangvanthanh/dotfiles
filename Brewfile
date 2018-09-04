@@ -12,6 +12,8 @@ brew 'neovim'
 brew 'redis'
 brew 'tree'
 brew 'z'
+brew 'mongodb'
+brew 'mongoose'
 
 # Apps
 tap 'caskroom/cask'
