@@ -128,9 +128,8 @@ let g:deoplete#enable_at_startup = 1
 let g:deoplete#num_processes = 1
 
 " Fzf
-let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --smart-case --glob "!.git/*"'
 nnoremap <C-b> :Buffers<CR>
-nnoremap <C-g> :Ag<CR>
 nnoremap <leader><leader> :Commands<CR>
 nnoremap <C-p> :Files<CR>
 
