@@ -15,6 +15,7 @@ brew 'mongodb'
 brew 'mongoose'
 brew 'ripgrep'
 brew 'postman'
+brew 'kubernetes-cli'
 
 # Apps
 tap 'caskroom/cask'
@@ -26,6 +27,9 @@ cask 'iterm2'
 cask 'visual-studio-code'
 cask 'sequel-pro'
 cask 'dash'
+cask 'robo-3t'
+cask 'virtualbox'
+cask 'minikute'
 
 cask 'blender'
 cask 'xquartz'
