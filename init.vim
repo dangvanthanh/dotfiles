@@ -91,6 +91,10 @@ Plug 'sbdchd/neoformat'
 
 call plug#end()
 
+" Python
+let g:python_host_prog = '/usr/local/bin/python'
+let g:python3_host_prog = '/usr/local/bin/python3'
+
 " Nerdtree
 let NERDTreeIgnore = ['.DS_Store', 'node_modules$', '.git$', '\~$']
 let NERDTreeShowHidden = 1
