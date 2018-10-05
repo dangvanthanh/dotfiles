@@ -110,7 +110,7 @@ let g:elm_format_autosave = 1
 let g:vue_disable_pre_processors = 1
 
 " Prettier
-autocmd BufWritePre *.jsx,*.js,*.ts,*.json,*.css,*.scss,*.less,*.graphql,*.md Prettier
+autocmd BufWritePre *.jsx,*.js,*.ts,*.json,*.css,*.scss,*.less,*.graphql,*.md,*.vue Prettier
 let g:prettier#autoformat = 0
 let g:prettier#config#single_quote = 'true'
 
