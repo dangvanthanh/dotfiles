@@ -50,7 +50,6 @@ set noundofile
 " Plugins
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'morhetz/gruvbox'
 
 " Frontend
