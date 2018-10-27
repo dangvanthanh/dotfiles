@@ -131,7 +131,7 @@ let g:deoplete#enable_at_startup = 1
 let g:deoplete#num_processes = 1
 
 " Fzf
-let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --smart-case --glob "!.git/*"'
+let $FZF_DEFAULT_COMMAND = 'rg --files --no-ignore --hidden --smart-case --follow -g "!{.git,node_modules}/*" 2> /dev/null'
 nnoremap <C-b> :Buffers<CR>
 nnoremap <leader><leader> :Commands<CR>
 nnoremap <C-p> :Files<CR>

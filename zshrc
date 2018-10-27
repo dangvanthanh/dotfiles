@@ -90,7 +90,7 @@ export ANDROID_HOME=/usr/local/share/android-sdk
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 . /usr/local/etc/profile.d/z.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case --glob "!.git/*"'
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --smart-case --follow -g "!{.git,node_modules}/*" 2> /dev/null'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 [[ -f ~/.aliases ]] && source ~/.aliases

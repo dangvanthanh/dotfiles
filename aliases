@@ -12,9 +12,9 @@ alias gp='git push'
 alias gs='git status'
 alias gcm='git commit -m'
 alias gca='git commit -am'
-alias gc='git checkout'
+alias gco='git checkout'
 alias gd='git diff'
-alias gl='git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short'
+alias glpretty='git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short'
 
 # Tmux
 alias t="tmux"
