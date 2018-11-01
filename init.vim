@@ -95,7 +95,7 @@ let g:python_host_prog = '/usr/local/bin/python'
 let g:python3_host_prog = '/usr/local/bin/python3'
 
 " Nerdtree
-let NERDTreeIgnore = ['.DS_Store', 'node_modules$', '.git$', '\~$']
+let NERDTreeIgnore = ['.DS_Store', '.cache$', 'node_modules$', '.git$', '\~$']
 let NERDTreeShowHidden = 1
 map <F2> :NERDTreeToggle<CR>
 
@@ -131,7 +131,7 @@ let g:deoplete#enable_at_startup = 1
 let g:deoplete#num_processes = 1
 
 " Fzf
-let $FZF_DEFAULT_COMMAND = 'rg --files --no-ignore --hidden --smart-case --follow -g "!{.git,node_modules}/*" 2> /dev/null'
+let $FZF_DEFAULT_COMMAND = 'rg --files --no-ignore --hidden --smart-case --follow -g "!{.git,.cache,node_modules}/*" 2> /dev/null'
 nnoremap <C-b> :Buffers<CR>
 nnoremap <leader><leader> :Commands<CR>
 nnoremap <C-p> :Files<CR>
