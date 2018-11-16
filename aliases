@@ -4,11 +4,12 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 
 # Neovim
-alias vim="nvim"
+alias vim='nvim'
 
 # Git
 alias ga='git add'
 alias gp='git push'
+alias gpm='git push origin master'
 alias gs='git status'
 alias gcm='git commit -m'
 alias gca='git commit -am'
@@ -17,14 +18,17 @@ alias gd='git diff'
 alias glpretty='git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short'
 
 # Tmux
-alias t="tmux"
-alias killt="tmux kill-server"
+alias t='tmux'
+alias killt='tmux kill-server'
 
 # Cwd
-alias cls="clear"
+alias cls='clear'
 alias dev='cd ~/Code/dev/'
 alias dotfiles='cd ~/Code/dev/dotfiles/'
-alias blog="cd ~/Code/blog"
+alias blog='cd ~/Code/blog'
 
 # Fzf
-alias preview="fzf --preview 'cat {}'"
+alias preview='fzf --preview "cat {}"'
+
+# Prettier and Husky
+alias quickpretty='npm install prettier --save-dev --save-exact && npm install pretty-quick husky --save-dev'
