@@ -16,6 +16,7 @@ brew 'mongoose'
 brew 'ripgrep'
 brew 'postman'
 brew 'kubernetes-cli'
+brew 'pandoc'
 
 # Apps
 tap 'caskroom/cask'
