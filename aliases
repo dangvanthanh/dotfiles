@@ -32,3 +32,6 @@ alias preview='fzf --preview "cat {}"'
 
 # Prettier and Husky
 alias quickpretty='npm install prettier --save-dev --save-exact && npm install pretty-quick husky --save-dev'
+
+# Npm
+alias npmcheck='npx npm-check -u'
