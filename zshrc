@@ -63,7 +63,23 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOROOT/bin
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+
+export FLUTTER_HOME=/Users/dangvanthanh/Code/dev/sdk/flutter
+export PATH=$FLUTTER_HOME/bin:$PATH
+
+# Android
+export ANT_HOME=/usr/local/opt/ant
+export MAVEN_HOME=/usr/local/opt/maven
+export GRADLE_HOME=/usr/local/opt/gradle
 export ANDROID_HOME=/usr/local/share/android-sdk
+export ANDROID_NDK_HOME=/usr/local/share/android-ndk
+export PATH=$ANT_HOME/bin:$PATH
+export PATH=$MAVEN_HOME/bin:$PATH
+export PATH=$GRADLE_HOME/bin:$PATH
+export PATH=$ANDROID_HOME/tools:$PATH
+export PATH=$ANDROID_HOME/platform-tools:$PATH
+export PATH=$ANDROID_HOME/build-tools/27.0.3:$PATH
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 

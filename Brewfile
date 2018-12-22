@@ -1,6 +1,6 @@
 cask_args appdir: '/Applications'
 
-# Scripts
+# Development 
 brew 'wget'
 brew 'node'
 brew 'git'
@@ -15,8 +15,12 @@ brew 'mongodb'
 brew 'mongoose'
 brew 'ripgrep'
 brew 'postman'
-brew 'kubernetes-cli'
 brew 'pandoc'
+
+# Android
+brew 'ant'
+brew 'maven'
+brew 'gradle'
 
 # Apps
 tap 'caskroom/cask'
@@ -29,7 +33,6 @@ cask 'visual-studio-code'
 cask 'sequel-pro'
 cask 'robo-3t'
 cask 'virtualbox'
-cask 'minikute'
 
 cask 'blender'
 cask 'xquartz'
@@ -41,9 +44,10 @@ cask 'teamviewer'
 cask 'dropbox'
 cask 'skype'
 cask 'spectacle'
-cask 'keycastr'
 cask 'caffeine'
 
 cask 'font-fira-code'
 cask 'kap'
-cask 'karabiner'
+
+cask 'android-sdk'
+cask 'android-ndk'
