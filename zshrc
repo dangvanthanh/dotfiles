@@ -64,7 +64,7 @@ export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOROOT/bin
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
-export FLUTTER_HOME=/Users/dangvanthanh/Code/dev/sdk/flutter
+export FLUTTER_HOME=/Users/dangvanthanh/Code/dev/flutter/sdk
 export PATH=$FLUTTER_HOME/bin:$PATH
 
 # Android
