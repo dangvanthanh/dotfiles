@@ -48,6 +48,7 @@ cask 'caffeine'
 
 cask 'font-fira-code'
 cask 'kap'
+cask 'figma'
 
 cask 'android-sdk'
 cask 'android-ndk'
