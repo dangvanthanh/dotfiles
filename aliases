@@ -35,3 +35,6 @@ alias lintstaged='npm install prettier --save-dev --save-exact && npm install li
 
 # Npm
 alias npmcheck='npx npm-check -u'
+
+# Brew
+alias bu='brew update && brew upgrade && brew cleanup'
