@@ -43,8 +43,6 @@ All the applications I use
 - [Skype](https://www.skype.com/en/) - Communication Calls And Chat
 - [Spectacle](https://www.spectacleapp.com/) - Move And Resize Windows
 - [Keycastr](https://github.com/keycastr/keycastr) - Keystoke Visualizer
-- [Caffeine](http://lightheadsw.com/caffeine/) - Don't Let Your Mac Fall Asleep
-- [Typora](https://typora.io/) - Markdown Editor
 - [Karabiner](https://pqrs.org/osx/karabiner/) - Keyboard Remapping
 
 ## Oh My ZSH
