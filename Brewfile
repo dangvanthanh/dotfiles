@@ -39,6 +39,7 @@ cask 'xquartz'
 cask 'inkscape'
 cask 'reaper'
 cask 'xmind'
+cask 'scrivener'
 
 cask 'teamviewer'
 cask 'dropbox'
