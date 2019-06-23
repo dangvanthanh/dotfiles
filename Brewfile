@@ -50,6 +50,7 @@ cask 'caffeine'
 cask 'font-fira-code'
 cask 'kap'
 cask 'figma'
+cask 'mounty'
 
 cask 'android-sdk'
 cask 'android-ndk'
