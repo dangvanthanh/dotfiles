@@ -63,9 +63,12 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOROOT/bin
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
-
 export FLUTTER_HOME=/Users/dangvanthanh/Code/dev/flutter/sdk
 export PATH=$FLUTTER_HOME/bin:$PATH
+export KIBANA_HOME=/usr/local/var/homebrew/linked/kiban
+export ES_HOME=/usr/local/var/homebrew/linked/elasticsearch-full
+export PATH=$KIBANA_HOME/bin:$PATH
+export PATH=$ES_HOME/bin:$PATH
 
 # Android
 export ANT_HOME=/usr/local/opt/ant/libexec
