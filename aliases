@@ -34,7 +34,8 @@ alias preview='fzf --preview "cat {}"'
 alias lintstaged='npm install prettier --save-dev --save-exact && npm install lint-staged husky --save-dev'
 
 # Npm
-alias npmcheck='npx npm-check -u'
+alias npm-check='npx npm-check -u'
+alias preinstall-postcss='npm i autoprefixer css-mqpacker cssnano npm-run-all postcss-cli postcss-each postcss-import postcss-nested postcss-preset-env tailwindcss --save-dev'
 
 # Brew
 alias bu='brew update && brew upgrade && brew cleanup'
