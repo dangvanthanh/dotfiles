@@ -26,7 +26,7 @@ $ ./brew.sh
 
 ### Brewfile
 
-All the applications I use
+All the applications I use:
 
 - [Google Chome](https://www.google.com/chrome/) - Chrome Web Browser
 - [Firefox](https://www.mozilla.org/en-US/firefox/new/) - Free Web Browser
