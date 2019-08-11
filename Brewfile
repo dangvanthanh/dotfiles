@@ -52,6 +52,7 @@ cask 'font-fira-code'
 cask 'kap'
 cask 'figma'
 cask 'brave-browser'
+cask 'numi'
 
 cask 'android-sdk'
 cask 'android-ndk'
