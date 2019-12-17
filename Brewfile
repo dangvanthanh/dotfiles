@@ -28,6 +28,7 @@ tap 'caskroom/cask'
 cask 'google-chrome'
 cask 'firefox'
 cask 'brave-browser'
+cask 'microsoft-edge-beta'
 
 cask 'iterm2'
 cask 'visual-studio-code'
