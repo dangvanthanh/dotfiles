@@ -7,7 +7,7 @@ export EDITOR='nvim'
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME="avit"
 DEFAULT_USER=$USER
 
 # Path to your oh-my-zsh installation.
@@ -113,23 +113,4 @@ export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --smart-case --follo
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 [[ -f ~/.aliases ]] && source ~/.aliases
-[[ -f ~/.functions ]] && source ~/.functions
-
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
-###-tns-completion-start-###
-if [ -f /Users/dangvanthanh/.tnsrc ]; then 
-    source /Users/dangvanthanh/.tnsrc 
-fi
-###-tns-completion-end-###
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/dangvanthanh/Code/sdk/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/dangvanthanh/Code/sdk/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/dangvanthanh/Code/sdk/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/dangvanthanh/Code/sdk/google-cloud-sdk/completion.zsh.inc'; fi
 
