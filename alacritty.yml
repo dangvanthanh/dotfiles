@@ -76,7 +76,7 @@
   #
   # Override the variant of the GTK theme. Commonly supported values are `dark` and `light`.
   # Set this to `None` to use the default theme variant.
-  #gtk_theme_variant: None
+  #gtk_theme_variant: dark 
 
 #scrolling:
   # Maximum number of lines in the scrollback buffer.
@@ -97,7 +97,7 @@
 # Some applications, like Emacs, rely on knowing about the width of a tab.
 # To prevent unexpected behavior in these applications, it's also required to
 # change the `it` value in terminfo when altering this setting.
-#tabspaces: 8
+#tabspaces: 4 
 
 # Font configuration
 #font:
@@ -109,7 +109,7 @@
     #   - (macOS) Menlo
     #   - (Linux) monospace
     #   - (Windows) Consolas
-    #family: "Fira Code" 
+    #family: Menlo 
 
     # The `style` can be specified to pick a specific face.
     #style: Regular
@@ -120,7 +120,7 @@
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    #family: "Fira Code" 
+    #family: Menlo 
 
     # The `style` can be specified to pick a specific face.
     #style: Bold
@@ -131,7 +131,7 @@
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    #family: "Fira Code" 
+    #family: Menlo 
 
     # The `style` can be specified to pick a specific face.
     #style: Italic
@@ -142,13 +142,13 @@
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    #family: "Fira Code" 
+    #family: Menlo 
 
     # The `style` can be specified to pick a specific face.
     #style: Bold Italic
 
   # Point size
-  #size: 16.0
+  #size: 14
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
