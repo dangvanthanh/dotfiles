@@ -12,9 +12,9 @@ set encoding=utf8
 filetype plugin indent on
 
 syntax on
-"set termguicolors
-"colorscheme gruvbox
-"set background=dark
+set termguicolors
+colorscheme gruvbox
+set background=dark
 set guifont=Fira\ Code:h16
 set laststatus=2
 

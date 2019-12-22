@@ -8,7 +8,7 @@ ln -svf $dotfiles/aliases $HOME/.aliases
 ln -svf $dotfiles/zshrc $HOME/.zshrc
 
 # Alacritty
-ln -svf $dotfiles/alacritty.ymp $HOME/.config/alacritty/alacritty.yml
+ln -svf $dotfiles/alacritty.yml $HOME/.config/alacritty/alacritty.yml
 
 # Vim
 echo "Setting up nvim..."

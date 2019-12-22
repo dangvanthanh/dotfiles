@@ -59,7 +59,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
-#export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
 #export GOROOT=/usr/local/opt/go/libexec
 #export PATH=$PATH:$GOROOT/bin
 #export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
