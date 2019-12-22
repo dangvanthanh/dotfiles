@@ -1,12 +1,14 @@
 #!/usr/bin/env sh
 
-dotfiles="$HOME/Code/dev/dotfiles"
+dotfiles="$HOME/Code/dotfiles"
 
 # Zshrc
 echo "Setting up zsh..."
 ln -svf $dotfiles/aliases $HOME/.aliases
 ln -svf $dotfiles/zshrc $HOME/.zshrc
-ln -svf $dotfiles/functions $HOME/.functions
+
+# Alacritty
+ln -svf $dotfiles/alacritty.ymp $HOME/.config/alacritty/alacritty.yml
 
 # Vim
 echo "Setting up nvim..."

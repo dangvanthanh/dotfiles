@@ -59,29 +59,29 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
-export PATH="$HOME/.cargo/bin:$PATH"
-export GOROOT=/usr/local/opt/go/libexec
-export PATH=$PATH:$GOROOT/bin
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
-export FLUTTER_HOME=/Users/dangvanthanh/Code/dev/mobile/flutter/
-export PATH=$FLUTTER_HOME/bin:$PATH
-export KIBANA_HOME=/usr/local/var/homebrew/linked/kiban
-export ES_HOME=/usr/local/var/homebrew/linked/elasticsearch-full
-export PATH=$KIBANA_HOME/bin:$PATH
-export PATH=$ES_HOME/bin:$PATH
+#export PATH="$HOME/.cargo/bin:$PATH"
+#export GOROOT=/usr/local/opt/go/libexec
+#export PATH=$PATH:$GOROOT/bin
+#export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+#export FLUTTER_HOME=/Users/dangvanthanh/Code/dev/mobile/flutter/
+#export PATH=$FLUTTER_HOME/bin:$PATH
+#export KIBANA_HOME=/usr/local/var/homebrew/linked/kiban
+#export ES_HOME=/usr/local/var/homebrew/linked/elasticsearch-full
+#export PATH=$KIBANA_HOME/bin:$PATH
+#export PATH=$ES_HOME/bin:$PATH
 
 # Android
-export ANT_HOME=/usr/local/opt/ant/libexec
-export MAVEN_HOME=/usr/local/opt/maven
-export GRADLE_HOME=/usr/local/opt/gradle
-export ANDROID_HOME=/usr/local/share/android-sdk
-export ANDROID_NDK_HOME=/usr/local/share/android-ndk
-export PATH=$ANT_HOME/bin:$PATH
-export PATH=$MAVEN_HOME/bin:$PATH
-export PATH=$GRADLE_HOME/bin:$PATH
-export PATH=$ANDROID_HOME/tools:$PATH
-export PATH=$ANDROID_HOME/platform-tools:$PATH
-export PATH=$ANDROID_HOME/build-tools/$(ls $ANDROID_HOME/build-tools | sort | tail -1):$PATH
+#export ANT_HOME=/usr/local/opt/ant/libexec
+#export MAVEN_HOME=/usr/local/opt/maven
+#export GRADLE_HOME=/usr/local/opt/gradle
+#export ANDROID_HOME=/usr/local/share/android-sdk
+#export ANDROID_NDK_HOME=/usr/local/share/android-ndk
+#export PATH=$ANT_HOME/bin:$PATH
+#export PATH=$MAVEN_HOME/bin:$PATH
+#export PATH=$GRADLE_HOME/bin:$PATH
+#export PATH=$ANDROID_HOME/tools:$PATH
+#export PATH=$ANDROID_HOME/platform-tools:$PATH
+#export PATH=$ANDROID_HOME/build-tools/$(ls $ANDROID_HOME/build-tools | sort | tail -1):$PATH
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -108,9 +108,9 @@ export PATH=$ANDROID_HOME/build-tools/$(ls $ANDROID_HOME/build-tools | sort | ta
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 . /usr/local/etc/profile.d/z.sh
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --smart-case --follow -g "!{.git,node_modules}/*" 2> /dev/null'
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [[ -f ~/.aliases ]] && source ~/.aliases
 
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --smart-case --follow -g "!{.git,node_modules}/*" 2> /dev/null'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
