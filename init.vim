@@ -45,6 +45,11 @@ set nowritebackup
 set noswapfile
 set noundofile
 
+set cmdheight=2
+set updatetime=300
+set shortmess+=c
+set signcolumn=yes
+
 " Plugins
 call plug#begin('~/.config/nvim/plugged')
 
@@ -85,6 +90,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'mattn/emmet-vim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'sbdchd/neoformat'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
@@ -124,7 +130,7 @@ let g:ale_fixers = {
 \  'scss': ['prettier'],
 \  'html': ['prettier']
 \}
-let g:ale_linters = {'javascript': ['']}
+let g:ale_linters = {'javascript': ['standard']}
 let g:ale_fix_on_save = 1
 let g:ale_javascript_prettier_use_local_config = 1
 let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5'
