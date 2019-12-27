@@ -126,7 +126,7 @@ let g:ale_fixers = {
 \  'elixir': ['mix_format'],
 \  'javascript': ['eslint'],
 \  'typescript': ['prettier'],
-\  'vue': ['eslint'],
+\  'vue': ['prettier'],
 \  'scss': ['prettier'],
 \  'html': ['prettier']
 \}
