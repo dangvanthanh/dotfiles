@@ -32,6 +32,7 @@ cask 'sequel-pro'
 cask 'blender'
 cask 'inkscape'
 
+cask 'sourcetree'
 cask 'teamviewer'
 cask 'dropbox'
 cask 'skype'
