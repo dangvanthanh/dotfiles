@@ -38,6 +38,7 @@ cask 'dropbox'
 cask 'skype'
 cask 'spectacle'
 cask 'figma'
+cask 'telegram'
 
 tap 'homebrew/cask-fonts'
 cask 'font-fira-code'
