@@ -13,11 +13,6 @@ brew 'tree'
 brew 'ripgrep'
 brew 'z'
 
-# Android
-# brew 'ant'
-# brew 'maven'
-# brew 'gradle'
-
 # Apps
 tap 'homebrew/cask'
 
@@ -43,5 +38,3 @@ cask 'telegram'
 tap 'homebrew/cask-fonts'
 cask 'font-fira-code'
 
-#cask 'android-sdk'
-#cask 'android-ndk'
