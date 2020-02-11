@@ -47,6 +47,7 @@ All the applications I use:
 - [Dropbox](https://www.dropbox.com/) - Storage Online
 - [Skype](https://www.skype.com/en/) - Communication Calls And Chat
 - [Spectacle](https://www.spectacleapp.com/) - Move And Resize Windows
+- [Telegram](https://telegram.org) - Cloud based instant message service
 
 ## ZSH and Oh My ZSH
 
