@@ -26,6 +26,7 @@ cask 'sequel-pro'
 
 cask 'blender'
 cask 'inkscape'
+cask 'kap'
 
 cask 'sourcetree'
 cask 'teamviewer'
