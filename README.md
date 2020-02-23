@@ -51,7 +51,7 @@ All the applications I use:
 
 ## ZSH and Oh My ZSH
 
-Switch to `zsh` default shell
+Make `zsh` default shell
 
 ```shell
 $ which zsh
@@ -64,6 +64,14 @@ Then install Oh My ZSH
 $ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 $ git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
 $ brew install zsh-syntax-highlighting
+```
+
+## Fish
+
+Make `fish` default shell
+
+```shell
+chsh -s /bin/fish
 ```
 
 ## Neovim

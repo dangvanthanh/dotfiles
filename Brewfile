@@ -12,6 +12,7 @@ brew 'redis'
 brew 'tree'
 brew 'ripgrep'
 brew 'z'
+brew 'fish'
 
 # Apps
 tap 'homebrew/cask'
@@ -36,6 +37,7 @@ cask 'spectacle'
 cask 'figma'
 cask 'telegram'
 
+# Others
 tap 'homebrew/cask-fonts'
 cask 'font-fira-code'
 
