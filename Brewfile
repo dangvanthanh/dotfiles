@@ -36,6 +36,7 @@ cask 'skype'
 cask 'spectacle'
 cask 'figma'
 cask 'telegram'
+cask 'spotify'
 
 # Others
 tap 'homebrew/cask-fonts'
