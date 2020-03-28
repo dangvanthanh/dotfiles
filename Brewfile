@@ -14,6 +14,8 @@ brew 'ripgrep'
 brew 'z'
 brew 'fish'
 brew 'elixir'
+brew 'postgress'
+brew 'postgis'
 
 # Apps
 tap 'homebrew/cask'
