@@ -13,6 +13,7 @@ brew 'tree'
 brew 'ripgrep'
 brew 'z'
 brew 'fish'
+brew 'elixir'
 
 # Apps
 tap 'homebrew/cask'
