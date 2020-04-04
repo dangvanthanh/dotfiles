@@ -246,7 +246,7 @@ nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 " Fzf
-let $FZF_DEFAULT_COMMAND = 'rg --files --no-ignore --hidden --smart-case --follow -g "!{.git,.cache,node_modules}/*" 2> /dev/null'
+let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --follow --glob "!{node_modules/*,.git/*}"'
 nnoremap <C-b> :Buffers<CR>
 nnoremap <leader><leader> :Commands<CR>
 nnoremap <C-p> :Files<CR>
