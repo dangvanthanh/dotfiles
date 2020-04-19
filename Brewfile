@@ -28,6 +28,7 @@ cask 'alacritty'
 cask 'visual-studio-code'
 cask 'sequel-pro'
 
+cask 'gimp'
 cask 'blender'
 cask 'inkscape'
 cask 'kap'
