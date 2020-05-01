@@ -123,7 +123,7 @@ let g:neoformat_try_formatprg = 1
 " Ale
 let g:ale_fixers = {
 \  'elixir': ['mix_format'],
-\  'javascript': ['eslint'],
+\  'javascript': ['prettier'],
 \  'typescript': ['prettier'],
 \  'vue': ['prettier'],
 \  'scss': ['prettier'],
