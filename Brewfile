@@ -2,20 +2,19 @@ cask_args appdir: '/Applications'
 
 # Development 
 brew 'wget'
-brew 'node'
 brew 'git'
-brew 'tmux'
+brew 'node'
 brew 'python3'
+brew 'elixir'
+brew 'postgress'
+brew 'postgis'
 brew 'asciinema'
+brew 'tmux'
 brew 'neovim'
 brew 'redis'
 brew 'tree'
 brew 'ripgrep'
 brew 'z'
-brew 'fish'
-brew 'elixir'
-brew 'postgress'
-brew 'postgis'
 
 # Apps
 tap 'homebrew/cask'
@@ -45,4 +44,3 @@ cask 'spotify'
 # Others
 tap 'homebrew/cask-fonts'
 cask 'font-fira-code'
-
