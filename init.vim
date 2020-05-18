@@ -71,6 +71,9 @@ Plug 'elmcast/elm-vim'
 Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
 Plug 'slashmili/alchemist.vim', { 'for': 'elixir' }
 
+" Svelte
+Plug 'evanleck/vim-svelte'
+
 " Themes
 Plug 'itchyny/lightline.vim'
 
@@ -110,6 +113,10 @@ let g:elm_format_autosave = 1
 
 " Vue
 let g:vue_disable_pre_processors = 1
+
+" Svelte
+let g:svelte_indent_script = 0
+let g:svelte_indent_style = 0
 
 " Prettier
 autocmd BufWritePre *.jsx,*.js,*.ts,*.json,*.css,*.scss,*.less,*.graphql,*.vue Prettier
