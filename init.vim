@@ -134,7 +134,8 @@ let g:ale_fixers = {
 \  'typescript': ['prettier'],
 \  'vue': ['prettier'],
 \  'scss': ['prettier'],
-\  'html': ['prettier']
+\  'html': ['prettier'],
+\  'svelte': ['prettier']
 \}
 let g:ale_linters = {'javascript': ['standard']}
 let g:ale_fix_on_save = 1
