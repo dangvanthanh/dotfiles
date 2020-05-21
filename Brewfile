@@ -16,6 +16,7 @@ brew 'tree'
 brew 'ripgrep'
 brew 'z'
 brew 'hugo'
+brew 'deno'
 
 # Apps
 tap 'homebrew/cask'
