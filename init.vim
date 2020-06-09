@@ -8,7 +8,7 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 set nocompatible 
-set encoding=utf8
+set encoding=UTF-8
 filetype plugin indent on
 
 syntax on
@@ -85,7 +85,6 @@ Plug 'tpope/vim-commentary'
 Plug 'airblade/vim-gitgutter'
 Plug 'w0rp/ale'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'ryanoasis/vim-devicons'
 Plug 'mileszs/ack.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -94,6 +93,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'mattn/emmet-vim'
 Plug 'sbdchd/neoformat'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
@@ -102,8 +102,11 @@ let g:python_host_prog = '/usr/local/bin/python'
 let g:python3_host_prog = '/usr/local/bin/python3'
 
 " Nerdtree
-let NERDTreeIgnore = ['.DS_Store', '.cache$', 'node_modules$', '.git$', '\~$']
-let NERDTreeShowHidden = 1
+let g:NERDTreeIgnore = ['.DS_Store', '.cache$', 'node_modules$', '.git$', '\~$']
+let g:NERDTreeShowHidden = 1
+let g:NERDTreeMinimalUI = 1
+let g:NERDTreeStatusline = ''
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 map <F2> :NERDTreeToggle<CR>
 
 " Elm
