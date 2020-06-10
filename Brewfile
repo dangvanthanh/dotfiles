@@ -42,6 +42,7 @@ cask 'spectacle'
 cask 'figma'
 cask 'telegram'
 cask 'spotify'
+cask 'notion'
 
 # Others
 tap 'homebrew/cask-fonts'
