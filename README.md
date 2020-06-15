@@ -22,33 +22,6 @@ $ git config --global user.name "Your Name"
 $ git config --global user.email "youremail@email.com"
 ```
 
-## Homebrew
-
-Install Homebrew and Brewfile
-
-```shell
-$ ./brew.sh
-```
-
-### Brewfile
-
-All the applications I use:
-
-- [Google Chome](https://www.google.com/chrome/) - Chrome Web Browser
-- [Firefox](https://www.mozilla.org/en-US/firefox/new/) - Free Web Browser
-- [Asciinema](https://asciinema.org/) - Record And Share Terminal
-- [Alacritty](https://github.com/jwilm/alacritty) - macOS Terminal Replacement
-- [Neovim](https://github.com/neovim/neovim) - Powerful Editor
-- [Visual Studio Code](https://code.visualstudio.com/) - Code Editor
-- [Sequel Pro](https://www.sequelpro.com/) - Database Management For MySQL
-- [Blender](https://www.blender.org/) - Free 3D Creation
-- [Inkscape](https://inkscape.org/en/) - Draw Freely
-- [Teamviewer](https://www.teamviewer.com/en/) - Remote Desktop
-- [Dropbox](https://www.dropbox.com/) - Storage Online
-- [Skype](https://www.skype.com/en/) - Communication Calls And Chat
-- [Spectacle](https://www.spectacleapp.com/) - Move And Resize Windows
-- [Telegram](https://telegram.org) - Cloud based instant message service
-
 ## ZSH and Oh My ZSH
 
 Make `zsh` default shell
@@ -66,12 +39,41 @@ $ git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-
 $ brew install zsh-syntax-highlighting
 ```
 
-## Fish
+## Homebrew
 
-Make `fish` default shell
+Install Homebrew and Brewfile
 
 ```shell
-chsh -s /bin/fish
+$ chmod +x brew.sh
+$ ./brew.sh
+```
+
+### Brewfile
+
+All the applications I use:
+
+- [Google Chome](https://www.google.com/chrome/) - Chrome Web Browser
+- [Firefox](https://www.mozilla.org/en-US/firefox/new/) - Free Web Browser
+- [Asciinema](https://asciinema.org/) - Record And Share Terminal
+- [Alacritty](https://github.com/jwilm/alacritty) - macOS Terminal Replacement
+- [Neovim](https://github.com/neovim/neovim) - Powerful Editor
+- [Visual Studio Code](https://code.visualstudio.com/) - Code Editor
+- [Sequel Pro](https://www.sequelpro.com/) - Database Management For MySQL
+- [Blender](https://www.blender.org/) - Free 3D Creation
+- [Dropbox](https://www.dropbox.com/) - Storage Online
+- [Skype](https://www.skype.com/en/) - Communication Calls And Chat
+- [Spectacle](https://www.spectacleapp.com/) - Move And Resize Windows
+
+## Alacritty
+
+Install Alacritty
+
+```shell
+$ mkdir ~/.config
+$ cd ~/.config 
+$ mkdir -p alacritty 
+$ cd alacritty 
+$ touch alacritty.yml
 ```
 
 ## Neovim
@@ -80,4 +82,12 @@ Install the Neovim Python module
 
 ```shell
 $ pip3 install --user neovim
+$ mkdir ~/.config
+$ cd ~/.config 
+$ mkdir -p nvim 
+$ cd nvim
+$ touch init.vim
+$ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+$ mkdir -p ~/.config/nvim/colors
+$ mv ~/.config/nvim/plugged/gruvbox/colors/gruvbox.vim ~/.config/nvim/colors/gruvbox.vim
 ```
