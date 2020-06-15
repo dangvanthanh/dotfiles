@@ -53,7 +53,7 @@ DEFAULT_USER=$USER
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-completions z)
+plugins=(git zsh-completions zsh-syntax-highlighting z)
 
 source $ZSH/oh-my-zsh.sh
 # User configuration
@@ -92,3 +92,4 @@ fi
 . /usr/local/etc/profile.d/z.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [[ -f ~/.aliases ]] && source ~/.aliases
+source /Users/dangvanthanh/Code/dotfiles/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

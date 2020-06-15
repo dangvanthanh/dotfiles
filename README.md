@@ -36,7 +36,9 @@ Then install Oh My ZSH
 ```shell
 $ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 $ git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
-$ brew install zsh-syntax-highlighting
+$ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+$ echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
+$ source ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ```
 
 ## Homebrew
