@@ -34,7 +34,7 @@ cask 'dropbox'
 cask 'skype'
 cask 'spectacle'
 cask 'figma'
-cask 'elmedia-player'
+cask 'vlc'
 
 # Others
 tap 'homebrew/cask-fonts'
