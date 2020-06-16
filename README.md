@@ -36,10 +36,9 @@ Then install Oh My ZSH
 ```shell
 $ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 $ git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
-$ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
-$ echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
-$ source ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-```
+$ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+$ echo "source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
+$ source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 ## Homebrew
 
@@ -66,29 +65,40 @@ All the applications I use:
 - [Skype](https://www.skype.com/en/) - Communication Calls And Chat
 - [Spectacle](https://www.spectacleapp.com/) - Move And Resize Windows
 
-## Alacritty
+## Alacritty and Neovim
 
-Install Alacritty
+Create `~/.config` folder for Alacritty and Neovim
 
-```shell
+```
 $ mkdir ~/.config
 $ cd ~/.config 
-$ mkdir -p alacritty 
-$ cd alacritty 
-$ touch alacritty.yml
 ```
 
-## Neovim
+### Alacritty
+
+Create configuration for Alacritty
+
+```shell
+$ mkdir -p ~/.config/alacritty && cd ~/.config/alacritty && touch alacritty.yml
+```
+
+### Neovim
 
 Install the Neovim Python module
 
 ```shell
 $ pip3 install --user neovim
-$ mkdir ~/.config
-$ cd ~/.config 
-$ mkdir -p nvim 
-$ cd nvim
-$ touch init.vim
+```
+
+Create configuration for Neovim
+
+```shell
+$ mkdir -p ~/.config/nvim && cd ~/.config/nvim && touch init.vim
+```
+
+Set color scheme for Nevim
+
+```shell
 $ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 $ mkdir -p ~/.config/nvim/colors
 $ mv ~/.config/nvim/plugged/gruvbox/colors/gruvbox.vim ~/.config/nvim/colors/gruvbox.vim

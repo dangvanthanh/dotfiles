@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
-export TERM=screen-256color
+# export TERM=screen-256color
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -92,4 +92,3 @@ fi
 . /usr/local/etc/profile.d/z.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [[ -f ~/.aliases ]] && source ~/.aliases
-source /Users/dangvanthanh/Code/dotfiles/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
