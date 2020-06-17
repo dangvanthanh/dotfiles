@@ -27,6 +27,7 @@ cask 'visual-studio-code'
 cask 'sequel-pro'
 
 cask 'blender'
+cask 'inkscape'
 
 cask 'sourcetree'
 cask 'teamviewer'
