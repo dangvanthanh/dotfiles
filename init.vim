@@ -101,7 +101,7 @@ let g:python_host_prog = '/usr/local/bin/python'
 let g:python3_host_prog = '/usr/local/bin/python3'
 
 " Nerdtree
-let g:NERDTreeIgnore = ['.DS_Store', '.cache$', 'node_modules$', '.git$', '\~$']
+let g:NERDTreeIgnore = ['.DS_Store', '.cache$', 'node_modules$', '.git$', 'debug$', '\~$']
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeStatusline = ''
