@@ -257,7 +257,7 @@ nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 " Fzf
-let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --follow --glob "!{node_modules/*,.git/*}"'
+let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --follow --glob "!{node_modules/*,debug/*,.git/*}"'
 nnoremap <C-b> :Buffers<CR>
 nnoremap <leader><leader> :Commands<CR>
 nnoremap <C-p> :Files<CR>
