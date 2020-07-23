@@ -28,6 +28,7 @@ cask 'sequel-pro'
 
 cask 'blender'
 cask 'inkscape'
+cask 'rstudio'
 
 cask 'sourcetree'
 cask 'teamviewer'
