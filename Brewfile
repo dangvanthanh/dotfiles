@@ -14,6 +14,8 @@ brew 'tree'
 brew 'ripgrep'
 brew 'z'
 brew 'deno'
+brew 'pandoc'
+brew 'pandoc-citeproc'
 
 # Apps
 tap 'homebrew/cask'
@@ -25,6 +27,7 @@ cask 'brave-browser'
 cask 'alacritty'
 cask 'visual-studio-code'
 cask 'sequel-pro'
+cask 'robo-3t'
 
 cask 'blender'
 cask 'inkscape'
@@ -36,7 +39,6 @@ cask 'dropbox'
 cask 'skype'
 cask 'spectacle'
 cask 'figma'
-cask 'vlc'
 
 # Others
 tap 'homebrew/cask-fonts'
