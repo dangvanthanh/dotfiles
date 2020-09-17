@@ -16,6 +16,7 @@ brew 'z'
 brew 'deno'
 brew 'pandoc'
 brew 'pandoc-citeproc'
+brew 'gh'
 
 # Apps
 tap 'homebrew/cask'

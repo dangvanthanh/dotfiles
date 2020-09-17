@@ -15,7 +15,7 @@ syntax on
 set termguicolors
 colorscheme gruvbox
 set background=dark
-set guifont=Fira\ Code:h16
+set guifont=Iosevka\ Slab:h16
 set laststatus=2
 
 set clipboard^=unnamed,unnamedplus
