@@ -7,7 +7,7 @@ alias ....='cd ../../..'
 alias vim='nvim'
 
 # Git
-alias ga='git add'
+alias ga='git add .'
 alias gp='git push'
 alias gpm='git push origin master'
 alias gs='git status'
