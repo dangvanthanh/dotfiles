@@ -25,6 +25,7 @@ alias killt='tmux kill-server'
 alias cls='clear'
 alias dotfiles='cd ~/Code/dotfiles/'
 alias dev='cd ~/Code/'
+alias codyschool="cd ~/CodySchool"
 
 # Fzf
 alias preview='fzf --preview "cat {}"'
