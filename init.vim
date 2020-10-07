@@ -109,7 +109,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 map <F2> :NERDTreeToggle<CR>
 
 " Elm
-let g:polyglot_disabled = ['elm']
+"let g:polyglot_disabled = ['elm']
 let g:elm_setup_keybindings = 0
 let g:elm_detailed_complete = 1
 let g:elm_format_autosave = 1
