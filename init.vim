@@ -125,6 +125,7 @@ let g:svelte_indent_style = 0
 autocmd BufWritePre *.jsx,*.js,*.ts,*.json,*.css,*.scss,*.less,*.graphql,*.vue Prettier
 let g:prettier#autoformat = 0
 let g:prettier#config#single_quote = 'true'
+let g:prettier#config#trailing_comma = 'none'
 
 " Neoformat
 autocmd FileType javascript setlocal formatprg=prettier\ --stdin\ --parser\ flow\ --single-quote\ --trailing-comma\ es5
