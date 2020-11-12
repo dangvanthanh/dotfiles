@@ -29,12 +29,5 @@ alias dev='cd ~/Code/'
 # Fzf
 alias preview='fzf --preview "cat {}"'
 
-# Prettier and Husky
-alias lintstaged='npm install prettier --save-dev --save-exact && npm install lint-staged husky --save-dev'
-
-# Npm
-alias npm-check='npx npm-check -u'
-alias preinstall-postcss='npm i autoprefixer css-mqpacker cssnano npm-run-all postcss-cli postcss-each postcss-import postcss-nested postcss-preset-env tailwindcss --save-dev'
-
 # Brew
 alias bu='brew update && brew upgrade && brew cleanup'
