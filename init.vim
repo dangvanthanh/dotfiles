@@ -121,7 +121,8 @@ let g:vue_disable_pre_processors = 1
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql PrettierAsync
 let g:prettier#autoformat = 1
 let g:prettier#exec_cmd_async = 1
-let g:prettier#config#parser = 'babylon'
+let g:prettier#config#single_quote = 'true'
+let g:prettier#config#trailing_comma = 'all'
 
 " Ale
 let g:ale_fixers = {
