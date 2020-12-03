@@ -25,9 +25,13 @@ alias killt='tmux kill-server'
 alias cls='clear'
 alias dotfiles='cd ~/Code/dotfiles/'
 alias dev='cd ~/Code/'
+alias dev-node-modules="cd ~/Code/ && find . -name "node_modules" -type d -prune -print | xargs du -chs"
+alias dev-cleanup="cd ~/Code/ && find . -name 'node_modules' -type d -prune -print -exec rm -rf '{}' \;"
 
 # Fzf
 alias preview='fzf --preview "cat {}"'
 
 # Brew
 alias bu='brew update && brew upgrade && brew cleanup'
+
+# Others
