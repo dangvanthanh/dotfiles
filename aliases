@@ -9,7 +9,6 @@ alias vim='nvim'
 # Git
 alias ga='git add .'
 alias gp='git push'
-alias gpm='git push origin master'
 alias gs='git status'
 alias gcm='git commit -m'
 alias gca='git commit -am'
