@@ -17,7 +17,6 @@ brew 'deno'
 brew 'pandoc'
 brew 'pandoc-citeproc'
 brew 'gcc'
-brew 'commander-one'
 
 # Apps
 tap 'homebrew/cask'
