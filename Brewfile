@@ -16,6 +16,7 @@ brew 'z'
 brew 'deno'
 brew 'gcc'
 brew 'kap'
+brew 'karabiner-elements'
 
 # Apps
 tap 'homebrew/cask'
