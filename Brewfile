@@ -17,6 +17,8 @@ brew 'deno'
 brew 'gcc'
 brew 'kap'
 brew 'karabiner-elements'
+brew 'dbngin'
+brew 'tableplus'
 
 # Apps
 tap 'homebrew/cask'
