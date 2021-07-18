@@ -15,10 +15,6 @@ brew 'ripgrep'
 brew 'z'
 brew 'deno'
 brew 'gcc'
-brew 'kap'
-brew 'karabiner-elements'
-brew 'dbngin'
-brew 'tableplus'
 
 # Apps
 tap 'homebrew/cask'
@@ -29,19 +25,20 @@ cask 'brave-browser'
 
 cask 'alacritty'
 cask 'visual-studio-code'
-cask 'sequel-pro'
 cask 'robo-3t'
 cask 'sourcetree'
+cask 'dbngin'
+cask 'tableplus'
 
 cask 'blender'
 cask 'inkscape'
 cask 'figma'
 
-cask 'teamviewer'
 cask 'dropbox'
 cask 'skype'
 
 cask 'spectacle'
+cask 'karabiner-elements'
 
 # Others
 tap 'homebrew/cask-fonts'
