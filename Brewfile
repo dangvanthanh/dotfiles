@@ -19,9 +19,8 @@ brew 'gcc'
 # Apps
 tap 'homebrew/cask'
 
-cask 'google-chrome'
 cask 'firefox'
-cask 'brave-browser'
+cask 'google-chrome'
 
 cask 'alacritty'
 cask 'visual-studio-code'
