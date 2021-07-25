@@ -21,6 +21,7 @@ tap 'homebrew/cask'
 
 cask 'firefox'
 cask 'google-chrome'
+cask 'tor-browser'
 
 cask 'alacritty'
 cask 'visual-studio-code'
