@@ -34,3 +34,4 @@ alias preview='fzf --preview "cat {}"'
 alias bu='brew update && brew upgrade && brew cleanup'
 
 # Others
+alias code-plugins="code --list-extensions | xargs -L 1 echo code --install-extension"

@@ -1,0 +1,17 @@
+code --install-extension christian-kohler.path-intellisense
+code --install-extension CoenraadS.bracket-pair-colorizer-2
+code --install-extension csstools.postcss
+code --install-extension dbaeumer.vscode-eslint
+code --install-extension EditorConfig.EditorConfig
+code --install-extension esbenp.prettier-vscode
+code --install-extension IronGeek.vscode-env
+code --install-extension jdinhlife.gruvbox
+code --install-extension octref.vetur
+code --install-extension okitavera.vscode-nunjucks-formatter
+code --install-extension ritwickdey.LiveServer
+code --install-extension ronnidc.nunjucks
+code --install-extension silvenon.mdx
+code --install-extension svelte.svelte-vscode
+code --install-extension vscode-icons-team.vscode-icons
+code --install-extension wix.vscode-import-cost
+code --install-extension znck.vue-language-features
