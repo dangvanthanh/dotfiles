@@ -37,7 +37,7 @@ cask 'figma'
 cask 'dropbox'
 cask 'skype'
 
-cask 'spectacle'
+cask 'rectangle'
 cask 'karabiner-elements'
 
 # Others
