@@ -1,5 +1,4 @@
 # Dang Thanh’s dotfiles
-
 ![](screenshot.png)
 
 ## Getting Started
@@ -63,7 +62,7 @@ All the applications I use:
 - [Blender](https://www.blender.org/) - Free 3D Creation
 - [Dropbox](https://www.dropbox.com/) - Storage Online
 - [Skype](https://www.skype.com/en/) - Communication Calls And Chat
-- [Rectangle](hhttps://rectangleapp.com/) - Move And Resize Windows
+- [Rectangle](https://rectangleapp.com/) - Move And Resize Windows
 
 ## Alacritty and Neovim
 
