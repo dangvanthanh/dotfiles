@@ -1,4 +1,5 @@
 # Dang Thanh’s dotfiles
+
 ![](screenshot.png)
 
 ## Getting Started
