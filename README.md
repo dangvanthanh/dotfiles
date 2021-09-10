@@ -31,14 +31,12 @@ $ which zsh
 $ chsh -s /bin/zsh
 ```
 
-Then install Oh My ZSH
+Install Oh My ZSH
 
 ```shell
-$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-$ git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
-$ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-$ echo "source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
-$ source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+$ cmod +x zsh.sh
+$ ./zsh.sh
+```
 
 ## Homebrew
 
@@ -59,7 +57,7 @@ All the applications I use:
 - [Alacritty](https://github.com/jwilm/alacritty) - macOS Terminal Replacement
 - [Neovim](https://github.com/neovim/neovim) - Powerful Editor
 - [Visual Studio Code](https://code.visualstudio.com/) - Code Editor
-- [Sequel Pro](https://www.sequelpro.com/) - Database Management For MySQL
+- [Table Plus](https://tableplus.com/) - Database Management Easy 
 - [Blender](https://www.blender.org/) - Free 3D Creation
 - [Dropbox](https://www.dropbox.com/) - Storage Online
 - [Skype](https://www.skype.com/en/) - Communication Calls And Chat
