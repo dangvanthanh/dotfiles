@@ -40,7 +40,11 @@ cask 'skype'
 cask 'rectangle'
 cask 'karabiner-elements'
 
+cask 'notion'
+cask 'obsidian'
+
 # Others
 tap 'homebrew/cask-fonts'
+
 cask 'font-fira-code'
 cask 'font-iosevka'
