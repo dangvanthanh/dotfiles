@@ -15,20 +15,18 @@ brew 'tree'
 brew 'ripgrep'
 brew 'z'
 brew 'gcc'
+brew 'fd'
+brew 'exa'
+brew 'lazygit'
 
 # Apps
 tap 'homebrew/cask'
 
 cask 'firefox'
 cask 'google-chrome'
-cask 'tor-browser'
 
 cask 'alacritty'
 cask 'visual-studio-code'
-cask 'robo-3t'
-cask 'sourcetree'
-cask 'dbngin'
-cask 'tableplus'
 
 cask 'blender'
 cask 'inkscape'
@@ -40,11 +38,9 @@ cask 'skype'
 cask 'rectangle'
 cask 'karabiner-elements'
 
-cask 'notion'
-cask 'obsidian'
-
 # Others
 tap 'homebrew/cask-fonts'
 
 cask 'font-fira-code'
 cask 'font-iosevka'
+cask 'font-hack-nerd-font'
