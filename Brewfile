@@ -18,6 +18,7 @@ brew 'gcc'
 brew 'fd'
 brew 'exa'
 brew 'lazygit'
+brew 'asdf'
 
 # Apps
 tap 'homebrew/cask'
