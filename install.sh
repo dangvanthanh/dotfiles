@@ -2,13 +2,8 @@
 
 dotfiles="$HOME/Code/dotfiles"
 
-# Alacritty
-ln -svf $dotfiles/.config/alacritty/alacritty.yml $HOME/.config/alacritty/alacritty.yml
-
-# Vim
-echo "Setting up nvim..."
-ln -svf $dotfiles/.config/nvim/init.vim $HOME/.config/nvim/init.vim 
-
-#Plug 'nvim-telescope/telescope-file-browser.nvim' Tmux
-echo "Setting up tmux..."
+echo "Setting up Neovim + Tmux + Fish + Alacritty"
+ln -svf $dotfiles/config/fish/config.fish $HOME/.config/fish/config.fish
+ln -svf $dotfiles/config/nvim/init.vim $HOME/.config/nvim/init.vim
+ln -svf $dotfiles/config/alacritty/alacritty.yml $HOME/.config/alacritty/alacritty.yml
 ln -svf $dotfiles/tmux.conf $HOME/.tmux.conf
