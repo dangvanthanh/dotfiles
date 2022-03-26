@@ -3,6 +3,7 @@ cask_args appdir: '/Applications'
 # Development 
 brew 'wget'
 brew 'git'
+brew 'git-lfs'
 brew 'node'
 brew 'python3'
 brew 'elixir'
