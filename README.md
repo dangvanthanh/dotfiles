@@ -22,20 +22,13 @@ $ git config --global user.name "Your Name"
 $ git config --global user.email "youremail@email.com"
 ```
 
-## ZSH and Oh My ZSH
+## Fish 
 
-Make `zsh` default shell
-
-```shell
-$ which zsh
-$ chsh -s /bin/zsh
-```
-
-Install Oh My ZSH
+Make `fish` default shell
 
 ```shell
-$ cmod +x zsh.sh
-$ ./zsh.sh
+$ which which 
+$ chsh -s /opt/homebrew/bin/fish
 ```
 
 ## Homebrew
@@ -51,17 +44,30 @@ $ ./brew.sh
 
 All the applications I use:
 
-- [Google Chome](https://www.google.com/chrome/) - Chrome Web Browser
-- [Firefox](https://www.mozilla.org/en-US/firefox/new/) - Free Web Browser
-- [Asciinema](https://asciinema.org/) - Record And Share Terminal
+#### Web Developer
 - [Alacritty](https://github.com/jwilm/alacritty) - macOS Terminal Replacement
 - [Neovim](https://github.com/neovim/neovim) - Powerful Editor
 - [Visual Studio Code](https://code.visualstudio.com/) - Code Editor
 - [Table Plus](https://tableplus.com/) - Database Management Easy 
+- [Google Chome](https://www.google.com/chrome/) - Chrome Web Browser
+- [Firefox](https://www.mozilla.org/en-US/firefox/new/) - Free Web Browser
+
+#### Design
+
 - [Blender](https://www.blender.org/) - Free 3D Creation
-- [Dropbox](https://www.dropbox.com/) - Storage Online
+- [Figma](https://www.figma.com/) - The Collaborative Interface Design Tool
+
+#### Communication
+
 - [Skype](https://www.skype.com/en/) - Communication Calls And Chat
+- [Slack](https://slack.com/) - Platform For Team and Work
+- [Dropbox](https://www.dropbox.com/) - Storage Online
+
+#### Others
+
+- [Asciinema](https://asciinema.org/) - Record And Share Terminal
 - [Rectangle](https://rectangleapp.com/) - Move And Resize Windows
+- [Topnotch](https://topnotch.app/) - Makes the notch disappear like a ninja
 
 ## Alacritty and Neovim
 
@@ -92,12 +98,4 @@ Create configuration for Neovim
 
 ```shell
 $ mkdir -p ~/.config/nvim && cd ~/.config/nvim && touch init.vim
-```
-
-Set color scheme for Nevim
-
-```shell
-$ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-$ mkdir -p ~/.config/nvim/colors
-$ mv ~/.config/nvim/plugged/gruvbox/colors/gruvbox.vim ~/.config/nvim/colors/gruvbox.vim
 ```
