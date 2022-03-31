@@ -31,6 +31,7 @@ cask 'google-chrome'
 
 cask 'alacritty'
 cask 'visual-studio-code'
+cask 'sourcetree'
 
 cask 'blender'
 cask 'inkscape'
