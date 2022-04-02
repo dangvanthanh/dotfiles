@@ -54,7 +54,8 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'nvim-telescope/telescope-file-browser.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'kyazdani42/nvim-tree.lua'
 
 " Frontend
 Plug 'othree/html5.vim'
@@ -97,15 +98,6 @@ let mapleader = " "
 " Python {{{
 let g:python_host_prog = '/usr/local/bin/python'
 let g:python3_host_prog = '/usr/local/bin/python3'
-" }}}
-
-" Nerdtree {{{
-let g:NERDTreeIgnore = ['.DS_Store', '.cache$', 'node_modules$', '.git$', 'debug$', '\~$']
-let g:NERDTreeShowHidden = 1
-let g:NERDTreeMinimalUI = 1
-let g:NERDTreeStatusline = ''
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-map <F2> :NERDTreeToggle<CR>
 " }}}
 
 " Emmet {{{
@@ -296,3 +288,24 @@ nnoremap <M-Right> :vertical resize -5<cr>
 nnoremap <M-Up> :resize +5<cr>
 nnoremap <M-Down> :resize -5<cr>
 nnoremap <M-Left> :vertical resize +5<cr>
+
+" Nvim Tree {{{
+let g:nvim_tree_ignore = [ '.git', 'node_modules', '.cache' ]
+let g:nvim_tree_gitignore = 1
+let g:nvim_tree_quit_on_open = 1
+let g:nvim_tree_indent_markers = 1
+let g:nvim_tree_git_hl = 1
+let g:nvim_tree_highlight_opened_files = 1
+let g:nvim_tree_group_empty = 1
+
+lua << EOF
+require'nvim-tree'.setup {
+  auto_close = true,
+  ignore_ft_on_setup  = { 'startify', 'dashboard' },
+}
+EOF
+
+nnoremap <C-n> :NvimTreeToggle<CR>
+nnoremap <leader>r :NvimTreeRefresh<CR>
+nnoremap <leader>n :NvimTreeFindFile<CR>
+" }}}

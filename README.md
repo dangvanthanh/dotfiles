@@ -51,6 +51,7 @@ All the applications I use:
 - [Table Plus](https://tableplus.com/) - Database Management Easy 
 - [Google Chome](https://www.google.com/chrome/) - Chrome Web Browser
 - [Firefox](https://www.mozilla.org/en-US/firefox/new/) - Free Web Browser
+- [SourceTree](https://www.sourcetreeapp.com/) - Simplicity and power in Git GUI
 
 #### Design
 
