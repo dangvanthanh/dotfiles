@@ -54,7 +54,6 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'nvim-telescope/telescope-file-browser.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
 
 " Frontend
@@ -308,4 +307,20 @@ EOF
 nnoremap <C-n> :NvimTreeToggle<CR>
 nnoremap <leader>r :NvimTreeRefresh<CR>
 nnoremap <leader>n :NvimTreeFindFile<CR>
+" }}}
+
+" Lualine {{{
+lua << EOF
+require('plenary.reload').reload_module('lualine', true)
+require('lualine').setup({
+  options = {
+    disabled_types = { 'NvimTree' }
+  },
+  sections = {
+    lualine_x = {},
+    -- lualine_y = {},
+    -- lualine_z = {},
+  }
+})
+EOF
 " }}}
