@@ -22,6 +22,7 @@ brew 'lazygit'
 brew 'asdf'
 brew 'gpg'
 brew 'gawk'
+brew 'flyctl'
 
 # Apps
 tap 'homebrew/cask'
