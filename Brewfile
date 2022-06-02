@@ -44,7 +44,6 @@ cask 'slack'
 
 cask 'rectangle'
 cask 'karabiner-elements'
-cask 'topnotch'
 
 # Others
 tap 'homebrew/cask-fonts'
