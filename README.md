@@ -100,3 +100,11 @@ Create configuration for Neovim
 ```shell
 $ mkdir -p ~/.config/nvim && cd ~/.config/nvim && touch init.vim
 ```
+
+## Asdf
+
+Update `asdf/shims/node no such file or directory`
+
+```shell
+$ vim ~/.asdf/shims
+```
