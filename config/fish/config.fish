@@ -13,3 +13,5 @@ fish_add_path "$HOME/.bun/bin"
 
 # The next line updates PATH for Netlify's Git Credential Helper.
 test -f "$HOME/Library/Preferences/netlify/helper/path.fish.inc" && source "$HOME/Library/Preferences/netlify/helper/path.fish.inc"
+
+starship init fish | source

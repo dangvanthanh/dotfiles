@@ -24,6 +24,7 @@ brew 'gpg'
 brew 'gawk'
 brew 'vips'
 brew 'flyctl'
+brew 'starship'
 
 # Apps
 tap 'homebrew/cask'
