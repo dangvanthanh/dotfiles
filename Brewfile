@@ -25,6 +25,7 @@ brew 'gawk'
 brew 'vips'
 brew 'flyctl'
 brew 'starship'
+brew 'nushell'
 
 # Apps
 tap 'homebrew/cask'
