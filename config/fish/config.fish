@@ -21,6 +21,7 @@ abbr -a t "tmux"
 abbr -a t-kill "tmux kill-server"
 abbr -a git-datagap "git config --global user.name 'Dang Van Thanh' && git config --global user.email 'thanh.dang@datagap.io'"
 abbr -a git-me "git config --global user.name 'Dang Van Thanh' && git config --global user.email 'dangvanthanh@dangthanh.org'"
+abbr -a cls-history "builtin history clear"
 
 # Starship
 starship init fish | source
