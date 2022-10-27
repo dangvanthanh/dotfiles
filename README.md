@@ -66,9 +66,10 @@ All the applications I use:
 
 #### Others
 
+- [Raycast](https://www.raycast.com/) - Blazingly Fast, Totally Extendable Launcher
 - [Asciinema](https://asciinema.org/) - Record And Share Terminal
 - [Rectangle](https://rectangleapp.com/) - Move And Resize Windows
-- [Topnotch](https://topnotch.app/) - Makes the notch disappear like a ninja
+- [Dozer](https://github.com/Mortennn/Dozer) - Hide menu bar icons on macOS
 
 ## Alacritty and Neovim
 
