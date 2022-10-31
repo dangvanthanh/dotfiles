@@ -88,6 +88,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'mattn/emmet-vim'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'norcalli/nvim-colorizer.lua', { 'branch': 'color-editor' }
+Plug 'preservim/nerdtree'
 
 call plug#end()
 
@@ -342,4 +343,11 @@ prettier.setup({
   },
 })
 EOF
+" }}}
+
+" Nerdtree {{{ 
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
 " }}}
