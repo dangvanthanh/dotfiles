@@ -321,30 +321,6 @@ null_ls.setup({
 EOF
 " }}}
 
-" Prettier {{{
-lua << EOF
-local prettier = require("prettier")
-
-prettier.setup({
-  bin = 'prettier',
-  filetypes = {
-    "css",
-    "graphql",
-    "html",
-    "javascript",
-    "javascriptreact",
-    "json",
-    "less",
-    "markdown",
-    "scss",
-    "typescript",
-    "typescriptreact",
-    "yaml",
-  },
-})
-EOF
-" }}}
-
 " Nerdtree {{{ 
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
