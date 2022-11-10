@@ -233,6 +233,8 @@ nnoremap <silent> <c-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
 nnoremap <silent> gr    <cmd>lua vim.lsp.buf.references()<CR>
 nnoremap <silent> gR    <cmd>lua vim.lsp.buf.rename()<CR>
 nnoremap <silent><leader>fo <cmd>lua vim.lsp.buf.formatting()<CR>
+let g:prettier#autoformat = 1
+let g:prettier#autoformat_require_pragma = 0
 
 " autocmd BufWritePre *.js lua vim.lsp.buf.formatting()
 " autocmd BufWritePre *.ts lua vim.lsp.buf.formatting()
