@@ -11,4 +11,5 @@ packer.startup(function (use)
   use {
     'ellisonleao/gruvbox.nvim'
   }
+  use 'hoob3rt/lualine.nvim'
 end)
