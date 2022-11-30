@@ -11,9 +11,6 @@ export PATH="$HOME/.cargo/bin:$PATH"
 set -Ux BUN_INSTALL "$HOME/.bun"
 fish_add_path "$HOME/.bun/bin"
 
-# The next line updates PATH for Netlify's Git Credential Helper.
-test -f "$HOME/Library/Preferences/netlify/helper/path.fish.inc" && source "$HOME/Library/Preferences/netlify/helper/path.fish.inc"
-
 # Alias
 abbr -a cls "clear"
 abbr -a ls "exa --long --header --git"
