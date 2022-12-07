@@ -31,6 +31,7 @@ tap 'homebrew/cask'
 
 cask 'firefox'
 cask 'google-chrome'
+cask 'orion'
 
 cask 'alacritty'
 cask 'visual-studio-code'
