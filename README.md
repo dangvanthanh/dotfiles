@@ -6,7 +6,8 @@
 
 You need install [Git](https://git-scm.com/). Clone or [download](https://github.com/dangvanthanh/dotfiles/archive/master.zip) this repository
 
-```shell $ git clone https://github.com/dangvanthanh/dotfiles.git ``` 
+`shell $ git clone https://github.com/dangvanthanh/dotfiles.git `
+
 ### Usage
 
 - `$ cd dotfiles`
@@ -22,12 +23,12 @@ $ git config --global user.name "Your Name"
 $ git config --global user.email "youremail@email.com"
 ```
 
-## Fish 
+## Fish
 
 Make `fish` default shell
 
 ```shell
-$ which which 
+$ which which
 $ chsh -s /opt/homebrew/bin/fish
 ```
 
@@ -45,13 +46,18 @@ $ ./brew.sh
 All the applications I use:
 
 #### Web Developer
+
 - [Alacritty](https://github.com/jwilm/alacritty) - macOS Terminal Replacement
 - [Neovim](https://github.com/neovim/neovim) - Powerful Editor
 - [Visual Studio Code](https://code.visualstudio.com/) - Code Editor
-- [Table Plus](https://tableplus.com/) - Database Management Easy 
-- [Google Chome](https://www.google.com/chrome/) - Chrome Web Browser
-- [Firefox](https://www.mozilla.org/en-US/firefox/new/) - Free Web Browser
+- [Table Plus](https://tableplus.com/) - Database Management Easy
 - [SourceTree](https://www.sourcetreeapp.com/) - Simplicity and power in Git GUI
+
+#### Browsers
+
+- [Orion](https://browser.kagi.com) - Lightweight, Very Fast and Zero Telemetry
+- [Firefox](https://www.mozilla.org/en-US/firefox/new/) - Fast, Private and Free
+- [Google Chome](https://www.google.com/chrome/) - Download the Fast, Security Browser
 
 #### Design
 
@@ -77,7 +83,7 @@ Create `~/.config` folder for Alacritty and Neovim
 
 ```
 $ mkdir ~/.config
-$ cd ~/.config 
+$ cd ~/.config
 ```
 
 ### Alacritty
