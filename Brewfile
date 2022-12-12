@@ -25,6 +25,8 @@ brew 'gawk'
 brew 'vips'
 brew 'flyctl'
 brew 'starship'
+brew 'lua-language-server'
+brew 'tree-sitter'
 
 # Apps
 tap 'homebrew/cask'

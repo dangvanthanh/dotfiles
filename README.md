@@ -108,6 +108,14 @@ Create configuration for Neovim
 $ mkdir -p ~/.config/nvim && cd ~/.config/nvim && touch init.vim
 ```
 
+#### tsserver
+
+`typescript-language-server` depends on `typescript`. Both packages can be installed via `npm`:
+
+```shell
+npm install -g typescript typescript-language-server
+```
+
 ## Asdf
 
 Update `asdf/shims/node no such file or directory`
