@@ -12,6 +12,7 @@ packer.startup(function(use)
     'ellisonleao/gruvbox.nvim'
   }
   use 'L3MON4D3/LuaSnip'
+  use 'kyazdani42/nvim-web-devicons'
   use 'hoob3rt/lualine.nvim'
   use 'onsails/lspkind-nvim'
   use 'hrsh7th/cmp-buffer'
@@ -22,4 +23,9 @@ packer.startup(function(use)
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
   }
+  use 'windwp/nvim-autopairs'
+  use 'windwp/nvim-ts-autotag'
+  use 'nvim-lua/plenary.nvim'
+  use 'nvim-telescope/telescope.nvim'
+  use 'nvim-telescope/telescope-file-browser.nvim'
 end)
