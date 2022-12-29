@@ -19,6 +19,7 @@ ln -svf $nvim/after/plugin/gruvbox.rc.lua $HOME/.config/nvim/after/plugin/gruvbo
 ln -svf $nvim/after/plugin/lspconfig.rc.lua $HOME/.config/nvim/after/plugin/lspconfig.rc.lua
 ln -svf $nvim/after/plugin/lspkind.rc.lua $HOME/.config/nvim/after/plugin/lspkind.rc.lua
 ln -svf $nvim/after/plugin/lualine.rc.lua $HOME/.config/nvim/after/plugin/lualine.rc.lua
+ln -svf $nvim/after/plugin/prettier.rc.lua $HOME/.config/nvim/after/plugin/prettier.rc.lua
 ln -svf $nvim/after/plugin/telescope.rc.lua $HOME/.config/nvim/after/plugin/telescope.rc.lua
 ln -svf $nvim/after/plugin/treesitter.rc.lua $HOME/.config/nvim/after/plugin/treesitter.rc.lua
 ln -svf $nvim/after/plugin/ts-autotag.rc.lua $HOME/.config/nvim/after/plugin/ts-autotag.rc.lua

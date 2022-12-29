@@ -121,5 +121,5 @@ npm install -g typescript typescript-language-server
 Update `asdf/shims/node no such file or directory`
 
 ```shell
-$ vim ~/.asdf/shims
+$ vim ~/.asdf/shims/node
 ```
