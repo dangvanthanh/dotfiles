@@ -15,10 +15,13 @@ ln -svf $nvim/lua/windows.lua $HOME/.config/nvim/lua/windows.lua
 ln -svf $nvim/lua/plugins.lua $HOME/.config/nvim/lua/plugins.lua
 ln -svf $nvim/after/plugin/autopairs.rc.lua $HOME/.config/nvim/after/plugin/autopairs.rc.lua
 ln -svf $nvim/after/plugin/cmp.rc.lua $HOME/.config/nvim/after/plugin/cmp.rc.lua
+ln -svf $nvim/after/plugin/gitsigns.rc.lua $HOME/.config/nvim/after/plugin/gitsigns.rc.lua
 ln -svf $nvim/after/plugin/gruvbox.rc.lua $HOME/.config/nvim/after/plugin/gruvbox.rc.lua
 ln -svf $nvim/after/plugin/lspconfig.rc.lua $HOME/.config/nvim/after/plugin/lspconfig.rc.lua
 ln -svf $nvim/after/plugin/lspkind.rc.lua $HOME/.config/nvim/after/plugin/lspkind.rc.lua
 ln -svf $nvim/after/plugin/lualine.rc.lua $HOME/.config/nvim/after/plugin/lualine.rc.lua
+ln -svf $nvim/after/plugin/null-ls.rc.lua $HOME/.config/nvim/after/plugin/null-ls.rc.lua
+ln -svf $nvim/after/plugin/nvim-tree.rc.lua $HOME/.config/nvim/after/plugin/nvim-tree.rc.lua
 ln -svf $nvim/after/plugin/prettier.rc.lua $HOME/.config/nvim/after/plugin/prettier.rc.lua
 ln -svf $nvim/after/plugin/telescope.rc.lua $HOME/.config/nvim/after/plugin/telescope.rc.lua
 ln -svf $nvim/after/plugin/treesitter.rc.lua $HOME/.config/nvim/after/plugin/treesitter.rc.lua
