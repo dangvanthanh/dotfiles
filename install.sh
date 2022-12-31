@@ -20,7 +20,6 @@ ln -svf $nvim/after/plugin/gruvbox.rc.lua $HOME/.config/nvim/after/plugin/gruvbo
 ln -svf $nvim/after/plugin/lspconfig.rc.lua $HOME/.config/nvim/after/plugin/lspconfig.rc.lua
 ln -svf $nvim/after/plugin/lspkind.rc.lua $HOME/.config/nvim/after/plugin/lspkind.rc.lua
 ln -svf $nvim/after/plugin/lualine.rc.lua $HOME/.config/nvim/after/plugin/lualine.rc.lua
-ln -svf $nvim/after/plugin/null-ls.rc.lua $HOME/.config/nvim/after/plugin/null-ls.rc.lua
 ln -svf $nvim/after/plugin/nvim-tree.rc.lua $HOME/.config/nvim/after/plugin/nvim-tree.rc.lua
 ln -svf $nvim/after/plugin/prettier.rc.lua $HOME/.config/nvim/after/plugin/prettier.rc.lua
 ln -svf $nvim/after/plugin/telescope.rc.lua $HOME/.config/nvim/after/plugin/telescope.rc.lua
