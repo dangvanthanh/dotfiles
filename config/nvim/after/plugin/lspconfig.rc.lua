@@ -32,3 +32,5 @@ nvim_lsp.sumneko_lua.setup({
     }
   }
 })
+
+nvim_lsp.astro.setup {}
