@@ -23,6 +23,7 @@ brew 'flyctl'
 brew 'starship'
 brew 'lua-language-server'
 brew 'tree-sitter'
+brew 'fig'
 
 # Apps
 tap 'homebrew/cask'
