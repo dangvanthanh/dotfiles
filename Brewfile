@@ -50,6 +50,7 @@ cask 'karabiner-elements'
 cask 'raycast'
 cask 'dozer'
 cask 'loqseq'
+cask 'powershell'
 
 # Others
 tap 'homebrew/cask-fonts'
