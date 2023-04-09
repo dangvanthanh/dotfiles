@@ -6,6 +6,7 @@ source /opt/homebrew/opt/asdf/libexec/asdf.fish
 
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/binaryen-version_112/bin:$PATH"
 
 # Bun
 set -Ux BUN_INSTALL "$HOME/.bun"
@@ -17,6 +18,7 @@ abbr -a ls "exa --long --header --git"
 abbr -a t "tmux"
 abbr -a t-kill "tmux kill-server"
 abbr -a cls-history "builtin history clear"
+abbr -a vim "nvim"
 
 # Starship
 starship init fish | source
