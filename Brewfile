@@ -31,6 +31,7 @@ tap 'homebrew/cask'
 cask 'firefox'
 cask 'google-chrome'
 cask 'orion'
+cask 'arc'
 
 cask 'alacritty'
 cask 'visual-studio-code'
@@ -49,7 +50,6 @@ cask 'rectangle'
 cask 'karabiner-elements'
 cask 'raycast'
 cask 'dozer'
-cask 'loqseq'
 cask 'powershell'
 
 # Others
