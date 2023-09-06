@@ -5,6 +5,7 @@ dotfiles="$HOME/Code/dotfiles"
 # Fish
 echo "Setting up Fish"
 ln -svf $dotfiles/config/fish/config.fish $HOME/.config/fish/config.fish
+ln -svf $dotfiles/config/fish/aliases.fish $HOME/.config/fish/aliases.fish
 
 # Neovim
 echo "Setting up Neovim"
