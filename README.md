@@ -123,3 +123,10 @@ Update `asdf/shims/node no such file or directory`
 ```shell
 $ vim ~/.asdf/shims/node
 ```
+
+Or reshim `asdf`
+
+```shell
+$ rm -rf ~/.asdf/shims/*
+$ asdf reshim
+```
