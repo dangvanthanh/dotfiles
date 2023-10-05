@@ -15,6 +15,9 @@ export PATH="$HOME/.cargo/bin:$PATH"
 set -Ux BUN_INSTALL "$HOME/.bun"
 fish_add_path "$HOME/.bun/bin"
 
+# Moon
+export PATH="$HOME/.moon/bin:$PATH"
+
 # Starship
 starship init fish | source
 

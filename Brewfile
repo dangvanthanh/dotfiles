@@ -30,7 +30,6 @@ tap 'homebrew/cask'
 
 cask 'firefox'
 cask 'google-chrome'
-cask 'orion'
 cask 'arc'
 
 cask 'alacritty'
