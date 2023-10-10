@@ -30,6 +30,7 @@ tap 'homebrew/cask'
 
 cask 'firefox'
 cask 'google-chrome'
+cask 'opera'
 cask 'arc'
 
 cask 'alacritty'
@@ -48,8 +49,8 @@ cask 'slack'
 cask 'rectangle'
 cask 'karabiner-elements'
 cask 'raycast'
-cask 'dozer'
 cask 'powershell'
+cask 'insomnia'
 
 # Others
 tap 'homebrew/cask-fonts'
