@@ -11,6 +11,9 @@ source /opt/homebrew/opt/asdf/libexec/asdf.fish
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
 
+# Python
+export PATH="$HOME/.asdf/installs/python/3.10.4/bin:$PATH"
+
 # Bun
 set -Ux BUN_INSTALL "$HOME/.bun"
 fish_add_path "$HOME/.bun/bin"

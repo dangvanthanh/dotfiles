@@ -6,7 +6,9 @@
 
 You need install [Git](https://git-scm.com/). Clone or [download](https://github.com/dangvanthanh/dotfiles/archive/master.zip) this repository
 
-`shell $ git clone https://github.com/dangvanthanh/dotfiles.git `
+```shell 
+$ git clone https://github.com/dangvanthanh/dotfiles.git
+```
 
 ### Usage
 
@@ -28,7 +30,7 @@ $ git config --global user.email "youremail@email.com"
 Make `fish` default shell
 
 ```shell
-$ which which
+$ which fish
 $ chsh -s /opt/homebrew/bin/fish
 ```
 
@@ -39,43 +41,8 @@ Install Homebrew and Brewfile
 ```shell
 $ chmod +x brew.sh
 $ ./brew.sh
+$ ./install.sh
 ```
-
-### Brewfile
-
-All the applications I use:
-
-#### Web Developer
-
-- [Alacritty](https://github.com/jwilm/alacritty) - macOS Terminal Replacement
-- [Neovim](https://github.com/neovim/neovim) - Powerful Editor
-- [Visual Studio Code](https://code.visualstudio.com/) - Code Editor
-- [Table Plus](https://tableplus.com/) - Database Management Easy
-- [SourceTree](https://www.sourcetreeapp.com/) - Simplicity and power in Git GUI
-
-#### Browsers
-
-- [Orion](https://browser.kagi.com) - Lightweight, Very Fast and Zero Telemetry
-- [Firefox](https://www.mozilla.org/en-US/firefox/new/) - Fast, Private and Free
-- [Google Chome](https://www.google.com/chrome/) - Download the Fast, Security Browser
-
-#### Design
-
-- [Blender](https://www.blender.org/) - Free 3D Creation
-- [Figma](https://www.figma.com/) - The Collaborative Interface Design Tool
-
-#### Communication
-
-- [Skype](https://www.skype.com/en/) - Communication Calls And Chat
-- [Slack](https://slack.com/) - Platform For Team and Work
-- [Dropbox](https://www.dropbox.com/) - Storage Online
-
-#### Others
-
-- [Raycast](https://www.raycast.com/) - Blazingly Fast, Totally Extendable Launcher
-- [Asciinema](https://asciinema.org/) - Record And Share Terminal
-- [Rectangle](https://rectangleapp.com/) - Move And Resize Windows
-- [Dozer](https://github.com/Mortennn/Dozer) - Hide menu bar icons on macOS
 
 ## Alacritty and Neovim
 
@@ -130,3 +97,46 @@ Or reshim `asdf`
 $ rm -rf ~/.asdf/shims/*
 $ asdf reshim
 ```
+
+## Brewfile
+
+All the applications I use:
+
+#### Web Developer
+
+- [Alacritty](https://github.com/jwilm/alacritty) - macOS Terminal Replacement
+- [Neovim](https://github.com/neovim/neovim) - Powerful Editor
+- [Visual Studio Code](https://code.visualstudio.com/) - Code Editor
+- [Beekeeper Studio](https://www.beekeeperstudio.io/) - The SQL Editor and Database Manager Of Your Dreams
+- [SourceTree](https://www.sourcetreeapp.com/) - Simplicity and Ppower in Git GUI
+- [Insomnia](https://insomnia.rest/) - The Easy Eay to Design, Debug, and Test APIs
+- [Fig](https://fig.io/) - The Next-Generation Command Line
+
+#### Browsers
+
+- [Arc](https://arc.net/) - A New Way of Using the Internet
+- [Firefox](https://www.mozilla.org/en-US/firefox/new/) - Fast, Private and Free
+- [Google Chome](https://www.google.com/chrome/) - Download the Fast, Security Browser
+- [Opera](https://www.opera.com/) - Faster, Safer and Smarter
+
+#### Design
+
+- [Blender](https://www.blender.org/) - Free 3D Creation
+- [Inkscape](https://inkscape.org/) - Draw Freely
+- [Figma](https://www.figma.com/) - The Collaborative Interface Design Tool
+
+#### Communication
+
+- [Discord](https://discord.com/) - Your Place to Talk and Hang Out
+- [Skype](https://www.skype.com/en/) - Communication Calls And Chat
+- [Slack](https://slack.com/) - Platform For Team and Work
+- [Dropbox](https://www.dropbox.com/) - Storage Online
+
+#### Others
+
+- [Raycast](https://www.raycast.com/) - Blazingly Fast, Totally Extendable Launcher
+- [Asciinema](https://asciinema.org/) - Record And Share Terminal
+- [Rectangle](https://rectangleapp.com/) - Move And Resize Windows
+- [BetterDisplay](https://github.com/waydabber/BetterDisplay) - Unlock Your Displays on Your Mac
+- [Bartender](https://www.macbartender.com/Bartender5/) - Take Control of Your Menu Bar
+- [NordVPN](https://nordvpn.com/) - Online VPN Service for Speed
