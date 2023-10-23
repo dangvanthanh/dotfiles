@@ -72,7 +72,13 @@ $ pip3 install --user neovim
 Create configuration for Neovim
 
 ```shell
-$ mkdir -p ~/.config/nvim && cd ~/.config/nvim && touch init.vim
+$ mkdir -p ~/.config/nvim && mkdir -p ~/.config/nvim/lua/plugins
+```
+
+Benmark nvim
+
+```shell
+$ hyperfine "nvim --headless +qa" --warmup 5
 ```
 
 #### tsserver

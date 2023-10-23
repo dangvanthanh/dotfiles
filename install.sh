@@ -20,19 +20,6 @@ files=(
     "lua/macos.lua"
     "lua/windows.lua"
     "lua/plugins.lua"
-    "after/plugin/autopairs.rc.lua"
-    "after/plugin/cmp.rc.lua"
-    "after/plugin/gitsigns.rc.lua"
-    "after/plugin/gruvbox.rc.lua"
-    "after/plugin/lspconfig.rc.lua"
-    "after/plugin/lspkind.rc.lua"
-    "after/plugin/lualine.rc.lua"
-    "after/plugin/nvim-tree.rc.lua"
-    "after/plugin/prettier.rc.lua"
-    "after/plugin/telescope.rc.lua"
-    "after/plugin/treesitter.rc.lua"
-    "after/plugin/ts-autotag.rc.lua"
-    "after/plugin/web-devicons.rc.lua"
 )
 
 for file in "${files[@]}"; do
