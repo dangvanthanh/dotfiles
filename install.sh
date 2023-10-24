@@ -14,12 +14,18 @@ nvimHome="$HOME/.config/nvim"
 
 files=(
     "init.lua"
-    "lua/base.lua"
-    "lua/highlights.lua"
-    "lua/maps.lua"
-    "lua/macos.lua"
-    "lua/windows.lua"
-    "lua/plugins.lua"
+    "lua/config/autocmds.lua"
+    "lua/config/keymaps.lua"
+    "lua/config/lazy.lua"
+    "lua/config/options.lua"
+    "lua/plugins/alpha.lua"
+    "lua/plugins/copilot.lua"
+    "lua/plugins/gruvbox.lua"
+    "lua/plugins/lsp.lua"
+    "lua/plugins/nvim-cmp.lua"
+    "lua/plugins/plugins.lua"
+    "lua/plugins/telescope.lua"
+    "lua/plugins/treesitter.lua"
 )
 
 for file in "${files[@]}"; do
