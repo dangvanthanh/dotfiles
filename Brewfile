@@ -60,5 +60,7 @@ cask 'nordvpn'
 tap 'homebrew/cask-fonts'
 
 cask 'font-fira-code'
+cask 'font-fira-code-nerd-font'
 cask 'font-iosevka'
+cask 'font-iosevka-nerd-font'
 cask 'font-hack-nerd-font'

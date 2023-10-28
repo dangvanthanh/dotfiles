@@ -75,20 +75,11 @@ Create configuration for Neovim
 $ mkdir -p ~/.config/nvim && mkdir -p ~/.config/nvim/lua && mkdir -p ~/.config/nvim/lua/config && mkdir -p ~/.config/nvim/lua/plugins
 ```
 
-Benmark nvim
+Benchmarking neovim
 
 ```shell
 $ hyperfine "nvim --headless +qa" --warmup 5
 ```
-
-#### tsserver
-
-`typescript-language-server` depends on `typescript`. Both packages can be installed via `npm`:
-
-```shell
-npm install -g typescript typescript-language-server
-```
-
 ## Asdf
 
 Update `asdf/shims/node no such file or directory`
@@ -102,6 +93,14 @@ Or reshim `asdf`
 ```shell
 $ rm -rf ~/.asdf/shims/*
 $ asdf reshim
+```
+
+## Visual Studio Code
+
+Show the extensions installed in Visual Studio Code
+
+```shell
+$ code --list-extensions | xargs -L 1 echo code --install-extension
 ```
 
 ## Brewfile
