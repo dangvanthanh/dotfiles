@@ -5,10 +5,16 @@ return {
   -- If you'd rather extend the default config, use the code below instead:
   {
     "nvim-treesitter/nvim-treesitter",
+    event = "BufRead",
+    build = ":TSUpdate",
     opts = function(_, opts)
       -- add tsx and treesitter
       vim.list_extend(opts.ensure_installed, {
+        "astro",
         "bash",
+        "css",
+        "dockerfile",
+        "fish",
         "help",
         "html",
         "javascript",
@@ -19,9 +25,12 @@ return {
         "python",
         "query",
         "regex",
+        "rust",
+        "scss",
         "tsx",
         "typescript",
         "vim",
+        "vue",
         "yaml",
       })
     end,
