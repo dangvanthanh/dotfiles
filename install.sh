@@ -24,6 +24,7 @@ files=(
     "lua/plugins/gitsigns.lua"
     "lua/plugins/gruvbox.lua"
     "lua/plugins/lsp.lua"
+    "lua/plugins/mason.lua"
     "lua/plugins/neo-tree.lua"
     "lua/plugins/nvim-cmp.lua"
     "lua/plugins/plugins.lua"
