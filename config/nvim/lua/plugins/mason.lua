@@ -1,3 +1,4 @@
+-- mason configuration
 return {
   "williamboman/mason.nvim",
   build = ":MasonInstallAll",
@@ -9,13 +10,13 @@ return {
       local ensure_installed = {
         "astro-language-server",
         "bash-language-server",
-        "csharp-language-server",
         "css-lsp",
         "dockerfile-language-server",
         "elixir-ls",
         "html-lsp",
         "json-lsp",
         "lua-language-server",
+        "omnisharp",
         "shfmt",
         "stylua",
         "tailwindcss-language-server",
