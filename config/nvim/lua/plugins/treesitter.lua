@@ -1,66 +1,66 @@
 -- Additional configurations from nvim-treesitter
 return {
-  -- since `vim.tbl_deep_extend`, can only merge tables and not lists, the code above
-  -- would overwrite `ensure_installed` with the new value.
-  -- If you'd rather extend the default config, use the code below instead:
   {
     "nvim-treesitter/nvim-treesitter",
-    event = { "BufReadPre", "BufNewFile" },
+    event = "BufRead",
     build = ":TSUpdate",
     dependencies = {
-      "nvim-treesitter/nvim-treesitter-textobjects",
+      "HiPhish/nvim-ts-rainbow2",
     },
-    config = function()
-      local treesitter = require("nvim-treesitter.configs")
-
-      treesitter.setup({
-        highlight = {
-          enable = true,
+    opts = function(_, opts)
+      opts.autopairs = {
+        enable = true,
+      }
+      opts.autotag = {
+        enable = true,
+        disabled = { "xml" },
+      }
+      opts.hightlight = {
+        enable = true,
+        disabled = { "css", "latex", "markdown" },
+        additional_vim_regex_highlighting = true,
+      }
+      opts.indent = {
+        enable = true,
+        disable = { "yml", "yaml" },
+      }
+      opts.rainbow = {
+        enable = true,
+        extended_mode = true,
+        max_file_lines = 1500,
+        colors = {
+          "Gold",
+          "Orchild",
+          "DorgerBlue",
+          "Cornsilk",
+          "Salmon",
+          "LawnGreen",
         },
-        indent = {
-          enable = true,
-        },
-        autotag = {
-          enable = true,
-        },
-        ensure_installed = {
-          "astro",
-          "bash",
-          "css",
-          "dockerfile",
-          "fish",
-          "help",
-          "html",
-          "javascript",
-          "json",
-          "lua",
-          "markdown",
-          "markdown_inline",
-          "python",
-          "query",
-          "regex",
-          "rust",
-          "scss",
-          "tsx",
-          "typescript",
-          "vim",
-          "vue",
-          "yaml",
-        },
-        incremental_selection = {
-          enable = true,
-          keymaps = {
-            init_selection = "<C-space>",
-            node_incremental = "<C-space>",
-            scope_incremental = false,
-            node_decremental = "<bs>",
-          },
-        },
-        context_commentstring = {
-          enable = true,
-          enable_autocmd = false,
-        },
-      })
+      }
+      opts.ensure_installed = {
+        "astro",
+        "bash",
+        "css",
+        "dockerfile",
+        "fish",
+        "help",
+        "html",
+        "javascript",
+        "json",
+        "lua",
+        "markdown",
+        "markdown_inline",
+        "python",
+        "query",
+        "regex",
+        "rust",
+        "scss",
+        "tsx",
+        "typescript",
+        "vim",
+        "vue",
+        "yaml",
+      }
     end,
   },
 }
