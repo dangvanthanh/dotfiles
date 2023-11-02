@@ -10,6 +10,7 @@ return {
       local ensure_installed = {
         "astro-language-server",
         "bash-language-server",
+        "csharpier",
         "css-lsp",
         "dockerfile-language-server",
         "elixir-ls",

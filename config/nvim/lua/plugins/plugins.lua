@@ -11,4 +11,7 @@ return {
 
   -- zen mode
   { "folke/zen-mode.nvim" },
+
+  -- omnisharp extended lsp
+  { "Hoffs/omnisharp-extended-lsp.nvim", lazy = true }
 }

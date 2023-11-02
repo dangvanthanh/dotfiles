@@ -40,6 +40,7 @@ return {
       opts.ensure_installed = {
         "astro",
         "bash",
+        "c_sharp",
         "css",
         "dockerfile",
         "fish",
