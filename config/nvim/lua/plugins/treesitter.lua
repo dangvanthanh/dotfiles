@@ -7,40 +7,29 @@ return {
     dependencies = {
       "HiPhish/nvim-ts-rainbow2",
     },
-    opts = function(_, opts)
-      opts.autopairs = {
+    opts = {
+      autopairs = {
         enable = true,
-      }
-      opts.autotag = {
+      },
+      autotag = {
         enable = true,
         disabled = { "xml" },
-      }
-      opts.hightlight = {
+      },
+      hightlight = {
         enable = true,
         disabled = { "css", "latex", "markdown" },
         additional_vim_regex_highlighting = true,
-      }
-      opts.indent = {
+      },
+      indent = {
         enable = true,
         disable = { "yml", "yaml" },
-      }
-      opts.rainbow = {
+      },
+      rainbow = {
         enable = true,
-        extended_mode = true,
-        max_file_lines = 1500,
-        colors = {
-          "Gold",
-          "Orchild",
-          "DorgerBlue",
-          "Cornsilk",
-          "Salmon",
-          "LawnGreen",
-        },
-      }
-      opts.ensure_installed = {
+      },
+      ensure_installed = {
         "astro",
         "bash",
-        "c_sharp",
         "css",
         "dockerfile",
         "fish",
@@ -61,7 +50,7 @@ return {
         "vim",
         "vue",
         "yaml",
-      }
-    end,
+      },
+    },
   },
 }
