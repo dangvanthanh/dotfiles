@@ -24,6 +24,7 @@ brew 'starship'
 brew 'lua-language-server'
 brew 'tree-sitter'
 brew 'fig'
+brew 'difftastic'
 
 # Apps
 tap 'homebrew/cask'
