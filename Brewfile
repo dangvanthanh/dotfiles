@@ -56,6 +56,7 @@ cask 'raycast'
 cask 'powershell'
 cask 'betterdisplay'
 cask 'nordvpn'
+cask 'pika'
 
 # Others
 tap 'homebrew/cask-fonts'
