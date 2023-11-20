@@ -51,6 +51,9 @@ return {
         "vue",
         "yaml",
       },
+      ignore_install = {
+        "help",
+      },
     },
     config = function(_, opts)
       require("nvim-treesitter.configs").setup(opts)
