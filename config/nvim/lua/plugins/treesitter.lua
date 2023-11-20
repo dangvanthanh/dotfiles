@@ -4,9 +4,6 @@ return {
     "nvim-treesitter/nvim-treesitter",
     event = "BufRead",
     build = ":TSUpdate",
-    dependencies = {
-      "HiPhish/nvim-ts-rainbow2",
-    },
     opts = {
       autopairs = {
         enable = true,
@@ -23,9 +20,6 @@ return {
       indent = {
         enable = true,
         disable = { "yml", "yaml" },
-      },
-      rainbow = {
-        enable = true,
       },
       ensure_installed = {
         "astro",
