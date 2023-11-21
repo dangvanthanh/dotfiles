@@ -7,7 +7,7 @@ abbr -a t-kill "tmux kill-server"
 abbr -a cls-history "builtin history clear"
 abbr -a vim nvim
 abbr -a clean-node-modules "find . -name 'node_modules' -type d -prune -print -exec rm -rf '{}' \;"
-abbr -a preview "fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}' | xargs nvim"
+abbr -a preview "fzf --preview 'bat --style=numbers --color=always --line-range :500 {}' | xargs nvim"
 abbr -a code-plugins "code --list-extensions | xargs -L 1 echo code --install-extension"
 abbr -a list-port "lsof -i :3000"
 abbr -a kill-port "kill -9"
