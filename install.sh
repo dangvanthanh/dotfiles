@@ -23,7 +23,6 @@ files=(
     "lua/plugins/disabled.lua"
     "lua/plugins/gitsigns.lua"
     "lua/plugins/gruvbox.lua"
-    "lua/plugins/inc-rename.lua"
     "lua/plugins/lsp.lua"
     "lua/plugins/mason.lua"
     "lua/plugins/neo-tree.lua"

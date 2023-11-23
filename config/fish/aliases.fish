@@ -11,3 +11,4 @@ abbr -a preview "fzf --preview 'bat --style=numbers --color=always --line-range 
 abbr -a code-plugins "code --list-extensions | xargs -L 1 echo code --install-extension"
 abbr -a list-port "lsof -i :3000"
 abbr -a kill-port "kill -9"
+abbr -a difft-git "GIT_EXTERNAL_DIFF=difft git log -p --ext-diff"
