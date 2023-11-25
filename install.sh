@@ -45,6 +45,10 @@ ln -svf $dotfiles/config/alacritty/alacritty.yml $HOME/.config/alacritty/alacrit
 echo "Setting up Kitty"
 ln -svf $dotfiles/config/kitty/kitty.conf $HOME/.config/kitty/kitty.conf
 
+# Wezterm
+echo "Setting up WezTerm"
+ln -svf $dotfiles/config/wezterm/.wezterm.lua $HOME/.wezterm.lua
+
 # Tmux
 echo "Setting up Tmux"
 ln -svf $dotfiles/tmux.conf $HOME/.tmux.conf

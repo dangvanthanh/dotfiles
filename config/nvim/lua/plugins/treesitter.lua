@@ -1,5 +1,4 @@
--- treesitter configuration
-
+-- treesitter
 return {
   -- Additional configurations from nvim-treesitter
   {

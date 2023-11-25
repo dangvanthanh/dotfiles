@@ -34,6 +34,7 @@ cask 'google-chrome'
 cask 'opera'
 cask 'arc'
 
+cask 'wezterm'
 cask 'alacritty'
 cask 'visual-studio-code'
 cask 'sourcetree'
