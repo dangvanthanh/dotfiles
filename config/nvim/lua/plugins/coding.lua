@@ -1,5 +1,6 @@
--- nvim-cmp configuration
+-- coding
 return {
+  -- nvim-cmp configuration
   -- customize nvim-cmp configs
   -- Use <tab> for completion and snippets (supertab)
   -- first: disable default <tab> and <s-tab> behavior in LuaSnip
@@ -71,4 +72,18 @@ return {
       end
     end,
   },
+  -- copilot configuration
+  {
+    "zbirenbaum/copilot.lua",
+    opts = {
+      suggestion = { enabled = true },
+      panel = { enabled = true },
+    },
+  },
+  -- markdown support
+  { "godlygeek/tabular" }, -- required by vim-markdown
+  { "plasticboy/vim-markdown" },
+
+  -- zen mode
+  { "folke/zen-mode.nvim" },
 }

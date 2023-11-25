@@ -1,5 +1,7 @@
--- Additional configurations from nvim-treesitter
+-- treesitter configuration
+
 return {
+  -- Additional configurations from nvim-treesitter
   {
     "nvim-treesitter/nvim-treesitter",
     event = "BufRead",
