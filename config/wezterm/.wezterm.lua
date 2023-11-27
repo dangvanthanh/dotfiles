@@ -1,5 +1,6 @@
 -- Pull in the wezterm API
 local wezterm = require("wezterm")
+local action = wezterm.action
 
 -- This table will hold the configuration.
 local config = {}
@@ -14,21 +15,21 @@ if wezterm.config_builder then
 end
 
 keys = {
-  { key = "T", mods = "CMD", action = wezterm.action({ SpawnTab = "CurrentPaneDomain" }) },
-  { key = "-", mods = "CMD", action = wezterm.action.DecreaseFontSize },
-  { key = "+", mods = "CMD", action = wezterm.action.IncreaseFontSize },
-  { key = "0", mods = "CMD", action = wezterm.action.ResetFontSize },
-  { key = "N", mods = "CMD", action = wezterm.action.SpawnWindow },
-  { key = "P", mods = "CMD", action = wezterm.action.ActivateCommandPalette },
-  { key = "V", mods = "CMD", action = wezterm.action.PasteFrom("Clipboard") },
-  { key = "C", mods = "CMD", action = wezterm.action.CopyTo("Clipboard") },
-  { key = "F11", mods = "NONE", action = wezterm.action.ToggleFullScreen },
+  { key = "T", mods = "CMD", action = action({ SpawnTab = "CurrentPaneDomain" }) },
+  { key = "-", mods = "CMD", action = action.DecreaseFontSize },
+  { key = "+", mods = "CMD", action = action.IncreaseFontSize },
+  { key = "0", mods = "CMD", action = action.ResetFontSize },
+  { key = "N", mods = "CMD", action = action.SpawnWindow },
+  { key = "P", mods = "CMD", action = action.ActivateCommandPalette },
+  { key = "V", mods = "CMD", action = action.PasteFrom("Clipboard") },
+  { key = "C", mods = "CMD", action = action.CopyTo("Clipboard") },
+  { key = "F11", mods = "NONE", action = action.ToggleFullScreen },
 }
 
 mouse_bindings = {
   {
     event = { Down = { streak = 3, button = "Left" } },
-    action = wezterm.action.SelectTextAtMouseCursor("SemanticZone"),
+    action = action.SelectTextAtMouseCursor("SemanticZone"),
     mods = "NONE",
   },
 }
