@@ -52,3 +52,7 @@ ln -svf $dotfiles/config/wezterm/.wezterm.lua $HOME/.wezterm.lua
 # Tmux
 echo "Setting up Tmux"
 ln -svf $dotfiles/tmux.conf $HOME/.tmux.conf
+
+# Bat
+echo "Setting up Bat"
+ln -svf $dotfiles/config/bat/config $HOME/.config/bat/config

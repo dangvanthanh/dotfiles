@@ -1,6 +1,6 @@
 -- Pull in the wezterm API
 local wezterm = require("wezterm")
-local action = wezterm.action
+local act = wezterm.action
 
 -- This table will hold the configuration.
 local config = {}
@@ -15,55 +15,57 @@ if wezterm.config_builder then
 end
 
 keys = {
-  { key = "T", mods = "CMD", action = action({ SpawnTab = "CurrentPaneDomain" }) },
-  { key = "-", mods = "CMD", action = action.DecreaseFontSize },
-  { key = "+", mods = "CMD", action = action.IncreaseFontSize },
-  { key = "0", mods = "CMD", action = action.ResetFontSize },
-  { key = "N", mods = "CMD", action = action.SpawnWindow },
-  { key = "P", mods = "CMD", action = action.ActivateCommandPalette },
-  { key = "V", mods = "CMD", action = action.PasteFrom("Clipboard") },
-  { key = "C", mods = "CMD", action = action.CopyTo("Clipboard") },
-  { key = "F11", mods = "NONE", action = action.ToggleFullScreen },
+  { key = "t", mods = "CMD", action = act({ SpawnTab = "CurrentPaneDomain" }) },
+  { key = "-", mods = "CMD", action = act.DecreaseFontSize },
+  { key = "+", mods = "CMD", action = act.IncreaseFontSize },
+  { key = "0", mods = "CMD", action = act.ResetFontSize },
+  { key = "n", mods = "CMD", action = act.SpawnWindow },
+  { key = "p", mods = "CMD", action = act.ActivateCommandPalette },
+  { key = "v", mods = "CMD", action = act.PasteFrom("Clipboard") },
+  { key = "c", mods = "CMD", action = act.CopyTo("Clipboard") },
+  { key = "F11", mods = "NONE", action = act.ToggleFullScreen },
 }
 
 mouse_bindings = {
   {
     event = { Down = { streak = 3, button = "Left" } },
-    action = action.SelectTextAtMouseCursor("SemanticZone"),
+    action = act.SelectTextAtMouseCursor("SemanticZone"),
     mods = "NONE",
   },
 }
 
 -- default configuration
-config.hide_tab_bar_if_only_one_tab = true
-config.exit_behavior = "Close"
-config.color_scheme = "Gruvbox dark, medium (base16)"
-config.window_frame = {
-  font = wezterm.font("Victor Mono"),
+config = {
+  hide_tab_bar_if_only_one_tab = true,
+  exit_behavior = "Close",
+  color_scheme = "Gruvbox dark, medium (base16)",
+  window_frame = {
+    font = wezterm.font("Fira Code"),
+  },
+  window_padding = {
+    left = 3,
+    right = 3,
+    top = 3,
+    bottom = 3,
+  },
+  inactive_pane_hsb = {
+    saturation = 0.9,
+    brightness = 0.7,
+  },
+  use_dead_keys = false,
+  scrollback_lines = 3500,
+  font = wezterm.font_with_fallback({
+    { family = "Victor Mono" },
+    { family = "JetBrains Mono" },
+    { family = "Iosevka" },
+  }),
+  font_size = 16.0,
+  launch_menu = launch_menu,
+  default_cursor_style = "BlinkingBar",
+  disable_default_key_bindings = true,
+  keys = keys,
+  mouse_bindings = mouse_bindings,
 }
-config.window_padding = {
-  left = 3,
-  right = 3,
-  top = 3,
-  bottom = 3,
-}
-config.inactive_pane_hsb = {
-  saturation = 0.9,
-  brightness = 0.7,
-}
-config.use_dead_keys = false
-config.scrollback_lines = 3500
-config.font = wezterm.font_with_fallback({
-  { family = "Victor Mono" },
-  { family = "JetBrains Mono" },
-  { family = "Iosevka" },
-})
-config.font_size = 16.0
-config.launch_menu = launch_menu
-config.default_cursor_style = "BlinkingBar"
-config.disable_default_key_bindings = true
-config.keys = keys
-config.mouse_bindings = mouse_bindings
 
 -- and finally, return the configuration to wezterm
 return config
