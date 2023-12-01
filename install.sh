@@ -31,6 +31,7 @@ nvimFiles=(
   "lua/plugins/editor.lua"
   "lua/plugins/lsp.lua"
   "lua/plugins/treesitter.lua"
+  "lua/plugins/ui.lua"
 )
 
 for file in "${nvimFiles[@]}"; do
