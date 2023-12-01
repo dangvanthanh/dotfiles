@@ -18,7 +18,6 @@ config.default_prog = { fish_path, "-l" }
 config.color_scheme = "Gruvbox dark, medium (base16)"
 config.font = wezterm.font_with_fallback({
   { family = "Victor Mono" },
-  { family = "JetBrains Mono" },
   { family = "Iosevka" },
 })
 config.font_size = 16.0

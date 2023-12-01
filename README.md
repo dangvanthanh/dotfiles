@@ -116,7 +116,7 @@ All the applications I use:
 - [Neovim](https://github.com/neovim/neovim) - Powerful Editor
 - [Visual Studio Code](https://code.visualstudio.com/) - Code Editor
 - [Beekeeper Studio](https://www.beekeeperstudio.io/) - The SQL Editor and Database Manager Of Your Dreams
-- [SourceTree](https://www.sourcetreeapp.com/) - Simplicity and Ppower in Git GUI
+- [SourceTree](https://www.sourcetreeapp.com/) - Simplicity and Power in Git GUI
 - [Insomnia](https://insomnia.rest/) - The Easy Eay to Design, Debug, and Test APIs
 - [Fig](https://fig.io/) - The Next-Generation Command Line
 
@@ -125,7 +125,6 @@ All the applications I use:
 - [Arc](https://arc.net/) - A New Way of Using the Internet
 - [Firefox](https://www.mozilla.org/en-US/firefox/new/) - Fast, Private and Free
 - [Google Chome](https://www.google.com/chrome/) - Download the Fast, Security Browser
-- [Opera](https://www.opera.com/) - Faster, Safer and Smarter
 
 #### Design
 

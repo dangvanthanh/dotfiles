@@ -31,7 +31,6 @@ tap 'homebrew/cask'
 
 cask 'firefox'
 cask 'google-chrome'
-cask 'opera'
 cask 'arc'
 
 cask 'wezterm'
@@ -62,11 +61,7 @@ cask 'pika'
 # Others
 tap 'homebrew/cask-fonts'
 
-cask 'font-fira-code'
-cask 'font-fira-code-nerd-font'
 cask 'font-iosevka'
 cask 'font-iosevka-nerd-font'
-cask 'font-jetbrains-mono'
-cask 'font-jetbrains-mono-nerd-font'
 cask 'font-victor-mono'
 cask 'font-victor-mono-nerd-font'
