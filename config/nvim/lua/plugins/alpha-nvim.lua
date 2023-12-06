@@ -1,6 +1,4 @@
--- ui
 return {
-  -- alpha configuration
   {
     "goolord/alpha-nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
@@ -34,11 +32,11 @@ return {
       end
 
       dashboard.config.layout = {
-        { type = "padding", val = vim.fn.max({ 2, vim.fn.floor(vim.fn.winheight(0) * 0.2) }) },
+        { type = "padding", val = vim.fn.max({ 2, vim.fn.floor(vim.fn.winheight(0) * 0.125) }) },
         dashboard.section.header,
-        { type = "padding", val = 3 },
+        { type = "padding", val = 2 },
         dashboard.section.buttons,
-        { type = "padding", val = 3 },
+        { type = "padding", val = 1 },
         dashboard.section.footer,
       }
       dashboard.config.opts.noautocmd = true

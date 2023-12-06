@@ -19,36 +19,38 @@ done
 echo "Setting up Neovim"
 nvim="$dotfiles/config/nvim"
 nvimHome="$HOME/.config/nvim"
-nvimFiles=(
-  "init.lua"
-  "lua/config/autocmds.lua"
-  "lua/config/keymaps.lua"
-  "lua/config/lazy.lua"
-  "lua/config/options.lua"
-  "lua/plugins/coding.lua"
-  "lua/plugins/colorscheme.lua"
-  "lua/plugins/disabled.lua"
-  "lua/plugins/editor.lua"
-  "lua/plugins/lsp.lua"
-  "lua/plugins/treesitter.lua"
-  "lua/plugins/ui.lua"
+
+folders=(
+  "lua/config"
+  "lua/plugins"
 )
 
-for file in "${nvimFiles[@]}"; do
-  ln -svf "$nvim/$file" "$nvimHome/$file"
+for folder in "${folders[@]}"; do
+  mkdir -p "$nvimHome/$folder"
+done
+
+link_folder() {
+  local src_folder="$1"
+  local dest_folder="$2"
+  
+  for file in "$nvim/$src_folder"/*; do
+    ln -svf "$file" "$nvimHome/$dest_folder"
+  done
+}
+
+ln -svf "$nvim/init.lua" "$nvimHome/init.lua"
+
+for folder in "${folders[@]}"; do
+  link_folder "$folder" "$folder"
 done
 
 # Alacritty
 echo "Setting up Alacritty"
 ln -svf $dotfiles/config/alacritty/alacritty.yml $HOME/.config/alacritty/alacritty.yml
 
-# Kitty
-echo "Setting up Kitty"
-ln -svf $dotfiles/config/kitty/kitty.conf $HOME/.config/kitty/kitty.conf
-
 # Wezterm
 echo "Setting up WezTerm"
-ln -svf $dotfiles/config/wezterm/.wezterm.lua $HOME/.wezterm.lua
+ln -svf $dotfiles/config/wezterm/wezterm.lua $HOME/.wezterm.lua
 
 # Tmux
 echo "Setting up Tmux"

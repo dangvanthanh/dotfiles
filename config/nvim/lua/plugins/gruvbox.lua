@@ -1,6 +1,4 @@
--- colorscheme
 return {
-  -- gruvbox configuration
   { "ellisonleao/gruvbox.nvim" },
   {
     "LazyVim/LazyVim",

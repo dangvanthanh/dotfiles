@@ -1,6 +1,4 @@
--- treesitter
 return {
-  -- Additional configurations from nvim-treesitter
   {
     "nvim-treesitter/nvim-treesitter",
     event = "BufRead",
