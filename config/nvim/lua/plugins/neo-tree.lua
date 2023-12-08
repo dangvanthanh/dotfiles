@@ -20,15 +20,21 @@ return {
       },
       filesystem = {
         filtered_items = {
-          visible = false,
           hide_dotfiles = false,
-          hide_gitignore = false,
+          hide_gitignored = true,
           hide_by_name = {
             ".git",
+            ".Ds_Store",
+            ".thumbs.db",
+            "node_modules",
           },
-          never_show = {},
+          follow_current_file = {
+            enable = true,
+            leave_dirs_open = true,
+          },
         },
       },
+      use_libux_file_watcher = true,
     },
   },
 }

@@ -21,9 +21,10 @@ return {
           "typescript-language-server",
           "vue-language-server",
           "yaml-language-server",
+          "biome",
         }
         vim.cmd("MasonInstall " .. table.concat(ensure_installed, " "))
       end, { desc = "install all lsp tools" })
     end,
-  }
+  },
 }
