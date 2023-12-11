@@ -15,6 +15,10 @@ return {
             "$FILENAME",
           },
         }),
+        nls.formatting.stylua,
+        nls.formatting.shfmt.with({
+          filetypes = { "sh", "zsh" },
+        }),
       }
     end,
   },
