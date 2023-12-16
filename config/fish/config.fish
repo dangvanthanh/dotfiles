@@ -27,5 +27,9 @@ starship init fish | source
 # Pnpm
 set -gx PNPM_HOME "$HOME/Library/pnpm"
 if not string match -q -- $PNPM_HOME $PATH
-  set -gx PATH "$PNPM_HOME" $PATH
+    set -gx PATH "$PNPM_HOME" $PATH
 end
+
+# Proto
+set -gx PROTO_HOME "$HOME/.proto"
+set -gx PATH "$PROTO_HOME/shims:$PROTO_HOME/bin" $PATH
