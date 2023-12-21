@@ -28,6 +28,10 @@ return {
             ".thumbs.db",
             "node_modules",
           },
+          always_show = {
+            ".env",
+            ".env.local",
+          },
           follow_current_file = {
             enable = true,
             leave_dirs_open = true,
