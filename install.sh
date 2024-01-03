@@ -46,11 +46,7 @@ done
 
 # Alacritty
 echo "Setting up Alacritty"
-ln -svf $dotfiles/config/alacritty/alacritty.yml $HOME/.config/alacritty/alacritty.yml
-
-# Wezterm
-echo "Setting up WezTerm"
-ln -svf $dotfiles/config/wezterm/wezterm.lua $HOME/.wezterm.lua
+ln -svf $dotfiles/config/alacritty/alacritty.toml $HOME/.config/alacritty/alacritty.toml
 
 # Tmux
 echo "Setting up Tmux"

@@ -33,7 +33,6 @@ cask 'firefox'
 cask 'google-chrome'
 cask 'arc'
 
-cask 'wezterm'
 cask 'alacritty'
 cask 'visual-studio-code'
 cask 'sourcetree'
