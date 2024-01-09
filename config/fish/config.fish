@@ -18,6 +18,9 @@ export PATH="$HOME/.asdf/installs/python/3.10.4/bin:$PATH"
 set -Ux BUN_INSTALL "$HOME/.bun"
 fish_add_path "$HOME/.bun/bin"
 
+# .NET
+export PATH="/usr/local/share/dotnet:$PATH"
+
 # Moon
 export PATH="$HOME/.moon/bin:$PATH"
 
