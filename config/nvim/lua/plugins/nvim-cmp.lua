@@ -17,6 +17,12 @@ return {
       -- Adds copilot cmp
       -- "zbirenbaum/copilot.lua",
       -- "zbirenbaum/copilot-cmp",
+      {
+        "Exafunction/codeium.nvim",
+        cmd = "Codeium",
+        build = ":Codeium Auth",
+        opts = {},
+      },
     },
     -- @param opts cmp.ConfigSchema
     opts = function(_, opts)
@@ -68,6 +74,13 @@ return {
         format_kinds(entry, item) -- add icons
         return require("tailwindcss-colorizer-cmp").formatter(entry, item)
       end
+
+      -- codeium
+      table.insert(opts.sources, 1, {
+        name = "codeium",
+        group_index = 1,
+        priority = 100,
+      })
     end,
   },
 }
