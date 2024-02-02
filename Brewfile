@@ -57,6 +57,7 @@ cask 'powershell'
 cask 'betterdisplay'
 cask 'nordvpn'
 cask 'pika'
+cask 'codewhisperer'
 
 # Others
 tap 'homebrew/cask-fonts'
