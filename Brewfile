@@ -25,6 +25,8 @@ brew 'lua-language-server'
 brew 'tree-sitter'
 brew 'fig'
 brew 'difftastic'
+brew 'imagemagick'
+brew 'ffmpeg'
 
 # Apps
 tap 'homebrew/cask'
