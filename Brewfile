@@ -49,7 +49,7 @@ cask 'protopie'
 
 cask 'dropbox'
 cask 'skype'
-cask 'slack'
+cask 'microsoft-teams'
 cask 'discord'
 
 cask 'rectangle'
