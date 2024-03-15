@@ -26,6 +26,7 @@ brew 'tree-sitter'
 brew 'difftastic'
 brew 'imagemagick'
 brew 'ffmpeg'
+brew 'gum'
 
 # Apps
 tap 'homebrew/cask'
