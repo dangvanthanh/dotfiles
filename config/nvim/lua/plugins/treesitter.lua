@@ -30,6 +30,7 @@ return {
         "html",
         "javascript",
         "json",
+        "graphql",
         "lua",
         "markdown",
         "markdown_inline",
