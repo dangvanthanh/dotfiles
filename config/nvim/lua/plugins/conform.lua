@@ -29,7 +29,6 @@ return {
         ["jsonc"] = { "biome" },
         ["html"] = { "biome" },
         ["svelte"] = { "biome" },
-        ["astro"] = { "biome" },
         ["scss"] = { "biome" },
         ["css"] = { "biome" },
         ["yaml"] = { "biome" },
