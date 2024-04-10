@@ -8,6 +8,8 @@ code --install-extension dbaeumer.vscode-eslint
 code --install-extension denoland.vscode-deno
 code --install-extension eamodio.gitlens
 code --install-extension editorconfig.editorconfig
+code --install-extension elmtooling.elm-ls-vscode
+code --install-extension hbenl.vscode-test-explorer
 code --install-extension irongeek.vscode-env
 code --install-extension jakebecker.elixir-ls
 code --install-extension jdinhlife.gruvbox
@@ -19,10 +21,10 @@ code --install-extension ms-dotnettools.vscodeintellicode-csharp
 code --install-extension ms-python.debugpy
 code --install-extension ms-python.python
 code --install-extension ms-python.vscode-pylance
+code --install-extension ms-vscode.test-adapter-converter
 code --install-extension pmneo.tsimporter
 code --install-extension ritvyk.heex-html
 code --install-extension ronnidc.nunjucks
-code --install-extension sbrink.elm
 code --install-extension shopify.theme-check-vscode
 code --install-extension svelte.svelte-vscode
 code --install-extension unifiedjs.vscode-mdx

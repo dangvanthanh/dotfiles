@@ -45,6 +45,7 @@ cask 'blender'
 cask 'inkscape'
 cask 'figma'
 cask 'protopie'
+cask 'tiled'
 
 cask 'dropbox'
 cask 'skype'
