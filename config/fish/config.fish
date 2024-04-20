@@ -21,9 +21,6 @@ fish_add_path "$HOME/.bun/bin"
 # .NET
 export PATH="/usr/local/share/dotnet:$PATH"
 
-# Moon
-export PATH="$HOME/.moon/bin:$PATH"
-
 # Starship
 starship init fish | source
 
@@ -32,10 +29,6 @@ set -gx PNPM_HOME "$HOME/Library/pnpm"
 if not string match -q -- $PNPM_HOME $PATH
     set -gx PATH "$PNPM_HOME" $PATH
 end
-
-# Proto
-set -gx PROTO_HOME "$HOME/.proto"
-set -gx PATH "$PROTO_HOME/shims:$PROTO_HOME/bin" $PATH
 
 # Wasmer
 export WASMER_DIR="$HOME/.wasmer"
