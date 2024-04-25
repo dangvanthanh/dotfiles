@@ -1,0 +1,30 @@
+{
+	"name": "slow-cli",
+	"version": "1.0.0",
+	"description": "",
+	"type": "module",
+	"main": "dist/index.js",
+	"scripts": {
+		"build": "npm exec tsc"
+	},
+	"keywords": [],
+	"author": "Dang Van Thanh",
+	"license": "MIT",
+	"dependencies": {
+		"@oclif/core": "^3.26.4"
+	},
+	"bin": {
+		"slow": "./bin/run.js"
+	},
+	"oclif": {
+		"bin": "slow",
+		"commands": "./dist/commands",
+		"dirname": "slow",
+		"topicSeparator": " "
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.7.1",
+		"ts-node": "^10.9.2",
+		"typescript": "^5"
+	}
+}
