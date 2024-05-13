@@ -27,6 +27,7 @@ brew 'tree-sitter'
 brew 'difftastic'
 brew 'imagemagick'
 brew 'ffmpeg'
+brew 'ollama'
 
 # Apps
 tap 'homebrew/cask'
@@ -39,12 +40,11 @@ cask 'alacritty'
 cask 'visual-studio-code'
 cask 'sourcetree'
 cask 'beekeeper-studio'
-cask 'insomnia'
+cask 'bruno'
 
 cask 'blender'
 cask 'inkscape'
 cask 'figma'
-cask 'protopie'
 cask 'tiled'
 
 cask 'dropbox'
