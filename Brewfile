@@ -22,12 +22,12 @@ brew 'gawk'
 brew 'vips'
 brew 'flyctl'
 brew 'starship'
-brew 'lua-language-server'
 brew 'tree-sitter'
 brew 'difftastic'
 brew 'imagemagick'
 brew 'ffmpeg'
 brew 'ollama'
+brew 'navi'
 
 # Apps
 tap 'homebrew/cask'
@@ -59,7 +59,6 @@ cask 'powershell'
 cask 'betterdisplay'
 cask 'nordvpn'
 cask 'pika'
-cask 'codewhisperer'
 
 # Others
 tap 'homebrew/cask-fonts'

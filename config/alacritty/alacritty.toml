@@ -14,7 +14,7 @@ white = "0xebdbb2"
 yellow = "0xfabd2f"
 
 [colors.normal]
-black = "0x282828"
+black = "0x32302f"
 blue = "0x458588"
 cyan = "0x689d6a"
 green = "0x98971a"
@@ -24,7 +24,7 @@ white = "0xa89984"
 yellow = "0xd79921"
 
 [colors.primary]
-background = "0x282828"
+background = "0x32302f"
 foreground = "0xebdbb2"
 
 [env]
@@ -35,7 +35,7 @@ size = 16.0
 
 [font.bold]
 family = "VictorMono NF"
-style = "Bold"
+style = "Regular"
 
 [font.bold_italic]
 family = "VictorMono NF"

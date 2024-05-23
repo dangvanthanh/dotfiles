@@ -55,3 +55,7 @@ ln -svf $dotfiles/tmux.conf $HOME/.tmux.conf
 # Bat
 echo "Setting up Bat"
 ln -svf $dotfiles/config/bat/config $HOME/.config/bat/config
+
+# Navi
+echo "Setting up Navi"
+ln -svf $dotfiles/config/navi/config.yaml $HOME/.config/navi/config.yaml

@@ -1,10 +1,8 @@
-code --install-extension amazonwebservices.codewhisperer-for-command-line-companion
 code --install-extension andrejunges.handlebars
 code --install-extension astro-build.astro-vscode
 code --install-extension biomejs.biome
 code --install-extension bmalehorn.vscode-fish
 code --install-extension christian-kohler.path-intellisense
-code --install-extension dbaeumer.vscode-eslint
 code --install-extension denoland.vscode-deno
 code --install-extension eamodio.gitlens
 code --install-extension editorconfig.editorconfig
@@ -27,6 +25,7 @@ code --install-extension ritvyk.heex-html
 code --install-extension ronnidc.nunjucks
 code --install-extension shopify.theme-check-vscode
 code --install-extension svelte.svelte-vscode
+code --install-extension tamasfe.even-better-toml
 code --install-extension unifiedjs.vscode-mdx
 code --install-extension vue.volar
 code --install-extension wix.vscode-import-cost
