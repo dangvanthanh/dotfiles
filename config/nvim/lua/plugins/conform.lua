@@ -42,6 +42,6 @@ return {
       formatters = {
         injected = { options = { ignore_errors = true } },
       },
-    },
-  },
+    }
+  }
 }
