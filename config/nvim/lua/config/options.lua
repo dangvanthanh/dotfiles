@@ -11,4 +11,3 @@ vim.g.loaded_ruby_provider = 0
 vim.g.loaded_node_provider = 0
 vim.g.loaded_perl_provider = 0
 vim.g.lazyvim_python_lsp = "basedpyright"
-vim.g.root_spec = { "lsp", { ".git", "lua" }, "cwd" }
