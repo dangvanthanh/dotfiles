@@ -12,3 +12,4 @@ abbr -a vscode-plugins "code --list-extensions | xargs -L 1 echo code --install-
 abbr -a list-port "lsof -i :3000"
 abbr -a kill-port "kill -9"
 abbr -a diff-git "GIT_EXTERNAL_DIFF=difft git log -p --ext-diff"
+abbr -a list-files "ls -1 | xargs -L1 identify -format \"%f: %wx%h\n\""
