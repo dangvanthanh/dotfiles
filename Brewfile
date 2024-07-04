@@ -26,7 +26,6 @@ brew 'tree-sitter'
 brew 'difftastic'
 brew 'imagemagick'
 brew 'ffmpeg'
-brew 'ollama'
 brew 'navi'
 
 # Apps
@@ -63,7 +62,5 @@ cask 'pika'
 # Others
 tap 'homebrew/cask-fonts'
 
-cask 'font-iosevka'
-cask 'font-iosevka-nerd-font'
 cask 'font-victor-mono'
 cask 'font-victor-mono-nerd-font'

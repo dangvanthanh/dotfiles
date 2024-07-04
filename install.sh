@@ -1,24 +1,26 @@
 #!/usr/bin/env sh
 
 dotfiles="$HOME/Code/dotfiles"
+dotfilesConfig="$dotfiles/config"
+homeConfig="$HOME/.config"
 
 # Fish
 echo "Setting up Fish"
-fish="$dotfiles/config/fish"
-fishHome="$HOME/.config/fish"
+fish="$dotfilesConfig/fish"
+fishHome="$homeConfig/fish"
 fishFiles=(
   "config.fish"
   "aliases.fish"
 )
 
-for file in "${nvimFiles[@]}"; do
-  ln -svf "$nvim/$file" "$nvimHome/$file"
+for file in "${fishFiles[@]}"; do
+  ln -svf "$fish/$file" "$fishHome/$file"
 done
 
 # Neovim
 echo "Setting up Neovim"
-nvim="$dotfiles/config/nvim"
-nvimHome="$HOME/.config/nvim"
+nvim="$dotfilesConfig/nvim"
+nvimHome="$homeConfig/nvim"
 
 folders=(
   "lua/config"
@@ -46,7 +48,7 @@ done
 
 # Alacritty
 echo "Setting up Alacritty"
-ln -svf $dotfiles/config/alacritty/alacritty.toml $HOME/.config/alacritty/alacritty.toml
+ln -svf $dotfilesConfig/alacritty/alacritty.toml $homeConfig/alacritty/alacritty.toml
 
 # Tmux
 echo "Setting up Tmux"
@@ -54,8 +56,8 @@ ln -svf $dotfiles/tmux.conf $HOME/.tmux.conf
 
 # Bat
 echo "Setting up Bat"
-ln -svf $dotfiles/config/bat/config $HOME/.config/bat/config
+ln -svf $dotfilesConfig/bat/config $homeConfig/bat/config
 
 # Navi
 echo "Setting up Navi"
-ln -svf $dotfiles/config/navi/config.yaml $HOME/.config/navi/config.yaml
+ln -svf $dotfilesConfig/navi/config.yaml $homeConfig/navi/config.yaml
