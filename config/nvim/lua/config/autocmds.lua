@@ -4,8 +4,8 @@
 
 -- Disable conceallevel for json and markdown files
 vim.api.nvim_create_autocmd({ "FileType" }, {
-  pattern = { "json", "jsonc", "markdown" },
+  pattern = { "*.mdx", "json", "jsonc", "markdown" },
   callback = function()
-    vim.wo.conceallevel = 0
+    vim.opt_local.conceallevel = 0
   end,
 })

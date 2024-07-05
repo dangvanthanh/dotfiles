@@ -2,7 +2,7 @@
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
 -- Highlight YAML front matter
-vim.opt.guifont='VictorMono NF'
+vim.opt.guifont = "VictorMono NF"
 vim.api.nvim_set_var("vim_markdown_frontmatter ", 1)
 vim.opt.winbar = "%=%m %f"
 vim.g.lazygit_config = false
