@@ -117,7 +117,7 @@ All the applications I use:
 - [Visual Studio Code](https://code.visualstudio.com/) - Code Editor
 - [Beekeeper Studio](https://www.beekeeperstudio.io/) - The SQL Editor and Database Manager Of Your Dreams
 - [SourceTree](https://www.sourcetreeapp.com/) - Simplicity and Power in Git GUI
-- [Insomnia](https://insomnia.rest/) - The Easy Eay to Design, Debug, and Test APIs
+- [Bruno](https://www.usebruno.com/) - The Easy Way to Design, Debug, and Test APIs
 - [Fig](https://fig.io/) - The Next-Generation Command Line
 
 #### Browsers
