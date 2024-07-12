@@ -21,6 +21,7 @@ return {
           "typescript-language-server",
           "vue-language-server",
           "yaml-language-server",
+          "svelte-language-server",
           "biome",
         }
         vim.cmd("MasonInstall " .. table.concat(ensure_installed, " "))
