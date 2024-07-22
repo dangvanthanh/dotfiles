@@ -14,7 +14,7 @@ return {
       },
     },
     opts = {
-      format = {
+      default_format_ops = {
         timeout_ms = 1000,
         async = false, -- not recommended to change
         quiet = false, -- not recommended to change
@@ -42,6 +42,6 @@ return {
       formatters = {
         injected = { options = { ignore_errors = true } },
       },
-    }
-  }
+    },
+  },
 }
