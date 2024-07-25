@@ -1,7 +1,7 @@
 # Alias
 abbr -a cls clear
-abbr -a ls "exa -l -g --icons --header --git"
-abbr -a llt "exa -1 --icons --tree --git-ignore"
+abbr -a ls "eza -l -g --icons --header --git"
+abbr -a llt "eza -1 --icons --tree --git-ignore"
 abbr -a t tmux
 abbr -a t-kill "tmux kill-server"
 abbr -a cls-history "builtin history clear"
