@@ -23,6 +23,8 @@ return {
           "yaml-language-server",
           "svelte-language-server",
           "biome",
+          "markdownlint-cli2",
+          "markdown-toc",
         }
         vim.cmd("MasonInstall " .. table.concat(ensure_installed, " "))
       end, { desc = "install all lsp tools" })

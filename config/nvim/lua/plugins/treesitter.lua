@@ -55,9 +55,11 @@ return {
       -- MDX
       vim.filetype.add({
         extension = {
+          md = "markdown",
           mdx = "markdown",
         },
       })
+      vim.treesitter.language.register("markdown", "md")
       vim.treesitter.language.register("markdown", "mdx")
     end,
   },
