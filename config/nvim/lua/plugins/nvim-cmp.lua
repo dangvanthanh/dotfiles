@@ -12,11 +12,7 @@ return {
   {
     "hrsh7th/nvim-cmp",
     dependencies = {
-      -- Adds cmp-emoji
       "hrsh7th/cmp-emoji",
-      -- Adds copilot cmp
-      -- "zbirenbaum/copilot.lua",
-      -- "zbirenbaum/copilot-cmp",
       {
         "Exafunction/codeium.nvim",
         cmd = "Codeium",
@@ -37,7 +33,6 @@ return {
 
       -- Add emoji to cmp sources
       opts.sources = cmp.config.sources(vim.list_extend(opts.sources, { { name = "emoji" } }))
-      -- opts.sources = cmp.config.sources(vim.list_extend(opts.sources, { { name = "copilot" } }))
 
       -- Configure <TAB> like in VSCode
       -- This is reaaaally not easy to setup :D

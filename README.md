@@ -1,13 +1,13 @@
 # Dang Thanh’s dotfiles
 
-![](screenshot.png)
+![Dang Thanh's dotfiles](screenshot.png)
 
 ## Getting Started
 
 You need install [Git](https://git-scm.com/). Clone or [download](https://github.com/dangvanthanh/dotfiles/archive/master.zip) this repository
 
-```shell 
-$ git clone https://github.com/dangvanthanh/dotfiles.git
+```shell
+git clone https://github.com/dangvanthanh/dotfiles.git
 ```
 
 ### Usage
@@ -21,8 +21,8 @@ $ git clone https://github.com/dangvanthanh/dotfiles.git
 Set Git global configuration
 
 ```shell
-$ git config --global user.name "Your Name"
-$ git config --global user.email "youremail@email.com"
+git config --global user.name "Your Name"
+git config --global user.email "youremail@email.com"
 ```
 
 ## Fish
@@ -30,8 +30,8 @@ $ git config --global user.email "youremail@email.com"
 Make `fish` default shell
 
 ```shell
-$ which fish
-$ chsh -s /opt/homebrew/bin/fish
+which fish
+chsh -s /opt/homebrew/bin/fish
 ```
 
 ## Homebrew
@@ -39,18 +39,18 @@ $ chsh -s /opt/homebrew/bin/fish
 Install Homebrew and Brewfile
 
 ```shell
-$ chmod +x brew.sh
-$ ./brew.sh
-$ ./install.sh
+chmod +x brew.sh
+./brew.sh
+./install.sh
 ```
 
 ## Alacritty and Neovim
 
 Create `~/.config` folder for Alacritty and Neovim
 
-```
-$ mkdir ~/.config
-$ cd ~/.config
+```shell
+mkdir ~/.config
+cd ~/.config
 ```
 
 ### Alacritty
@@ -58,7 +58,7 @@ $ cd ~/.config
 Create configuration for Alacritty
 
 ```shell
-$ mkdir -p ~/.config/alacritty && cd ~/.config/alacritty && touch alacritty.yml
+mkdir -p ~/.config/alacritty && cd ~/.config/alacritty && touch alacritty.yml
 ```
 
 ### Neovim
@@ -66,36 +66,37 @@ $ mkdir -p ~/.config/alacritty && cd ~/.config/alacritty && touch alacritty.yml
 Install the Neovim Python module
 
 ```shell
-$ pip3 install --user neovim
+pip3 install --user neovim
 ```
 
 Create configuration for Neovim
 
 ```shell
-$ mkdir -p ~/.config/nvim
-$ mkdir -p ~/.config/nvim/lua
-$ mkdir -p ~/.config/nvim/lua/config
-$ mkdir -p ~/.config/nvim/lua/plugins
+mkdir -p ~/.config/nvim
+mkdir -p ~/.config/nvim/lua
+mkdir -p ~/.config/nvim/lua/config
+mkdir -p ~/.config/nvim/lua/plugins
 ```
 
 Benchmarking neovim
 
 ```shell
-$ hyperfine "nvim --headless +qa" --warmup 5
+hyperfine "nvim --headless +qa" --warmup 5
 ```
+
 ## Asdf
 
 Update `asdf/shims/node no such file or directory`
 
 ```shell
-$ vim ~/.asdf/shims/node
+vim ~/.asdf/shims/node
 ```
 
 Or reshim `asdf`
 
 ```shell
-$ rm -rf ~/.asdf/shims/*
-$ asdf reshim
+rm -rf ~/.asdf/shims/*
+asdf reshim
 ```
 
 ## Visual Studio Code
@@ -103,14 +104,14 @@ $ asdf reshim
 Show the extensions installed in Visual Studio Code
 
 ```shell
-$ code --list-extensions | xargs -L 1 echo code --install-extension
+code --list-extensions | xargs -L 1 echo code --install-extension
 ```
 
 ## Brewfile
 
 All the applications I use:
 
-#### Web Developer
+### Web Developer
 
 - [Alacritty](https://github.com/jwilm/alacritty) - macOS Terminal Replacement
 - [Neovim](https://github.com/neovim/neovim) - Powerful Editor
@@ -120,13 +121,13 @@ All the applications I use:
 - [Bruno](https://www.usebruno.com/) - The Easy Way to Design, Debug, and Test APIs
 - [Fig](https://fig.io/) - The Next-Generation Command Line
 
-#### Browsers
+### Browsers
 
 - [Arc](https://arc.net/) - A New Way of Using the Internet
 - [Firefox](https://www.mozilla.org/en-US/firefox/new/) - Fast, Private and Free
 - [Google Chome](https://www.google.com/chrome/) - Download the Fast, Security Browser
 
-#### Design
+### Design
 
 - [Blender](https://www.blender.org/) - Free 3D Creation
 - [Inkscape](https://inkscape.org/) - Draw Freely
