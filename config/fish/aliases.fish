@@ -8,7 +8,7 @@ abbr -a vscode-plugins "code --list-extensions | xargs -L 1 echo code --install-
 # Eza
 abbr -a ls "eza -l -g --icons --header --git"
 abbr -a ls-tree "eza -1 --icons --tree --git-ignore"
-abbr -a ls-images 'eza --oneline --long | awk '{print $NF}' | grep -E '\.(jpg|jpeg|png|gif|bmp|tiff|webp|svg)$' | xargs -L1 identify -format "%f: %wx%h\n"'
+abbr -a ls-images "eza --long --oneline | awk '{print $NF}' | grep -E '\.(jpg|jpeg|png|gif|bmp|tiff|webp|svg)' | xargs -I{} identify -format \"%f: %wx%h\n\" {}"
 
 # Tmux
 abbr -a vim nvim
