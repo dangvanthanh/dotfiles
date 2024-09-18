@@ -31,6 +31,7 @@ return {
           always_show = {
             ".env",
             ".env.local",
+            ".dev.vars",
           },
           follow_current_file = {
             enable = true,
