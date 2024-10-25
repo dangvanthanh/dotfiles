@@ -60,7 +60,7 @@ mouse = "Middle"
 history = 10000
 multiplier = 3
 
-[shell]
+[terminal.shell]
 program = "/opt/homebrew/bin//fish"
 
 [window]
