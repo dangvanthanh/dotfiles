@@ -4,6 +4,7 @@
 -- Highlight YAML front matter
 vim.opt.guifont = "VictorMono NF"
 vim.api.nvim_set_var("vim_markdown_frontmatter ", 1)
+vim.opt.relativenumber = false
 vim.opt.winbar = "%=%m %f"
 vim.g.lazygit_config = false
 vim.g.loaded_python3_provider = 0
