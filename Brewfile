@@ -27,6 +27,7 @@ brew 'difftastic'
 brew 'imagemagick'
 brew 'ffmpeg'
 brew 'navi'
+brew 'bottom'
 
 # Apps
 tap 'homebrew/cask'
