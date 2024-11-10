@@ -34,11 +34,9 @@ tap 'homebrew/cask'
 
 cask 'firefox'
 cask 'google-chrome'
-cask 'arc'
 
 cask 'alacritty'
 cask 'visual-studio-code'
-cask 'sourcetree'
 cask 'beekeeper-studio'
 cask 'dbngin'
 cask 'bruno'
