@@ -44,6 +44,7 @@ cask 'bruno'
 cask 'blender'
 cask 'inkscape'
 cask 'figma'
+cask 'spline'
 cask 'tiled'
 
 cask 'dropbox'
