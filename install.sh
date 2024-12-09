@@ -69,3 +69,10 @@ naviHome="$homeConfig/navi"
 create_symlink "$navi/config.yaml" "$naviHome/config.yaml"
 naviFolders=("cheats")
 link_folders "$navi" "$naviHome" "${naviFolders[@]}"
+
+# Espanso
+echo "Setting up Espanso"
+espanso="$dotfilesConfig/espanso"
+espansoHome="/Users/dangvanthanh/Library/Application Support/espanso"
+create_symlink "$espanso/default.yml" "$espansoHome/config/default.yml"
+create_symlink "$espanso/base.yml" "$espansoHome/match/base.yml"

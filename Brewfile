@@ -60,6 +60,10 @@ cask 'betterdisplay'
 cask 'nordvpn'
 cask 'pika'
 cask 'calibre'
+cask 'espanso'
+
+cask 'jan'
+cask 'lm-studio'
 
 # Others
 tap 'homebrew/cask-fonts'

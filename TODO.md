@@ -16,7 +16,7 @@
 - [] Monitor: BenQ PD3420Q
 - [x] Monitor mount: Vivo Dual Monitor Vertical Mount
 - [x] Monitor light bar: Xiaomi Light Bar
-- [] Speakers: Edifier R1280DB
+- [] Speakers: Edifier R1280DB, Kanto ORAMW 100W Powered
 - [x] Keyboard: Nibble 65
 - [] Mouse: Evoluent VMDSW Vertical Mouse D Small
 - [x] Mouse mat: KAT Space Dust

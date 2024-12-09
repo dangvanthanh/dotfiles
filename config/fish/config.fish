@@ -33,3 +33,5 @@ end
 # Wasmer
 export WASMER_DIR="$HOME/.wasmer"
 [ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
+# Added by LM Studio CLI (lms)
+set -gx PATH $PATH /Users/dangvanthanh/.cache/lm-studio/bin
