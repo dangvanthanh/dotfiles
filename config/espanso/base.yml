@@ -1,12 +1,5 @@
-# espanso match file
+# Espanso Trigger
 
-# For a complete introduction, visit the official docs at: https://espanso.org/docs/
-
-# You can use this file to define the base matches (aka snippets)
-# that will be available in every application when using espanso.
-
-# Matches are substitution rules: when you type the "trigger" string
-# it gets replaced by the "replace" string.
 matches:
   # Simple text replacement
   - trigger: ":espanso"
@@ -35,8 +28,8 @@ matches:
           cmd: "echo 'Hello from your shell'"
 
   # Nail Pro
-  - trigger: ":nail-thanks"
+  - trigger: ":nail-1"
     replace: "Thank you for your wonderful feedback! We're thrilled to be your top choice in Silverdale. It's great to hear you loved your pedicure and acrylic fill. We look forward to seeing you again soon at Nail Pro!"
 
-
-  # And much more! For more information, visit the docs: https://espanso.org/docs/
+  - trigger: ":nail-2"
+    replace: "Thank you for your wonderful feedback! We are truly honored to offer exceptional service at Nail Pro."
