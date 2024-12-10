@@ -1,0 +1,10 @@
+matches:
+  # Thanks
+  - trigger: ";ty.feed"
+    replace: "Thank you for your wonderful feedback! We're thrilled to be your top choice in Silverdale. It's great to hear you loved your pedicure and acrylic fill. We look forward to seeing you again soon at Nail Pro!"
+
+  - trigger: ";ty.wonder"
+    replace: "Thank you for your wonderful feedback! We are truly honored to offer exceptional service at Nail Pro."
+
+  - trigger: ";ty.sy"
+    replace: "We look forward to seeing you again soon at Nail Pro!"

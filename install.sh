@@ -75,4 +75,7 @@ echo "Setting up Espanso"
 espanso="$dotfilesConfig/espanso"
 espansoHome="/Users/dangvanthanh/Library/Application Support/espanso"
 create_symlink "$espanso/default.yml" "$espansoHome/config/default.yml"
-create_symlink "$espanso/base.yml" "$espansoHome/match/base.yml"
+
+for match in base.yml me.yml nailpro.yml; do
+  create_symlink "$espanso/$match" "$espansoHome/match/$match"
+done

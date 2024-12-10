@@ -5,9 +5,10 @@ toggle_key: OFF
 search_shortcut: OFF
 
 # --- Injection Backend
+# backend: Clipboard
 
 # --- Auto-restart
-auto_restart: true
+# auto_restart: false
 
 # --- Clipboard threshold
-clipboard_threshold: 100
+# clipboard_threshold: 100
