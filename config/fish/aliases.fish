@@ -22,4 +22,4 @@ abbr -a t-kill "tmux kill-server"
 abbr -a diff-git "GIT_EXTERNAL_DIFF=difft git log -p --ext-diff"
 
 # Pdf
-abbr -a gs-pdf "gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf"
+abbr -a gs-pdf "gs -sDEVICE=pdfwrite -sPAPERSIZE=a4 -dFIXEDMEDIA -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf"

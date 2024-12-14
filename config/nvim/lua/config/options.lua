@@ -17,5 +17,8 @@ vim.g.loaded_node_provider = 0
 vim.g.loaded_perl_provider = 0
 vim.g.lazyvim_python_lsp = "basedpyright"
 vim.g.lazyvim_no_inlay_hints = true
+vim.g.lazyvim_prettier_needs_config = true
+vim.g.lazyvim_blink_main = false
+vim.g.lazyvim_picker = "fzf"
 
 vim.api.nvim_set_var("vim_markdown_frontmatter ", 1)

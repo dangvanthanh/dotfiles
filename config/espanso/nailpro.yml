@@ -1,10 +1,25 @@
 matches:
   # Thanks
-  - trigger: ";ty.feed"
+  - trigger: ";ty.top"
     replace: "Thank you for your wonderful feedback! We're thrilled to be your top choice in Silverdale. It's great to hear you loved your pedicure and acrylic fill. We look forward to seeing you again soon at Nail Pro!"
 
   - trigger: ";ty.wonder"
-    replace: "Thank you for your wonderful feedback! We are truly honored to offer exceptional service at Nail Pro."
+    replace: "Thank you for your wonderful feedback!"
+
+  - trigger: ";ty.feed"
+    replace: "Thank you for your feedback!"
 
   - trigger: ";ty.sy"
     replace: "We look forward to seeing you again soon at Nail Pro!"
+
+  - trigger: ";ty.generous"
+    replace: "Thank you for your generous words!"
+
+  - trigger: ";ty.kind"
+    replace: "Thank you for your kind words!"
+
+  - trigger: ";ty.apologize"
+    replace: "We sincerely apologize for your experience. We'll ensure better service next time!"
+
+  - trigger: ";ty.share"
+    replace: "Could you please share how we can improve?"
