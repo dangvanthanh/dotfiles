@@ -21,5 +21,31 @@ matches:
   - trigger: ";ty.apologize"
     replace: "We sincerely apologize for your experience. We'll ensure better service next time!"
 
+  - trigger: ";ty.glad"
+    replace: "We're glad that your time at Nail Pro was great, and we hope to see you soon!"
+
   - trigger: ";ty.share"
     replace: "Could you please share how we can improve?"
+
+  - trigger: ";ty.support"
+    replace: "Your support is greatly appreciated."
+
+  - trigger: ";np.winter"
+    replace: |
+      Winter Nails:
+
+      Treat yourself to the ultimate nail experience - your dream nails are just a phone call away!
+      📞 (360) 698-5063
+      📍 3299 NW Randall Way #103, Silverdale, WA 98383
+
+      #nailpro #nailprosilverdale #holidaynailsalon #christmasnails #snowflakedesigns #winterbeauty #festivestyle #holidayglow
+
+  - trigger: ";np.summer"
+    replace: |
+      Summer Nails:
+
+      Treat yourself to the ultimate nail experience - your dream nails are just a phone call away!
+      📞 (360) 698-5063
+      📍 3299 NW Randall Way #103, Silverdale, WA 98383
+
+      #nailpro #nailprosilverdale #holidaynailsalon #festivestyle #holidayglow
