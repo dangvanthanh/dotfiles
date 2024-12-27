@@ -38,7 +38,7 @@ matches:
       📞 (360) 698-5063
       📍 3299 NW Randall Way #103, Silverdale, WA 98383
 
-      #nailpro #nailprosilverdale #holidaynailsalon #christmasnails #snowflakedesigns #winterbeauty #festivestyle #holidayglow
+      #nailpro #nailprosilverdale #christmasnails #winterbeauty #festivestyle
 
   - trigger: ";np.summer"
     replace: |
@@ -48,4 +48,4 @@ matches:
       📞 (360) 698-5063
       📍 3299 NW Randall Way #103, Silverdale, WA 98383
 
-      #nailpro #nailprosilverdale #holidaynailsalon #festivestyle #holidayglow
+      #nailpro #nailprosilverdale #summernails #festivestyle
