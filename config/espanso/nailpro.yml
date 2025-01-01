@@ -49,3 +49,9 @@ matches:
       📍 3299 NW Randall Way #103, Silverdale, WA 98383
 
       #nailpro #nailprosilverdale #summernails #festivestyle
+  
+  - trigger: ";np.image"
+    replace: "Provide a description of these nails in 40-60 characters."
+
+  - trigger: ";np.reply"
+    replace: "Compose a thank you reply to feedback for my salon, Nail Pro, between 100-140 characters:"
