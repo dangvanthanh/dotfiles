@@ -65,6 +65,8 @@ cask 'espanso'
 cask 'jan'
 cask 'lm-studio'
 
+cask 'the-unarchiver'
+
 # Others
 tap 'homebrew/cask-fonts'
 

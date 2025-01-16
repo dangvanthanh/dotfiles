@@ -23,3 +23,6 @@ abbr -a diff-git "GIT_EXTERNAL_DIFF=difft git log -p --ext-diff"
 
 # Pdf
 abbr -a gs-pdf "gs -sDEVICE=pdfwrite -sPAPERSIZE=a4 -dFIXEDMEDIA -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf"
+
+# Show hidden files on macos
+abbr -a show-all-files "defaults write com.apple.finder AppleShowAllFiles TRUE;killall Finder"
