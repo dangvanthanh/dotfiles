@@ -6,7 +6,8 @@ set fish_getting ""
 bind \ct kill_word
 
 # Asdf
-source /opt/homebrew/opt/asdf/libexec/asdf.fish
+set --export ASDF_DATA_DIR $HOME/.asdf
+fish_add_path --prepend $ASDF_DATA_DIR/shims
 
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
