@@ -6,8 +6,11 @@ set fish_getting ""
 bind \ct kill_word
 
 # Asdf
-set --export ASDF_DATA_DIR $HOME/.asdf
-fish_add_path --prepend $ASDF_DATA_DIR/shims
+if test -z $ASDF_DATA_DIR
+    set _asdf_shims "$HOME/.asdf/shims"
+else
+    set _asdf_shims "$ASDF_DATA_DIR/shims"
+end
 
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
