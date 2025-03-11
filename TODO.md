@@ -13,7 +13,7 @@
 
 ## Workspace
 
-- [] Monitor: BenQ PD3420Q and MSI MPG 491CQP QD-OLED, 49 Curved OLED
+- [] Monitor: BenQ PD3420Q and MSI MPG 491CQP QD-OLED, 49 Curved OLED or 
 - [x] Monitor mount: Vivo Dual Monitor Vertical Mount
 - [x] Monitor light bar: Xiaomi Light Bar
 - [] Speakers: Edifier R1280DB, Kanto ORAMW 100W Powered

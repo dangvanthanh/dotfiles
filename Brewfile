@@ -48,7 +48,6 @@ cask 'spline'
 cask 'tiled'
 
 cask 'dropbox'
-cask 'skype'
 cask 'microsoft-teams'
 cask 'discord'
 

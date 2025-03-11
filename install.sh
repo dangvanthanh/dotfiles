@@ -58,18 +58,6 @@ create_symlink "$dotfilesConfig/alacritty/alacritty.toml" "$homeConfig/alacritty
 echo "Setting up Tmux"
 create_symlink "$dotfiles/tmux.conf" "$HOME/.tmux.conf"
 
-# Bat
-echo "Setting up Bat"
-create_symlink "$dotfilesConfig/bat/config" "$homeConfig/bat/config"
-
-# Navi
-echo "Setting up Navi"
-navi="$dotfilesConfig/navi"
-naviHome="$homeConfig/navi"
-create_symlink "$navi/config.yaml" "$naviHome/config.yaml"
-naviFolders=("cheats")
-link_folders "$navi" "$naviHome" "${naviFolders[@]}"
-
 # Espanso
 echo "Setting up Espanso"
 espanso="$dotfilesConfig/espanso"

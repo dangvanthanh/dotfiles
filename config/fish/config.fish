@@ -39,3 +39,7 @@ export WASMER_DIR="$HOME/.wasmer"
 [ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
 # Added by LM Studio CLI (lms)
 set -gx PATH $PATH /Users/dangvanthanh/.cache/lm-studio/bin
+
+# OpenSSL
+# export PATH="/usr/local/opt/openssl@3/bin:$PATH"
+export LDFLAGS="-I/opt/homebrew/opt/openssl/include -L/opt/homebrew/opt/openssl/lib"
