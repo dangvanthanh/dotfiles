@@ -26,7 +26,6 @@ brew 'tree-sitter'
 brew 'difftastic'
 brew 'imagemagick'
 brew 'ffmpeg'
-brew 'navi'
 brew 'bottom'
 
 # Apps
@@ -61,8 +60,7 @@ cask 'pika'
 cask 'calibre'
 cask 'espanso'
 
-cask 'jan'
-cask 'lm-studio'
+cask 'msty'
 
 cask 'the-unarchiver'
 
