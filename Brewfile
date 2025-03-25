@@ -1,6 +1,6 @@
 cask_args appdir: '/Applications'
 
-# Development 
+# Development
 brew 'wget'
 brew 'git'
 brew 'git-lfs'
@@ -35,10 +35,12 @@ cask 'firefox'
 cask 'google-chrome'
 
 cask 'alacritty'
-cask 'visual-studio-code'
 cask 'beekeeper-studio'
-cask 'dbngin'
 cask 'bruno'
+cask 'dbngin'
+cask 'visual-studio-code'
+cask 'trae'
+cask 'windsurf'
 
 cask 'blender'
 cask 'inkscape'

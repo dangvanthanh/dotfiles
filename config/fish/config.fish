@@ -34,3 +34,13 @@ end
 # Wasmer
 export WASMER_DIR="$HOME/.wasmer"
 [ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
+
+# Icu4c
+fish_add_path "/opt/homebrew/opt/icu4c@76/bin"
+fish_add_path "/opt/homebrew/opt/icu4c@76/sbin"
+
+set -gx LDFLAGS "-L/opt/homebrew/opt/icu4c@76/lib"
+set -gx CPPFLAGS "-I/opt/homebrew/opt/icu4c@76/include"
+set -gx PKG_CONFIG_PATH "/opt/homebrew/opt/icu4c@76/lib/pkgconfig"
+# Added by Windsurf
+fish_add_path /Users/dangvanthanh/.codeium/windsurf/bin
