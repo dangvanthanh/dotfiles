@@ -44,21 +44,13 @@ chmod +x brew.sh
 ./install.sh
 ```
 
-## Alacritty and Neovim
+## configuration
 
-Create `~/.config` folder for Alacritty and Neovim
+Create `~/.config` folder for configuration
 
 ```shell
 mkdir ~/.config
 cd ~/.config
-```
-
-### Alacritty
-
-Create configuration for Alacritty
-
-```shell
-mkdir -p ~/.config/alacritty && cd ~/.config/alacritty && touch alacritty.yml
 ```
 
 ### Ghostty
@@ -66,7 +58,7 @@ mkdir -p ~/.config/alacritty && cd ~/.config/alacritty && touch alacritty.yml
 Create configuration for Ghostty
 
 ```shell
-mkdir -p ~/.config/ghostty && cd ~/.config/ghostty && touch config
+mkdir -p ~/.config/ghostty && touch ~/.config/ghostty/config
 ```
 
 ### Neovim
@@ -86,7 +78,7 @@ mkdir -p ~/.config/nvim/lua/config
 mkdir -p ~/.config/nvim/lua/plugins
 ```
 
-Benchmarking neovim
+Benchmarking Neovim
 
 ```shell
 hyperfine "nvim --headless +qa" --warmup 5
@@ -107,42 +99,36 @@ rm -rf ~/.asdf/shims/*
 asdf reshim
 ```
 
-## Visual Studio Code
-
-Show the extensions installed in Visual Studio Code
-
-```shell
-code --list-extensions | xargs -L 1 echo code --install-extension
-```
-
 ## Brewfile
 
 All the applications I use:
 
 ### Web Developer
 
-- [Alacritty](https://github.com/jwilm/alacritty) - macOS Terminal Replacement
+- [Ghostty](https://ghostty.org/) - macOS Terminal Replacement
 - [Neovim](https://github.com/neovim/neovim) - Powerful Editor
-- [Visual Studio Code](https://code.visualstudio.com/) - Code Editor
+- [Windsurf Editor](https://codeium.com/windsurf) - Code AI Editor
+- [Msty](https://msty.app/) - Using AI Models made Simple and Easy
 - [Beekeeper Studio](https://www.beekeeperstudio.io/) - The SQL Editor and Database Manager Of Your Dreams
 - [Bruno](https://www.usebruno.com/) - The Easy Way to Design, Debug, and Test APIs
 
 ### Browsers
 
+- [Zen Browsers](https://zen-browser.app) - Beautifully Designed, Privacy-focused
 - [Firefox](https://www.mozilla.org/en-US/firefox/new/) - Fast, Private and Free
 - [Google Chome](https://www.google.com/chrome/) - Download the Fast, Security Browser
 
 ### Design
 
+- [Figma](https://www.figma.com/) - The Collaborative Interface Design Tool
 - [Blender](https://www.blender.org/) - Free 3D Creation
 - [Inkscape](https://inkscape.org/) - Draw Freely
-- [Figma](https://www.figma.com/) - The Collaborative Interface Design Tool
+- [Darktable](https://darktable.org/) - The Easy Way to Make Great Photos
 
 #### Communication
 
 - [Discord](https://discord.com/) - Your Place to Talk and Hang Out
-- [Skype](https://www.skype.com/en/) - Communication Calls And Chat
-- [Slack](https://slack.com/) - Platform For Team and Work
+- [Microsoft Team](https://www.microsoft.com/en-us/microsoft-teams/group-chat-software) - Streamline Communications
 - [Dropbox](https://www.dropbox.com/) - Storage Online
 
 #### Others
@@ -153,3 +139,4 @@ All the applications I use:
 - [BetterDisplay](https://github.com/waydabber/BetterDisplay) - Unlock Your Displays on Your Mac
 - [Bartender](https://www.macbartender.com/Bartender5/) - Take Control of Your Menu Bar
 - [NordVPN](https://nordvpn.com/) - Online VPN Service for Speed
+- [The Unarchiver](https://theunarchiver.com/) - Unarchive Files

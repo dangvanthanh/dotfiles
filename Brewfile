@@ -48,6 +48,7 @@ cask 'inkscape'
 cask 'figma'
 cask 'spline'
 cask 'tiled'
+cask 'darktable'
 
 cask 'dropbox'
 cask 'microsoft-teams'
