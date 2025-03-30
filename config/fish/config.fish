@@ -42,5 +42,9 @@ fish_add_path "/opt/homebrew/opt/icu4c@76/sbin"
 set -gx LDFLAGS "-L/opt/homebrew/opt/icu4c@76/lib"
 set -gx CPPFLAGS "-I/opt/homebrew/opt/icu4c@76/include"
 set -gx PKG_CONFIG_PATH "/opt/homebrew/opt/icu4c@76/lib/pkgconfig"
-# Added by Windsurf
+
+# Windsurf
 fish_add_path /Users/dangvanthanh/.codeium/windsurf/bin
+
+# zoxide
+zoxide init fish | source

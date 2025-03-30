@@ -61,6 +61,14 @@ Create configuration for Alacritty
 mkdir -p ~/.config/alacritty && cd ~/.config/alacritty && touch alacritty.yml
 ```
 
+### Ghostty
+
+Create configuration for Ghostty
+
+```shell
+mkdir -p ~/.config/ghostty && cd ~/.config/ghostty && touch config
+```
+
 ### Neovim
 
 Install the Neovim Python module

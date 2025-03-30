@@ -10,7 +10,7 @@ brew 'neovim'
 brew 'redis'
 brew 'tree'
 brew 'ripgrep'
-brew 'z'
+brew 'zoxide'
 brew 'gcc'
 brew 'fd'
 brew 'fx'
@@ -31,6 +31,7 @@ brew 'bottom'
 # Apps
 tap 'homebrew/cask'
 
+cask 'zen-browser'
 cask 'firefox'
 cask 'google-chrome'
 
@@ -38,7 +39,7 @@ cask 'alacritty'
 cask 'beekeeper-studio'
 cask 'bruno'
 cask 'dbngin'
-cask 'visual-studio-code'
+
 cask 'trae'
 cask 'windsurf'
 
