@@ -9,6 +9,13 @@ bold-is-bright = true
 shell-integration-features = no-cursor,sudo,no-title
 shell-integration = fish
 
+# Mac
+macos-titlebar-style = tabs
+macos-option-as-alt = true
+
+# Term
+term = xterm-256color
+
 # Mouse settings
 copy-on-select = true
 cursor-style = block

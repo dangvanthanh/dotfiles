@@ -54,6 +54,10 @@ link_folders "$nvim" "$nvimHome" "${nvimFolders[@]}"
 echo "Setting up Alacritty"
 create_symlink "$dotfilesConfig/alacritty/alacritty.toml" "$homeConfig/alacritty/alacritty.toml"
 
+# Bat
+echo "Setting up Bat"
+create_symlink "$dotfilesConfig/bat/config" "$homeConfig/bat/config"
+
 # Ghostty
 echo "Setting up Ghostty"
 create_symlink "$dotfilesConfig/ghostty/config" "$homeConfig/ghostty/config"

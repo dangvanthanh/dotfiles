@@ -17,13 +17,13 @@
 - [x] Monitor mount: Vivo Dual Monitor Vertical Mount
 - [x] Monitor light bar: Xiaomi Light Bar
 - [] Speakers: Edifier R1280DB, Kanto ORAMW 100W Powered
-- [x] Keyboard: Nibble 65
+- [x] Keyboard: Nibble 65, Logitech MX Mechanical
 - [] Mouse: Evoluent VMDSW Vertical Mouse D Small
 - [x] Mouse mat: KAT Space Dust
 - [] Table: TOPSKY Dual Motor
 - [] Chair: KERDOM Ergonomic Office Chair
 - [] Display: Tidbyt Gen 2
-- [] Mini PC: ASRock
+- [] Mini PC: Beelink SER9 Pro or GMKtec EVO-X1
 
 ## Kitchen
 
