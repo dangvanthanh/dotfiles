@@ -1,17 +1,19 @@
+# Font
 font-family = VictorMono Nerd Font Mono
 font-size = 16
 font-style = Regular
 font-thicken = true
+bold-is-bright = true
 
+# Shell
 shell-integration-features = no-cursor,sudo,no-title
 shell-integration = fish
-
-bold-is-bright = true
 
 # Mouse settings
 copy-on-select = true
 cursor-style = block
 cursor-style-blink = false
+mouse-hide-while-typing = true
 
 # Color scheme (Gruvbox)
 background = #32302f

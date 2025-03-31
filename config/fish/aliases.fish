@@ -15,7 +15,7 @@ abbr -a vim nvim
 abbr -a list-port "lsof -i :3000"
 abbr -a kill-port "kill -9"
 abbr -a t tmux
-abbr -a t-layout "tmux split-window -h -p 30"
+abbr -a t-layout "tmux split-window -h -p 25"
 abbr -a t-kill "tmux kill-server"
 
 # Git

@@ -22,9 +22,6 @@ fish_add_path "$HOME/.bun/bin"
 # .NET
 export PATH="/usr/local/share/dotnet:$PATH"
 
-# Starship
-starship init fish | source
-
 # Pnpm
 set -gx PNPM_HOME "$HOME/Library/pnpm"
 if not string match -q -- $PNPM_HOME $PATH
@@ -46,5 +43,8 @@ set -gx PKG_CONFIG_PATH "/opt/homebrew/opt/icu4c@76/lib/pkgconfig"
 # Windsurf
 fish_add_path /Users/dangvanthanh/.codeium/windsurf/bin
 
-# zoxide
+# Starship
+starship init fish | source
+
+# Zoxide
 zoxide init fish | source

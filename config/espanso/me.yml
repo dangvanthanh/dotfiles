@@ -16,4 +16,4 @@ matches:
     replace: "https://www.facebook.com/dangvanthanh"
 
   - trigger: ";me.linkedin"
-    replace: "https://www.linkedin.com/in/dangthanh/"
+    replace: "https://www.linkedin.com/in/dangthanh"
