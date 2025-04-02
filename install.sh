@@ -62,6 +62,11 @@ create_symlink "$dotfilesConfig/bat/config" "$homeConfig/bat/config"
 echo "Setting up Ghostty"
 create_symlink "$dotfilesConfig/ghostty/config" "$homeConfig/ghostty/config"
 
+
+# Starship
+echo "Setting up Starship"
+create_symlink "$dotfilesConfig/starship/starship.toml" "$homeConfig/starship.toml"
+
 # Tmux
 echo "Setting up Tmux"
 create_symlink "$dotfiles/tmux.conf" "$HOME/.tmux.conf"

@@ -44,7 +44,7 @@ chmod +x brew.sh
 ./install.sh
 ```
 
-## configuration
+## Configuration
 
 Create `~/.config` folder for configuration
 
@@ -82,6 +82,14 @@ Benchmarking Neovim
 
 ```shell
 hyperfine "nvim --headless +qa" --warmup 5
+```
+
+### Starship
+
+Create configuration for Starship
+
+```shell
+mkdir -p ~/.config && touch ~/.config/starship.toml
 ```
 
 ## Asdf
