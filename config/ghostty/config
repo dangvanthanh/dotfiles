@@ -50,3 +50,26 @@ palette = 14=#689d6a
 # white
 palette = 7=#ebdbb2
 palette = 15=#a89984
+
+# Full screen for terminal
+window-height = 80
+window-width = 190
+
+# For tmux like keybinding
+keybind = ctrl+a>q=quit
+keybind = ctrl+a>c=new_tab
+keybind = ctrl+a>p=previous_tab
+keybind = ctrl+a>n=next_tab
+
+# To create split and navigate it
+keybind = ctrl+a>\=new_split:right
+keybind = ctrl+a>-=new_split:down
+keybind = ctrl+a>l=goto_split:next
+keybind = ctrl+a>h=goto_split:previous
+keybind = ctrl+a>x=close_surface
+
+# For resizing split
+keybind = ctrl+shift+h=resize_split:left,10
+keybind = ctrl+shift+l=resize_split:right,10
+keybind = ctrl+shift+k=resize_split:up,10
+keybind = ctrl+shift+j=resize_split:down,10
