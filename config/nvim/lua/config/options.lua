@@ -13,10 +13,19 @@ vim.g.loaded_python3_provider = 0
 vim.g.loaded_ruby_provider = 0
 vim.g.loaded_node_provider = 0
 vim.g.loaded_perl_provider = 0
+
 vim.g.lazyvim_python_lsp = "basedpyright"
 vim.g.lazyvim_no_inlay_hints = true
 vim.g.lazyvim_prettier_needs_config = true
 vim.g.lazyvim_blink_main = false
-vim.g.lazyvim_picker = "fzf"
 
-vim.api.nvim_set_var("vim_markdown_frontmatter ", 1)
+-- Limit LSP document size
+vim.lsp.buf.big_file_threshold = 1024 * 1024 -- 1MB
+
+-- Lazy load plugins
+vim.api.nvim_create_autocmd("BufEnter", {
+	pattern = { "*.py" },
+	callback = function()
+		require("lazy").load({ plugins = { "pyright" } })
+	end,
+})

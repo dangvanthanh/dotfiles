@@ -1,7 +1,7 @@
 return {
 	{
 		"stevearc/conform.nvim",
-		event = { "BufWritePre" },
+		event = { "BufWritePre", "BufNewFile" },
 		cmd = "ConformInfo",
 		keys = {
 			{
@@ -21,21 +21,22 @@ return {
 				lsp_fallback = true, -- not recommended to change
 			},
 			formatters_by_ft = {
+				["sh"] = { "shfmt" },
+				["lua"] = { "stylua" },
+				["fish"] = { "fish_indent" },
 				["javascript"] = { "biome" },
 				["typescript"] = { "biome" },
 				["javascriptreact"] = { "biome" },
 				["typescriptreact"] = { "biome" },
-				["json"] = { "biome" },
-				["jsonc"] = { "biome" },
-				["html"] = { "biome" },
 				["svelte"] = { "biome" },
 				["scss"] = { "biome" },
 				["css"] = { "biome" },
+				["html"] = { "biome" },
+				["json"] = { "biome" },
+				["jsonc"] = { "biome" },
 				["yaml"] = { "biome" },
 				["graphql"] = { "biome" },
-				["lua"] = { "stylua" },
-				["fish"] = { "fish_indent" },
-				["sh"] = { "shfmt" },
+				["python"] = { "isort", "ruff" },
 			},
 			formatters = {
 				injected = { options = { ignore_errors = true } },

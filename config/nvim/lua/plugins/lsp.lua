@@ -1,10 +1,5 @@
 return {
 	{
-		"williamboman/mason.nvim",
-		event = "VeryLazy",
-		opts = {},
-	},
-	{
 		"neovim/nvim-lspconfig",
 		dependencies = {
 			"jose-elias-alvarez/typescript.nvim",
