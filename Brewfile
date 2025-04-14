@@ -46,8 +46,8 @@ cask 'beekeeper-studio'
 cask 'bruno'
 cask 'dbngin'
 
-cask 'trae'
-cask 'windsurf'
+# cask 'trae'
+# cask 'windsurf'
 
 cask 'blender'
 cask 'inkscape'

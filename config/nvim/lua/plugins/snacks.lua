@@ -16,6 +16,7 @@ return {
 		},
 	},
 	opts = {
+
 		picker = {
 			transform = function(item)
 				if not item.file then
@@ -27,6 +28,14 @@ return {
 				end
 				return item
 			end,
+			sources = {
+				explorer = {
+					hidden = true,
+					ignored = true,
+					exclude = { "node_modules", ".git", ".DS_Store" },
+					include = { ".env", ".env.local" },
+				},
+			},
 			debug = {
 				scores = false, -- show scores in the list
 			},
