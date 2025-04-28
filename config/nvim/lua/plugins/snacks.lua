@@ -37,7 +37,7 @@ return {
 				files = {
 					hidden = true,
 					ignored = true,
-					exclude = { ".DS_Store" },
+					exclude = { "node_modules", ".DS_Store" },
 				},
 			},
 			debug = {
