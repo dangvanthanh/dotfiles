@@ -1,3 +1,20 @@
+local excluded = {
+	"node_modules",
+	"dist",
+	"build",
+	".next",
+	".nuxt",
+	".turbo",
+	".vite",
+	".git",
+	"bun.lock",
+	"bun.lockb",
+	"package-lock.json",
+	"pnpm-lock.yaml",
+	"yarn.lock",
+	".DS_Store",
+}
+
 return {
 	"folke/snacks.nvim",
 	keys = {
@@ -31,13 +48,13 @@ return {
 				explorer = {
 					hidden = true,
 					ignored = true,
-					exclude = { "node_modules", "dist", ".turbo", ".git", ".DS_Store" },
+					exclude = excluded,
 					include = { ".env", ".env.local" },
 				},
 				files = {
 					hidden = true,
 					ignored = true,
-					exclude = { "node_modules", "dist", ".turbo", ".git", ".DS_Store" },
+					exclude = excluded,
 				},
 			},
 			debug = {
