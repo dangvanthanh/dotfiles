@@ -31,13 +31,13 @@ return {
 				explorer = {
 					hidden = true,
 					ignored = true,
-					exclude = { "node_modules", ".git", ".DS_Store" },
+					exclude = { "node_modules", "dist", ".turbo", ".git", ".DS_Store" },
 					include = { ".env", ".env.local" },
 				},
 				files = {
 					hidden = true,
 					ignored = true,
-					exclude = { "node_modules", ".DS_Store" },
+					exclude = { "node_modules", "dist", ".turbo", ".git", ".DS_Store" },
 				},
 			},
 			debug = {
