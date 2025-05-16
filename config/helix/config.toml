@@ -1,0 +1,32 @@
+theme = "gruvbox_dark_soft"
+
+[editor]
+line-number = "relative"
+mouse = false
+auto-pairs = true
+bufferline = "multiple"
+
+[editor.statusline]
+left = ["mode", "spinner", "file-name", "file-modification-indicator"]
+center = ["workspace-diagnostics", "selections"]
+right = ["diagnostics", "position", "file-encoding"]
+
+[editor.lsp]
+display-messages = true
+display-inlay-hints = true
+
+[editor.indent-guides]
+render = true
+character = "⸽"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+git-global = false
+
+[editor.soft-wrap]
+enable = true

@@ -1,0 +1,69 @@
+[language-server]
+biome = { command = "biome", args = ["lsp-proxy"] }
+
+[[language]]
+name = "markdown"
+language-servers = ["marksman", "ltex-ls"]
+rulers = [120]
+
+[[language]]
+name = "json"
+auto-format = false
+
+[[language]]
+name = "toml"
+
+[[languages]]
+name = "bash"
+file-types = ["sh", "bash", ".functions"]
+
+[[language]]
+name = "html"
+
+[[language]]
+name = "css"
+
+[[language]]
+name = "javascript"
+language-servers = [
+  { name = "typescript-language-server", except-features = [
+    "format",
+  ] },
+  "biome",
+]
+auto-format = true
+
+[[language]]
+name = "typescript"
+language-servers = [
+  { name = "typescript-language-server", except-features = [
+    "format",
+  ] },
+  "biome",
+]
+auto-format = true
+
+[[language]]
+name = "tsx"
+auto-format = true
+language-servers = [
+  { name = "typescript-language-server", except-features = [
+    "format",
+  ] },
+  "biome",
+]
+
+[[language]]
+name = "jsx"
+auto-format = true
+language-servers = [
+  { name = "typescript-language-server", except-features = [
+    "format",
+  ] },
+  "biome",
+]
+
+[[languages]]
+name = "go"
+auto-format = true
+formatter = { command = "goimports" }

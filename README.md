@@ -115,6 +115,7 @@ All the applications I use:
 
 - [Ghostty](https://ghostty.org/) - macOS Terminal Replacement
 - [Neovim](https://github.com/neovim/neovim) - Powerful Editor
+- [Helix](https://helix-editor.com/) - Post-modern Text Editor
 - [Windsurf Editor](https://codeium.com/windsurf) - Code AI Editor
 - [Msty](https://msty.app/) - Using AI Models made Simple and Easy
 - [Beekeeper Studio](https://www.beekeeperstudio.io/) - The SQL Editor and Database Manager Of Your Dreams

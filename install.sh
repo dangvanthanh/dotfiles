@@ -50,6 +50,11 @@ create_symlink "$nvim/init.lua" "$nvimHome/init.lua"
 nvimFolders=("lua/config" "lua/plugins")
 link_folders "$nvim" "$nvimHome" "${nvimFolders[@]}"
 
+# Helix
+echo "Setting up Helix"
+create_symlink "$dotfilesConfig/helix/config.toml" "$homeConfig/helix/config.toml"
+create_symlink "$dotfilesConfig/helix/languages.toml" "$homeConfig/helix/languages.toml"
+
 # Alacritty
 echo "Setting up Alacritty"
 create_symlink "$dotfilesConfig/alacritty/alacritty.toml" "$homeConfig/alacritty/alacritty.toml"
