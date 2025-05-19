@@ -34,6 +34,9 @@ brew 'ripgrep'
 brew 'fzf'
 brew 'zoxide'
 brew 'imagemagick'
+brew 'biome'
+brew 'elixir-ls'
+brew 'taplo'
 
 # Apps
 tap 'homebrew/cask'

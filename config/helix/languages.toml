@@ -12,6 +12,8 @@ auto-format = false
 
 [[language]]
 name = "toml"
+auto-format = true
+formatter = { command = "taplo", args = ["format", "-"] }
 
 [[languages]]
 name = "bash"
@@ -67,3 +69,7 @@ language-servers = [
 name = "go"
 auto-format = true
 formatter = { command = "goimports" }
+
+[[languages]]
+name = "elixir"
+auto-format = true
