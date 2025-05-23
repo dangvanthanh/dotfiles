@@ -42,6 +42,7 @@ brew 'tree-sitter'
 brew 'biome'
 brew 'elixir-ls'
 brew 'taplo'
+brew 'vscode-langservers-extracted'
 
 # Apps
 tap 'homebrew/cask'
