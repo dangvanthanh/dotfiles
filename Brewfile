@@ -36,6 +36,7 @@ brew 'starship'
 brew 'difftastic'
 brew 'zoxide'
 brew 'yazi'
+brew 'zellij'
 
 # Language Server Protocol
 brew 'tree-sitter'

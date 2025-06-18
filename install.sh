@@ -54,6 +54,7 @@ link_folders "$nvim" "$nvimHome" "${nvimFolders[@]}"
 echo "Setting up Helix"
 create_symlink "$dotfilesConfig/helix/config.toml" "$homeConfig/helix/config.toml"
 create_symlink "$dotfilesConfig/helix/languages.toml" "$homeConfig/helix/languages.toml"
+create_symlink "$dotfilesConfig/helix/yazi-picker.fish" "$homeConfig/helix/yazi-picker.fish"
 
 # Alacritty
 echo "Setting up Alacritty"
