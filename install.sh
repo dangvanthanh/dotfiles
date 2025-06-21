@@ -56,6 +56,10 @@ create_symlink "$dotfilesConfig/helix/config.toml" "$homeConfig/helix/config.tom
 create_symlink "$dotfilesConfig/helix/languages.toml" "$homeConfig/helix/languages.toml"
 create_symlink "$dotfilesConfig/helix/yazi-picker.fish" "$homeConfig/helix/yazi-picker.fish"
 
+# Zellij
+echo "Setting up Zellij"
+create_symlink "$dotfilesConfig/zellij/config.kdl" "$homeConfig/zellij/config.kdl"
+
 # Alacritty
 echo "Setting up Alacritty"
 create_symlink "$dotfilesConfig/alacritty/alacritty.toml" "$homeConfig/alacritty/alacritty.toml"
