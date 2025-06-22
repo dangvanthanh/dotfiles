@@ -46,36 +46,49 @@ link_files "$fish" "$fishHome" "${fishFiles[@]}"
 echo "Setting up Neovim"
 nvim="$dotfilesConfig/nvim"
 nvimHome="$homeConfig/nvim"
-create_symlink "$nvim/init.lua" "$nvimHome/init.lua"
 nvimFolders=("lua/config" "lua/plugins")
+create_symlink "$nvim/init.lua" "$nvimHome/init.lua"
 link_folders "$nvim" "$nvimHome" "${nvimFolders[@]}"
 
 # Helix
 echo "Setting up Helix"
-create_symlink "$dotfilesConfig/helix/config.toml" "$homeConfig/helix/config.toml"
-create_symlink "$dotfilesConfig/helix/languages.toml" "$homeConfig/helix/languages.toml"
-create_symlink "$dotfilesConfig/helix/yazi-picker.fish" "$homeConfig/helix/yazi-picker.fish"
+helix="$dotfilesConfig/helix"
+helixHome="$homeConfig/helix"
+helixFiles=("config.toml" "languages.toml" "yazi-picker-.fish")
+
+link_files "$helix" "$helixHome" "${helixFiles[@]}"
+
 
 # Zellij
 echo "Setting up Zellij"
-create_symlink "$dotfilesConfig/zellij/config.kdl" "$homeConfig/zellij/config.kdl"
+zellij="$dotfilesConfig/zellij"
+zellijHome="$homeConfig/zellij"
+zellijFolders=("layouts" "themes")
+create_symlink "$zellij/config.kdl" "$zellijHome/config.kdl"
+link_folders "$zellij" "$zellijHome" "${zellijFolders[@]}"
 
 # Alacritty
 echo "Setting up Alacritty"
-create_symlink "$dotfilesConfig/alacritty/alacritty.toml" "$homeConfig/alacritty/alacritty.toml"
+alacritty="$dotfilesConfig/alacritty"
+alacrittyHome="$homeConfig/alacritty"
+create_symlink "$alacritty/alacritty.toml" "$alacrittyHome/alacritty.toml"
 
 # Bat
 echo "Setting up Bat"
-create_symlink "$dotfilesConfig/bat/config" "$homeConfig/bat/config"
+bat="$dotfilesConfig/bat"
+batHome="$homeConfig/bat"
+create_symlink "$bat/config" "$batHome/config"
 
 # Ghostty
 echo "Setting up Ghostty"
-create_symlink "$dotfilesConfig/ghostty/config" "$homeConfig/ghostty/config"
-
+ghostty="$dotfilesConfig/ghostty"
+ghosttyHome="$homeConfig/ghostty"
+create_symlink "$ghostty/config" "$ghosttyHome/config"
 
 # Starship
 echo "Setting up Starship"
-create_symlink "$dotfilesConfig/starship/starship.toml" "$homeConfig/starship.toml"
+starship="$dotfilesConfig/starship"
+create_symlink "$starship/starship.toml" "$homeConfig/starship.toml"
 
 # Tmux
 echo "Setting up Tmux"
