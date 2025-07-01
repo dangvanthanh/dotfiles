@@ -22,6 +22,16 @@ file-types = ["sh", "bash", ".functions"]
 auto-format = true
 
 [[language]]
+name = "kdl"
+scope = "source.kdl"
+file-types = ["kdl"]
+comment-token = "//"
+block-comment-tokens = { start = "/*", end = "*/" }
+injection-regex = "kdl"
+formatter = { command = "kdlfmt", args = ["format", "-"] }
+auto-format = true
+
+[[language]]
 name = "html"
 
 [[language]]

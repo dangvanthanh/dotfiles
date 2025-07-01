@@ -1,5 +1,5 @@
 themes {
-    gruvbox {
+		gruvbox {
 				fg "#32302f"
 				bg "#ebdbb2"
 				black "#32302f"
@@ -11,5 +11,6 @@ themes {
 				cyan "#689d6a"
 				white "#a89984"
 				orange "#d65d0e"
-    }
+		}
 }
+
