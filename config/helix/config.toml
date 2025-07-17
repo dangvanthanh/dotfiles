@@ -37,7 +37,7 @@ y = "yank_main_selection_to_clipboard" # y yanks selection to clipboard
 p = "paste_clipboard_before"           # p pastes clipboard before
 
 [keys.normal.C-y]
-y = ":sh zellij run -f -x 10% -y 10% --width 80% --height 80% -- fish ~/.config/helix/yazi-picker.fish"
+y = ":sh zellij run -f -x 10%% -y 10%% --width 80%% --height 80%% -- fish ~/.config/helix/yazi-picker.fish"
 
 [keys.select]
 y = "yank_main_selection_to_clipboard" # y yanks selection to clipboard
