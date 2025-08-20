@@ -85,6 +85,12 @@ ghostty="$dotfilesConfig/ghostty"
 ghosttyHome="$homeConfig/ghostty"
 create_symlink "$ghostty/config" "$ghosttyHome/config"
 
+echo "Setting up Yazi"
+yazi="$dotfilesConfig/yazi"
+yaziHome="$homeConfig/yazi"
+yaziFiles=("yazi.toml" "keymap.toml" "theme.toml")
+link_files "$yazi" "$yaziHome" "${yaziFiles[@]}"
+
 # Starship
 echo "Setting up Starship"
 starship="$dotfilesConfig/starship"
