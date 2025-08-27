@@ -83,7 +83,8 @@ cask 'espanso'
 
 cask 'msty'
 
-cask 'the-unarchiver'
+cask 'keka'
+cask 'iina'
 
 # Others
 tap 'homebrew/cask-fonts'
