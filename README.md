@@ -49,8 +49,7 @@ chmod +x brew.sh
 Create `~/.config` folder for configuration
 
 ```shell
-mkdir ~/.config
-cd ~/.config
+mkdir ~/.config && cd ~/.config
 ```
 
 ### Ghostty
@@ -116,8 +115,7 @@ All the applications I use:
 - [Ghostty](https://ghostty.org/) - macOS Terminal Replacement
 - [Neovim](https://github.com/neovim/neovim) - Powerful Editor
 - [Helix](https://helix-editor.com/) - Post-modern Text Editor
-- [Windsurf Editor](https://codeium.com/windsurf) - Code AI Editor
-- [Msty](https://msty.app/) - Using AI Models made Simple and Easy
+- [Trae](https://www.trae.ai/) - Code AI Editor
 - [Beekeeper Studio](https://www.beekeeperstudio.io/) - The SQL Editor and Database Manager Of Your Dreams
 - [Bruno](https://www.usebruno.com/) - The Easy Way to Design, Debug, and Test APIs
 
@@ -148,4 +146,4 @@ All the applications I use:
 - [BetterDisplay](https://github.com/waydabber/BetterDisplay) - Unlock Your Displays on Your Mac
 - [Bartender](https://www.macbartender.com/Bartender5/) - Take Control of Your Menu Bar
 - [NordVPN](https://nordvpn.com/) - Online VPN Service for Speed
-- [The Unarchiver](https://theunarchiver.com/) - Unarchive Files
+- [Keka](https://www.keka.io/) - Unarchive Files

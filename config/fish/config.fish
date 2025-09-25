@@ -13,6 +13,7 @@ set -gx LDFLAGS "-L/opt/homebrew/opt/openssl@3/lib"
 set -gx CPPFLAGS "-I/opt/homebrew/opt/openssl@3/include"
 
 # Path
+export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="/usr/local/share/dotnet:$PATH"
 export WASMER_DIR="$HOME/.wasmer"

@@ -57,8 +57,7 @@ cask 'beekeeper-studio'
 cask 'bruno'
 cask 'dbngin'
 
-# cask 'trae'
-# cask 'windsurf'
+cask 'trae'
 
 cask 'blender'
 cask 'inkscape'
@@ -80,8 +79,6 @@ cask 'nordvpn'
 cask 'pika'
 cask 'calibre'
 cask 'espanso'
-
-cask 'msty'
 
 cask 'keka'
 cask 'iina'
