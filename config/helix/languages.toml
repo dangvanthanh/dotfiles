@@ -42,6 +42,7 @@ name = "javascript"
 language-servers = [
   { name = "typescript-language-server", except-features = [
     "format",
+    "inlay-hints",
   ] },
   "biome",
 ]
@@ -52,6 +53,7 @@ name = "typescript"
 language-servers = [
   { name = "typescript-language-server", except-features = [
     "format",
+    "inlay-hints",
   ] },
   "biome",
 ]
@@ -63,6 +65,7 @@ auto-format = true
 language-servers = [
   { name = "typescript-language-server", except-features = [
     "format",
+    "inlay-hints",
   ] },
   "biome",
 ]
