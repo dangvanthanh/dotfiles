@@ -82,6 +82,7 @@ cask 'espanso'
 
 cask 'keka'
 cask 'iina'
+cask 'netnewswire'
 
 # Others
 tap 'homebrew/cask-fonts'
