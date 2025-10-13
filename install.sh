@@ -42,14 +42,6 @@ fishHome="$homeConfig/fish"
 fishFiles=("config.fish" "aliases.fish")
 link_files "$fish" "$fishHome" "${fishFiles[@]}"
 
-# Neovim
-echo "Setting up Neovim"
-nvim="$dotfilesConfig/nvim"
-nvimHome="$homeConfig/nvim"
-nvimFolders=("lua/config" "lua/plugins")
-create_symlink "$nvim/init.lua" "$nvimHome/init.lua"
-link_folders "$nvim" "$nvimHome" "${nvimFolders[@]}"
-
 # Helix
 echo "Setting up Helix"
 helix="$dotfilesConfig/helix"
@@ -58,7 +50,6 @@ helixFiles=("config.toml" "languages.toml" "yazi-picker-.fish")
 
 link_files "$helix" "$helixHome" "${helixFiles[@]}"
 
-
 # Zellij
 echo "Setting up Zellij"
 zellij="$dotfilesConfig/zellij"
@@ -66,12 +57,6 @@ zellijHome="$homeConfig/zellij"
 zellijFolders=("layouts" "themes")
 create_symlink "$zellij/config.kdl" "$zellijHome/config.kdl"
 link_folders "$zellij" "$zellijHome" "${zellijFolders[@]}"
-
-# Alacritty
-echo "Setting up Alacritty"
-alacritty="$dotfilesConfig/alacritty"
-alacrittyHome="$homeConfig/alacritty"
-create_symlink "$alacritty/alacritty.toml" "$alacrittyHome/alacritty.toml"
 
 # Bat
 echo "Setting up Bat"
@@ -95,10 +80,6 @@ link_files "$yazi" "$yaziHome" "${yaziFiles[@]}"
 echo "Setting up Starship"
 starship="$dotfilesConfig/starship"
 create_symlink "$starship/starship.toml" "$homeConfig/starship.toml"
-
-# Tmux
-echo "Setting up Tmux"
-create_symlink "$dotfiles/tmux.conf" "$HOME/.tmux.conf"
 
 # Espanso
 echo "Setting up Espanso"

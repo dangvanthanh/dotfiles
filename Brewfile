@@ -28,9 +28,7 @@ brew 'bottom'
 brew 'fastfetch'
 
 # Terminal
-brew 'tmux'
 brew 'helix'
-brew 'neovim'
 brew 'lazygit'
 brew 'starship'
 brew 'difftastic'
@@ -87,6 +85,5 @@ cask 'netnewswire'
 # Others
 tap 'homebrew/cask-fonts'
 
-cask 'font-victor-mono'
-cask 'font-victor-mono-nerd-font'
+cask 'font-monaspace'
 cask 'font-symbols-only-nerd-font'
