@@ -1,5 +1,6 @@
 # Font
 font-family = Monaspace Neon
+font-feature = ss01
 font-size = 16
 font-style = Light
 font-thicken = true
@@ -53,7 +54,7 @@ palette = 15=#a89984
 
 # Full screen for terminal
 window-height = 80
-window-width = 190
+window-width = 171
 
 # For tmux like keybinding
 keybind = ctrl+a>q=quit
