@@ -5,6 +5,7 @@ line-number = "relative"
 mouse = false
 auto-pairs = true
 bufferline = "multiple"
+end-of-line-diagnostics = "hint"
 
 [editor.statusline]
 left = ["mode", "spinner", "file-name", "file-modification-indicator"]
