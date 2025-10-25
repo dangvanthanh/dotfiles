@@ -81,12 +81,6 @@ echo "Setting up Starship"
 starship="$dotfilesConfig/starship"
 create_symlink "$starship/starship.toml" "$homeConfig/starship.toml"
 
-# Espanso
-echo "Setting up Espanso"
-espanso="$dotfilesConfig/espanso"
-espansoHome="/Users/dangvanthanh/Library/Application Support/espanso"
-create_symlink "$espanso/default.yml" "$espansoHome/config/default.yml"
-
 for match in base.yml me.yml nailpro.yml; do
   create_symlink "$espanso/$match" "$espansoHome/match/$match"
 done
