@@ -1,6 +1,11 @@
 [language-server]
 biome = { command = "biome", args = ["lsp-proxy"] }
 
+[language-server.deno-lsp]
+command = "deno"
+args = ["lsp"]
+config.deno.enable = true
+
 [[language]]
 name = "markdown"
 language-servers = ["marksman", "ltex-ls"]
@@ -36,6 +41,20 @@ name = "html"
 
 [[language]]
 name = "css"
+
+[[language]]
+name = "typescript"
+roots = ["deno.json", "deno.jsonc"]
+file-types = ["ts", "tsx"]
+auto-format = true
+language-servers = ["deno-lsp"]
+
+[[language]]
+name = "javascript"
+roots = ["deno.json", "deno.jsonc"]
+file-types = ["js", "jsx"]
+auto-format = true
+language-servers = ["deno-lsp"]
 
 [[language]]
 name = "javascript"
