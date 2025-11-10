@@ -42,6 +42,8 @@ brew 'biome'
 brew 'elixir-ls'
 brew 'taplo'
 brew 'vscode-langservers-extracted'
+brew 'marksman'
+brew 'ltex-ls'
 
 # Apps
 tap 'homebrew/cask'

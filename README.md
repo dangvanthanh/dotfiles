@@ -4,7 +4,7 @@
 
 ## Getting Started
 
-You need install [Git](https://git-scm.com/). Clone or [download](https://github.com/dangvanthanh/dotfiles/archive/master.zip) this repository
+You need to install [Git](https://git-scm.com/). Clone or [download](https://github.com/dangvanthanh/dotfiles/archive/master.zip) this repository
 
 ```shell
 git clone https://github.com/dangvanthanh/dotfiles.git
@@ -123,7 +123,7 @@ All the applications I use:
 
 - [Zen Browsers](https://zen-browser.app) - Beautifully Designed, Privacy-focused
 - [Firefox](https://www.mozilla.org/en-US/firefox/new/) - Fast, Private and Free
-- [Google Chome](https://www.google.com/chrome/) - Download the Fast, Security Browser
+- [Google Chrome](https://www.google.com/chrome/) - Download the Fast, Security Browser
 
 ### Design
 
