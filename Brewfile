@@ -36,6 +36,9 @@ brew 'zoxide'
 brew 'yazi'
 brew 'zellij'
 
+# Programing
+brew 'zig'
+
 # Language Server Protocol
 brew 'tree-sitter'
 brew 'biome'
@@ -52,7 +55,7 @@ cask 'zen-browser'
 cask 'firefox'
 cask 'google-chrome'
 
-cask 'alacritty'
+cask 'ghostty'
 cask 'beekeeper-studio'
 cask 'bruno'
 cask 'dbngin'
@@ -78,7 +81,6 @@ cask 'betterdisplay'
 cask 'nordvpn'
 cask 'pika'
 cask 'calibre'
-cask 'espanso'
 
 cask 'keka'
 cask 'iina'
