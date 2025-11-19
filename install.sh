@@ -80,7 +80,3 @@ link_files "$yazi" "$yaziHome" "${yaziFiles[@]}"
 echo "Setting up Starship"
 starship="$dotfilesConfig/starship"
 create_symlink "$starship/starship.toml" "$homeConfig/starship.toml"
-
-for match in base.yml me.yml nailpro.yml; do
-  create_symlink "$espanso/$match" "$espansoHome/match/$match"
-done

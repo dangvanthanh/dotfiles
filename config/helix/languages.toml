@@ -17,8 +17,23 @@ rulers = [120]
 
 [[language]]
 name = "json"
+language-servers = [
+  { name = "vscode-json-language-server", except-features = [
+    "format",
+  ] },
+  "biome",
+]
 auto-format = true
-formatter = { command = 'prettier', args = ["--parser", "json"] }
+
+[[language]]
+name = "jsonc"
+language-servers = [
+  { name = "vscode-json-language-server", except-features = [
+    "format",
+  ] },
+  "biome",
+]
+auto-format = true
 
 [[language]]
 name = "toml"
@@ -42,6 +57,26 @@ auto-format = true
 
 [[language]]
 name = "html"
+
+[[language]]
+name = "njk"
+scope = "text.html.njk"
+injection-regex = "njk"
+file-types = ["njk"]
+roots = []
+formatter = { command = 'djlint', args = [
+  "-",
+  "--profile",
+  "nunjucks",
+  "--reformat",
+] }
+auto-format = true
+indent = { tab-width = 2, unit = "  " }
+grammar = "jinja2"
+
+[[grammar]]
+name = "jinja2"
+source = { git = "https://github.com/varpeti/tree-sitter-jinja2.git", rev = "a533cd3c33aea6acb0f9bf9a56f35dcfe6a8eb53" }
 
 [[language]]
 name = "css"
@@ -120,3 +155,17 @@ injection-regex = "(elixir|ex)"
 shebangs = ["elixir"]
 roots = ["mix.exs", "mix.lock"]
 language-servers = ["elixir-ls"]
+
+[[language]]
+name = "zig"
+auto-format = true
+
+[[language]]
+name = "svelte"
+auto-format = true
+language-servers = [
+  { name = "svelteserver", except-features = [
+    "format",
+  ] },
+  "biome",
+]
