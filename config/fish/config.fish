@@ -20,8 +20,8 @@ export WASMER_DIR="$HOME/.wasmer"
 
 [ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
 
-fish_add_path "$HOME/.codeium/windsurf/bin"
 fish_add_path "$HOME/.bun/bin"
+fish_add_path "$HOME/.opencode/bin"
 
 # Asdf
 if test -z $ASDF_DATA_DIR
@@ -40,10 +40,3 @@ starship init fish | source
 
 # Zoxide
 zoxide init fish | source
-
-# pnpm
-set -gx PNPM_HOME "$HOME/Library/pnpm"
-if not string match -q -- $PNPM_HOME $PATH
-    set -gx PATH "$PNPM_HOME" $PATH
-end
-# pnpm end
