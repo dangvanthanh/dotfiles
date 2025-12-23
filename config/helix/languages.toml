@@ -83,7 +83,9 @@ name = "css"
 
 [[language]]
 name = "typescript"
-file-types = ["ts"]
+roots = ["deno.json", "deno.jsonc", "package.json"]
+file-types = ["ts", "tsx"]
+auto-format = true
 language-servers = ["deno-language-server"]
 
 [[language]]
