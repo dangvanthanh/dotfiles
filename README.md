@@ -117,7 +117,11 @@ All the applications I use:
 - [Helix](https://helix-editor.com/) - Post-modern Text Editor
 - [Trae](https://www.trae.ai/) - Code AI Editor
 - [Beekeeper Studio](https://www.beekeeperstudio.io/) - The SQL Editor and Database Manager Of Your Dreams
-- [Bruno](https://www.usebruno.com/) - The Easy Way to Design, Debug, and Test APIs
+
+
+### TUI
+- [Lazygit](https://github.com/jesseduffield/lazygit) - Simple Terminal for Git Commands
+- [Posting](https://github.com/darrenburns/posting) - The API Client that Lives in Your Terminal
 
 ### Browsers
 

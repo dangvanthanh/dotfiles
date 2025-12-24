@@ -70,6 +70,7 @@ ghostty="$dotfilesConfig/ghostty"
 ghosttyHome="$homeConfig/ghostty"
 create_symlink "$ghostty/config" "$ghosttyHome/config"
 
+# Yazi
 echo "Setting up Yazi"
 yazi="$dotfilesConfig/yazi"
 yaziHome="$homeConfig/yazi"
