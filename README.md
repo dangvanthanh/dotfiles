@@ -113,9 +113,7 @@ All the applications I use:
 ### Web Developer
 
 - [Ghostty](https://ghostty.org/) - macOS Terminal Replacement
-- [Neovim](https://github.com/neovim/neovim) - Powerful Editor
 - [Helix](https://helix-editor.com/) - Post-modern Text Editor
-- [Trae](https://www.trae.ai/) - Code AI Editor
 - [Beekeeper Studio](https://www.beekeeperstudio.io/) - The SQL Editor and Database Manager Of Your Dreams
 
 

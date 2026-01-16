@@ -60,8 +60,6 @@ cask 'beekeeper-studio'
 cask 'bruno'
 cask 'dbngin'
 
-cask 'trae'
-
 cask 'blender'
 cask 'inkscape'
 cask 'figma'
@@ -84,7 +82,6 @@ cask 'calibre'
 
 cask 'keka'
 cask 'iina'
-cask 'netnewswire'
 
 # Others
 tap 'homebrew/cask-fonts'
