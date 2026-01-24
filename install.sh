@@ -81,3 +81,8 @@ link_files "$yazi" "$yaziHome" "${yaziFiles[@]}"
 echo "Setting up Starship"
 starship="$dotfilesConfig/starship"
 create_symlink "$starship/starship.toml" "$homeConfig/starship.toml"
+
+# Lazygit
+echo "Setting up Lazygit"
+lazygit="$dotfilesConfig/lazygit"
+create_symlink "$lazygit/config.yml" "$HOME/Library/Application Support/lazygit/config.yml"

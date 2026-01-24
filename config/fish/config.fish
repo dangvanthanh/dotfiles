@@ -40,3 +40,6 @@ starship init fish | source
 
 # Zoxide
 zoxide init fish | source
+
+# Added by Antigravity
+fish_add_path /Users/dangvanthanh/.antigravity/antigravity/bin
