@@ -116,7 +116,6 @@ All the applications I use:
 - [Helix](https://helix-editor.com/) - Post-modern Text Editor
 - [Beekeeper Studio](https://www.beekeeperstudio.io/) - The SQL Editor and Database Manager Of Your Dreams
 
-
 ### TUI
 - [Lazygit](https://github.com/jesseduffield/lazygit) - Simple Terminal for Git Commands
 - [Posting](https://github.com/darrenburns/posting) - The API Client that Lives in Your Terminal

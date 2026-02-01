@@ -56,6 +56,7 @@ cask 'zen-browser'
 cask 'firefox'
 cask 'google-chrome'
 
+cask 'zed'
 cask 'ghostty'
 cask 'beekeeper-studio'
 cask 'bruno'
