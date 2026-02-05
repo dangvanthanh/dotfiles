@@ -88,5 +88,6 @@ cask 'iina'
 # Others
 tap 'homebrew/cask-fonts'
 
-cask 'font-monaspace'
+cask 'font-jetbrains-mono'
+cask 'font-jetbrains-mono-nerd-font'
 cask 'font-symbols-only-nerd-font'
