@@ -1,5 +1,6 @@
 # Font
 font-family = JetBrainsMono Nerd Font
+font-feature = +calt
 font-style = Regular
 font-style-bold = Bold
 font-size = 16

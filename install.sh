@@ -46,7 +46,7 @@ link_files "$fish" "$fishHome" "${fishFiles[@]}"
 echo "Setting up Helix"
 helix="$dotfilesConfig/helix"
 helixHome="$homeConfig/helix"
-helixFiles=("config.toml" "languages.toml" "yazi-picker-.fish")
+helixFiles=("config.toml" "languages.toml" "yazi-picker.fish" "rg-picker.fish" "mgrep-picker.fish")
 
 link_files "$helix" "$helixHome" "${helixFiles[@]}"
 

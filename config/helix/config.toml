@@ -32,15 +32,8 @@ git-global = false
 [editor.soft-wrap]
 enable = true
 
-[keys.normal]
-"C-s" = ":w"                           # Ctrl-s saves the current file
-y = "yank_main_selection_to_clipboard" # y yanks selection to clipboard
-p = "paste_clipboard_before"           # p pastes clipboard before
-
 [keys.normal.C-y]
 y = ":sh zellij run -f -x 10%% -y 10%% --width 80%% --height 80%% -- fish ~/.config/helix/yazi-picker.fish"
+s = ":sh zellij run -f -x 10%% -y 10%% --width 80%% --height 80%% -- fish -c 'read -l -P \"mgrep query: \" query; fish ~/.config/helix/mgrep-picker.fish \"$query\"'"
+f = ":sh zellij run -f --width 80%% --height 80%% -- fish ~/.config/helix/rg-picker.fish"
 l = ":sh zellij run -f -n lazygit -x 10%% -y 10%% --width 80%% --height 80%% -c -- lazygit"
-
-[keys.select]
-y = "yank_main_selection_to_clipboard" # y yanks selection to clipboard
-p = "paste_clipboard_before"           # p pastes clipboard before
