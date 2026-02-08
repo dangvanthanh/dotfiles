@@ -1,0 +1,8 @@
+# General
+.DS_Store
+*.log
+.git/
+.terraform/
+.vscode/
+.idea/
+EOF
