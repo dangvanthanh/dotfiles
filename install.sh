@@ -54,7 +54,7 @@ link_files "$helix" "$helixHome" "${helixFiles[@]}"
 echo "Setting up Zellij"
 zellij="$dotfilesConfig/zellij"
 zellijHome="$homeConfig/zellij"
-zellijFolders=("layouts" "themes")
+zellijFolders=("layouts")
 create_symlink "$zellij/config.kdl" "$zellijHome/config.kdl"
 link_folders "$zellij" "$zellijHome" "${zellijFolders[@]}"
 
