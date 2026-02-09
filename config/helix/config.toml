@@ -1,6 +1,7 @@
 theme = "kanagawa"
 
 [editor]
+true-color = true
 line-number = "relative"
 mouse = false
 auto-pairs = true
@@ -26,11 +27,15 @@ normal = "block"
 select = "underline"
 
 [editor.file-picker]
-hidden = false
+hidden = true
+ignore = true
 git-global = false
 
 [editor.soft-wrap]
 enable = true
+
+[editor.search]
+smart-case = true
 
 [keys.normal.C-y]
 y = ":sh zellij run -f -x 10%% -y 10%% --width 80%% --height 80%% -- fish ~/.config/helix/yazi-picker.fish"
