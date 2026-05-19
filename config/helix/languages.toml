@@ -1,5 +1,6 @@
-[language-server]
-biome = { command = "biome", args = ["lsp-proxy"] }
+[language-server.oxfmt]
+command = "oxfmt"
+args = ["--lsp"]
 
 [language-server.deno-language-server]
 command = "deno"
@@ -21,7 +22,7 @@ language-servers = [
   { name = "vscode-json-language-server", except-features = [
     "format",
   ] },
-  "biome",
+  "oxfmt",
 ]
 auto-format = true
 
@@ -31,7 +32,7 @@ language-servers = [
   { name = "vscode-json-language-server", except-features = [
     "format",
   ] },
-  "biome",
+  "oxfmt",
 ]
 auto-format = true
 
@@ -95,7 +96,7 @@ language-servers = [
     "format",
     "inlay-hints",
   ] },
-  "biome",
+  "oxfmt",
 ]
 auto-format = true
 
@@ -106,7 +107,7 @@ language-servers = [
     "format",
     "inlay-hints",
   ] },
-  "biome",
+  "oxfmt",
 ]
 auto-format = true
 
@@ -118,7 +119,7 @@ language-servers = [
     "format",
     "inlay-hints",
   ] },
-  "biome",
+  "oxfmt",
 ]
 
 [[language]]
@@ -128,7 +129,7 @@ language-servers = [
   { name = "typescript-language-server", except-features = [
     "format",
   ] },
-  "biome",
+  "oxfmt",
 ]
 
 [[languages]]
@@ -160,5 +161,5 @@ language-servers = [
   { name = "svelteserver", except-features = [
     "format",
   ] },
-  "biome",
+  "oxfmt",
 ]

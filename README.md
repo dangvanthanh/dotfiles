@@ -114,7 +114,7 @@ All the applications I use:
 
 - [Ghostty](https://ghostty.org/) - macOS Terminal Replacement
 - [Helix](https://helix-editor.com/) - Post-modern Text Editor
-- [Beekeeper Studio](https://www.beekeeperstudio.io/) - The SQL Editor and Database Manager Of Your Dreams
+- [TablePro](https://tablepro.app/) - The database client for Mac
 
 ### TUI
 - [Lazygit](https://github.com/jesseduffield/lazygit) - Simple Terminal for Git Commands
@@ -145,6 +145,6 @@ All the applications I use:
 - [Asciinema](https://asciinema.org/) - Record And Share Terminal
 - [Rectangle](https://rectangleapp.com/) - Move And Resize Windows
 - [BetterDisplay](https://github.com/waydabber/BetterDisplay) - Unlock Your Displays on Your Mac
-- [Bartender](https://www.macbartender.com/Bartender5/) - Take Control of Your Menu Bar
+- [Ice](https://icemenubar.app/) - Menu Bar Management
 - [NordVPN](https://nordvpn.com/) - Online VPN Service for Speed
 - [Keka](https://www.keka.io/) - Unarchive Files
