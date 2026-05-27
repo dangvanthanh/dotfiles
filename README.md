@@ -144,7 +144,6 @@ All the applications I use:
 - [Raycast](https://www.raycast.com/) - Blazingly Fast, Totally Extendable Launcher
 - [Asciinema](https://asciinema.org/) - Record And Share Terminal
 - [Rectangle](https://rectangleapp.com/) - Move And Resize Windows
-- [BetterDisplay](https://github.com/waydabber/BetterDisplay) - Unlock Your Displays on Your Mac
 - [Ice](https://icemenubar.app/) - Menu Bar Management
 - [NordVPN](https://nordvpn.com/) - Online VPN Service for Speed
 - [Keka](https://www.keka.io/) - Unarchive Files
