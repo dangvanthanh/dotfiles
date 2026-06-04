@@ -6,7 +6,6 @@ brew 'git'
 brew 'git-lfs'
 brew 'git-delta'
 brew 'asciinema'
-brew 'asdf'
 brew 'redis'
 brew 'tree'
 brew 'gcc'
@@ -37,12 +36,8 @@ brew 'zoxide'
 brew 'yazi'
 brew 'zellij'
 
-# Programing
-brew 'zig'
-
 # Language Server Protocol
 brew 'tree-sitter'
-brew 'biome'
 brew 'elixir-ls'
 brew 'taplo'
 brew 'vscode-langservers-extracted'
