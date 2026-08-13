@@ -3,6 +3,7 @@ abbr -a cls clear
 abbr -a cls-history "builtin history clear"
 abbr -a cls-node-modules "find . -name 'node_modules' -type d -prune -print -exec rm -rf '{}' \;"
 abbr -a preview "fd --exclude node_modules | fzf --preview 'bat --style=numbers --color=always --line-range :500 {}' | xargs nvim"
+abbr -a ncu "bunx npm-check-updates -ui"
 
 # Eza
 abbr -a ls eza

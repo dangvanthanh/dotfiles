@@ -133,6 +133,11 @@ main() {
   # Opencode
   log_info "Setting up Opencode"
   create_symlink "$dotfilesConfig/opencode/opencode.json" "$homeConfig/opencode/opencode.json"
+
+  # Pi
+  log_info "Setting up Pi"
+  link_folder_contents "$dotfilesConfig/pi" "$HOME/.pi"
+
   log_info "Installation complete!"
 }
 
