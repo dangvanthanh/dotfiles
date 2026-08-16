@@ -60,29 +60,6 @@ Create configuration for Ghostty
 mkdir -p ~/.config/ghostty && touch ~/.config/ghostty/config
 ```
 
-### Neovim
-
-Install the Neovim Python module
-
-```shell
-pip3 install --user neovim
-```
-
-Create configuration for Neovim
-
-```shell
-mkdir -p ~/.config/nvim
-mkdir -p ~/.config/nvim/lua
-mkdir -p ~/.config/nvim/lua/config
-mkdir -p ~/.config/nvim/lua/plugins
-```
-
-Benchmarking Neovim
-
-```shell
-hyperfine "nvim --headless +qa" --warmup 5
-```
-
 ### Starship
 
 Create configuration for Starship
@@ -102,12 +79,12 @@ All the applications I use:
 - [TablePro](https://tablepro.app/) - The database client for Mac
 
 ### TUI
-- [Lazygit](https://github.com/jesseduffield/lazygit) - Simple Terminal for Git Commands
+
+- [GitUI](https://github.com/gitui-org/gitui) - Fast Terminal UI for Git
 - [Posting](https://github.com/darrenburns/posting) - The API Client that Lives in Your Terminal
 
 ### Browsers
 
-- [Zen Browsers](https://zen-browser.app) - Beautifully Designed, Privacy-focused
 - [Firefox](https://www.mozilla.org/en-US/firefox/new/) - Fast, Private and Free
 - [Google Chrome](https://www.google.com/chrome/) - Download the Fast, Security Browser
 

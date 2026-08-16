@@ -11,7 +11,14 @@ abbr -a l "eza -l -g --icons --header --git"
 abbr -a lt "eza -1 --icons --tree --git-ignore"
 abbr -a li "eza --long --oneline | awk '{print $NF}' | grep -E '\.(jpg|jpeg|png|gif|bmp|tiff|webp|svg)' | xargs -I{} identify -format \"%f: %wx%h\n\" {}"
 
-# Tmux and Neovim
+# Tmux, Zellij and Neovim
+function zellij
+    if test (count $argv) -eq 0
+        command zellij --layout dev
+    else
+        command zellij $argv
+    end
+end
 abbr -a vim nvim
 abbr -a t tmux
 abbr -a tl "tmux split-window -h -p 25"
