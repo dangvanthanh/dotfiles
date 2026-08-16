@@ -11,16 +11,9 @@ abbr -a l "eza -l -g --icons --header --git"
 abbr -a lt "eza -1 --icons --tree --git-ignore"
 abbr -a li "eza --long --oneline | awk '{print $NF}' | grep -E '\.(jpg|jpeg|png|gif|bmp|tiff|webp|svg)' | xargs -I{} identify -format \"%f: %wx%h\n\" {}"
 
-# Tmux and Neovim
 abbr -a vim nvim
-abbr -a t tmux
-abbr -a tl "tmux split-window -h -p 25"
-abbr -a tk "tmux kill-server"
 abbr -a port-list "lsof -i :3000"
 abbr -a port-kill "kill -9"
-
-# Git
-abbr -a git-diff "GIT_EXTERNAL_DIFF=difft git log -p --ext-diff"
 
 # Show/hide files on Macos
 abbr -a showFiles "defaults write com.apple.finder AppleShowAllFiles TRUE;killall Finder"

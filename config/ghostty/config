@@ -1,9 +1,13 @@
 # Font
 font-family = JetBrainsMono Nerd Font
-font-feature = +calt
+font-feature = -calt,-liga,-dlig
 font-style = Regular
 font-style-bold = Bold
 font-size = 16
+
+background-opacity = 1.0
+scrollback-limit = 5000
+image-storage-limit = 100000000
 
 font-thicken = true
 bold-is-bright = true
@@ -33,21 +37,15 @@ theme = Kanagawabones
 window-height = 80
 window-width = 171
 
-# For tmux like keybinding
-keybind = ctrl+a>q=quit
-keybind = ctrl+a>c=new_tab
-keybind = ctrl+a>p=previous_tab
-keybind = ctrl+a>n=next_tab
+keybind = alt+left=unbind
+keybind = alt+right=unbind
+keybind = alt+up=unbind
+keybind = alt+down=unbind
 
-# To create split and navigate it
-keybind = ctrl+a>\=new_split:right
-keybind = ctrl+a>-=new_split:down
-keybind = ctrl+a>l=goto_split:next
-keybind = ctrl+a>h=goto_split:previous
-keybind = ctrl+a>x=close_surface
-
-# For resizing split
-keybind = ctrl+shift+h=resize_split:left,10
-keybind = ctrl+shift+l=resize_split:right,10
-keybind = ctrl+shift+k=resize_split:up,10
-keybind = ctrl+shift+j=resize_split:down,10
+keybind = super+t=unbind
+keybind = super+w=unbind
+keybind = super+n=unbind
+keybind = super+d=unbind
+keybind = super+shift+d=unbind
+keybind = super+bracket_left=unbind
+keybind = super+bracket_right=unbind

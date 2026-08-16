@@ -1,21 +1,27 @@
 theme = "kanagawa"
 
 [editor]
+idle-timeout = 50
+completion-timeout = 5
+cursorline = false
+cursorcolumn = false
 true-color = true
 line-number = "relative"
 mouse = false
 auto-pairs = true
 bufferline = "multiple"
 end-of-line-diagnostics = "hint"
+rulers = []
 
 [editor.statusline]
-left = ["mode", "spinner", "file-name", "file-modification-indicator"]
+left = ["mode", "spinner", "file-name"]
 center = ["workspace-diagnostics", "selections"]
-right = ["diagnostics", "position", "file-encoding"]
+right = ["diagnostics", "position"]
 
 [editor.lsp]
-display-messages = true
+display-messages = false
 display-inlay-hints = false
+auto-signature-help = false
 
 [editor.indent-guides]
 render = true
@@ -32,10 +38,13 @@ ignore = true
 git-global = false
 
 [editor.soft-wrap]
-enable = true
+enable = false
+
+[editor.gutters]
+layout = ["diagnostics", "line-numbers"]
 
 [editor.search]
 smart-case = true
 
 [keys.normal.C-y]
-y = ":sh zellij run -f -x 10% -y 10% --width 80% --height 80% -- fish ~/.config/helix/yazi-picker.fish $ZELLIJ_PANE_ID"
+y = ":sh zellij run -f -x 10%% -y 10%% --width 80%% --height 80%% -- fish ~/.config/helix/yazi-picker.fish $ZELLIJ_PANE_ID"

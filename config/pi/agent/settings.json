@@ -1,23 +1,9 @@
 {
-  "pi-zellij": {
-    "commands": {
-      "zh": {
-        "run": "hx",
-        "acceptArgs": true,
-        "description": "Helix floating"
-      },
-      "zg": {
-        "run": "gitui",
-        "description": "GitUI floating"
-      }
-    }
-  },
   "lastChangelogVersion": "0.84.2",
   "theme": "dark",
   "defaultProvider": "fireworks",
   "defaultModel": "accounts/fireworks/models/deepseek-v4-pro-0813",
   "packages": [
-    "npm:pi-zellij",
     "npm:pi-web-access"
   ]
 }

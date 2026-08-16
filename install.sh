@@ -122,6 +122,7 @@ main() {
   # GitUI
   log_info "Setting up GitUI"
 	create_symlink "$dotfilesConfig/gitui/theme.ron" "$homeConfig/gitui/theme.ron"
+	create_symlink "$dotfilesConfig/gitui/key_bindings.ron" "$homeConfig/gitui/key_bindings.ron"
   
   # Pi
   log_info "Setting up Pi"
