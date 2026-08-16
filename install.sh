@@ -17,15 +17,6 @@ detect_os() {
 
 OS=$(detect_os)
 
-# OS-specific paths
-get_lazygit_config_path() {
-  if [ "$OS" = "macos" ]; then
-    echo "$HOME/Library/Application Support/lazygit/config.yml"
-  else
-    echo "$homeConfig/lazygit/config.yml"
-  fi
-}
-
 # Utility functions
 log_info() {
   printf "\033[34m[INFO]\033[0m %s\n" "$1"
@@ -83,7 +74,11 @@ link_folder_contents() {
     [ -e "$file" ] || continue
     local basename
     basename=$(basename "$file")
-    create_symlink "$file" "$dest_dir/$basename"
+    local dest="$dest_dir/$basename"
+    if [ -d "$dest" ] && [ ! -L "$dest" ]; then
+      rm -rf "$dest"
+    fi
+    create_symlink "$file" "$dest"
   done
 }
 
@@ -123,17 +118,11 @@ main() {
   # Starship
   log_info "Setting up Starship"
   create_symlink "$dotfilesConfig/starship/starship.toml" "$homeConfig/starship.toml"
-  
-	# Lazygit (OS-specific)
-  log_info "Setting up Lazygit"
-  local lazygit_dest
-  lazygit_dest=$(get_lazygit_config_path)
-	create_symlink "$dotfilesConfig/lazygit/config.yml" "$lazygit_dest"
-  
-  # Opencode
-  log_info "Setting up Opencode"
-  create_symlink "$dotfilesConfig/opencode/opencode.json" "$homeConfig/opencode/opencode.json"
 
+  # GitUI
+  log_info "Setting up GitUI"
+	create_symlink "$dotfilesConfig/gitui/theme.ron" "$homeConfig/gitui/theme.ron"
+  
   # Pi
   log_info "Setting up Pi"
   link_folder_contents "$dotfilesConfig/pi" "$HOME/.pi"

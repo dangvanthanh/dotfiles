@@ -2,18 +2,9 @@
 command = "oxfmt"
 args = ["--lsp"]
 
-[language-server.deno-language-server]
-command = "deno"
-args = ["lsp"]
-required-root-patterns = ["deno.json", "deno.jsonc"]
-
-[language-server.codebook]
-command = "codebook-lsp"
-args = ["serve"]
-
 [[language]]
 name = "markdown"
-language-servers = ["marksman", "ltex-ls", "codebook"]
+language-servers = ["marksman"]
 rulers = [120]
 
 [[language]]
@@ -41,7 +32,7 @@ name = "toml"
 auto-format = true
 formatter = { command = "taplo", args = ["format", "-"] }
 
-[[languages]]
+[[language]]
 name = "bash"
 file-types = ["sh", "bash", ".functions"]
 auto-format = true
@@ -60,34 +51,7 @@ auto-format = true
 name = "html"
 
 [[language]]
-name = "njk"
-scope = "text.html.njk"
-injection-regex = "njk"
-file-types = ["njk"]
-roots = []
-formatter = { command = 'djlint', args = [
-  "-",
-  "--profile",
-  "nunjucks",
-  "--reformat",
-] }
-auto-format = true
-indent = { tab-width = 2, unit = "  " }
-grammar = "jinja2"
-
-[[grammar]]
-name = "jinja2"
-source = { git = "https://github.com/varpeti/tree-sitter-jinja2.git", rev = "a533cd3c33aea6acb0f9bf9a56f35dcfe6a8eb53" }
-
-[[language]]
 name = "css"
-
-[[language]]
-name = "typescript"
-roots = ["deno.json", "deno.jsonc", "package.json"]
-file-types = ["ts", "tsx"]
-auto-format = true
-language-servers = ["deno-language-server"]
 
 [[language]]
 name = "javascript"
@@ -132,7 +96,7 @@ language-servers = [
   "oxfmt",
 ]
 
-[[languages]]
+[[language]]
 name = "go"
 auto-format = true
 formatter = { command = "goimports" }

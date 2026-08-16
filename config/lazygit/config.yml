@@ -1,7 +1,0 @@
-git:
-  diffRenderers:
-    - command: delta --dark --paging=never
-    - command: ydiff -p cat -s --wrap --width={{columnWidth}}
-      colorArg: always
-    - command: difft --color=always
-      type: extDiff

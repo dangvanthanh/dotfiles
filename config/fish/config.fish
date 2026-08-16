@@ -8,7 +8,7 @@ set EDITOR nvim
 bind \ct kill_word
 
 # Starship
-starship init fish | source
+starship init fish --print-full-init | source
 
 # Zoxide
 zoxide init fish | source
