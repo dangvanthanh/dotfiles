@@ -11,7 +11,7 @@ import { truncateToWidth, visibleWidth } from "@earendil-works/pi-tui";
 
 export default function (pi: ExtensionAPI) {
 	pi.on("session_start", async (_event, ctx) => {
-		let thinkingLevel = "high";
+		let thinkingLevel = ctx.thinkingLevel ?? pi.getThinkingLevel();
 
 		pi.on("thinking_level_select", async (event) => {
 			thinkingLevel = event.level;
@@ -83,19 +83,27 @@ export default function (pi: ExtensionAPI) {
 					const arrowUp = `${theme.fg("success", "↑")}${theme.fg("text", fmt(input))}`;
 					const arrowDown = `${theme.fg("error", "↓")}${theme.fg("text", fmt(output))}`;
 					const reasoningStr =
-						reasoning > 0
-							? `${theme.fg("accent", "R")}${theme.fg("text", fmt(reasoning))}`
-							: "";
+						reasoning > 0 ? `${theme.fg("accent", "R")}${theme.fg("text", fmt(reasoning))}` : "";
 					const costStr = theme.fg("warning", `$${cost.toFixed(3)}`);
-					const speedStr =
-						lastSpeed !== null ? theme.fg("mdLink", `${fmt(lastSpeed)} t/s`) : "";
+					const speedStr = lastSpeed !== null ? theme.fg("mdLink", `${fmt(lastSpeed)} t/s`) : "";
+
 					const model = ctx.model;
 					const modelStr = theme.fg(
 						"accent",
 						model ? model.id.split("/").pop() || model.id : "no-model",
 					);
 					const providerStr = model?.provider ? theme.fg("muted", model.provider) : "";
-					const levelStr = theme.fg("muted", `(${thinkingLevel})`);
+					const levelColors: Record<string, string> = {
+						off: "thinkingOff",
+						minimal: "thinkingMinimal",
+						low: "thinkingLow",
+						medium: "thinkingMedium",
+						high: "thinkingHigh",
+						"xhigh": "thinkingXhigh",
+						max: "thinkingXhigh",
+					};
+					const levelColor = levelColors[thinkingLevel] || "accent";
+					const levelStr = theme.fg(levelColor, `(${thinkingLevel})`);
 					const gitStr = branch ? theme.fg("toolDiffAdded", ` ${branch}`) : "";
 
 					const leftParts = [
