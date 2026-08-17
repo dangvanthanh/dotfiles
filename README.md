@@ -16,23 +16,6 @@ git clone https://github.com/dangvanthanh/dotfiles.git
 - `$ chmod +x install.sh`
 - `$ ./install.sh`
 
-## Git
-
-Set Git global configuration
-
-```shell
-git config --global user.name "Your Name"
-git config --global user.email "youremail@email.com"
-```
-
-## Fish
-
-Make `fish` default shell
-
-```shell
-which fish
-chsh -s /opt/homebrew/bin/fish
-```
 
 ## Homebrew
 
@@ -42,30 +25,27 @@ Install Homebrew and Brewfile
 chmod +x brew.sh
 ./brew.sh
 ./install.sh
-```
+`
 
-## Configuration
+## Git and Hunk
 
-Create `~/.config` folder for configuration
-
-```shell
-mkdir ~/.config && cd ~/.config
-```
-
-### Ghostty
-
-Create configuration for Ghostty
+Set Git global configuration
 
 ```shell
-mkdir -p ~/.config/ghostty && touch ~/.config/ghostty/config
+git config --global user.name "Your Name"
+git config --global user.email "youremail@email.com"
+git config --global core.pager "hunk pager"
+git config --global alias.hdiff '-c core.pager="hunk pager" diff'
+git config --global alias.hshow '-c core.pager="hunk pager" show'
 ```
 
-### Starship
+## Fish
 
-Create configuration for Starship
+Make `fish` default shell
 
 ```shell
-mkdir -p ~/.config && touch ~/.config/starship.toml
+which fish
+chsh -s /opt/homebrew/bin/fish
 ```
 
 ## Brewfile
@@ -106,6 +86,6 @@ All the applications I use:
 - [Raycast](https://www.raycast.com/) - Blazingly Fast, Totally Extendable Launcher
 - [Asciinema](https://asciinema.org/) - Record And Share Terminal
 - [Rectangle](https://rectangleapp.com/) - Move And Resize Windows
-- [Ice](https://icemenubar.app/) - Menu Bar Management
+- [Hidden Bar](https://apps.apple.com/us/app/hidden-bar/id1452453066?mt=12) - Minimal Menu Bar Management
 - [NordVPN](https://nordvpn.com/) - Online VPN Service for Speed
 - [Keka](https://www.keka.io/) - Unarchive Files
