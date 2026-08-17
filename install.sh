@@ -141,6 +141,7 @@ main() {
   create_symlink "$dotfilesConfig/pi/agents/semble-search.md" "$piHome/agents/semble-search.md"
   create_symlink "$dotfilesConfig/pi/web_search.json" "$piHome/web-search.json"
   link_folder_contents "$dotfilesConfig/pi/agent/skills" "$piHome/agent/skills"
+  link_folder_contents "$dotfilesConfig/pi/agent/extensions" "$piHome/agent/extensions"
 
   log_info "Installation complete!"
 }
