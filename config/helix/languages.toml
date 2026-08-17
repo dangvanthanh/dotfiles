@@ -4,7 +4,13 @@ args = ["--lsp"]
 
 [[language]]
 name = "markdown"
-language-servers = ["marksman"]
+language-servers = [
+  { name = "marksman", except-features = [
+    "format",
+  ] },
+  "oxfmt",
+]
+auto-format = true
 rulers = [120]
 
 [[language]]
@@ -49,9 +55,23 @@ auto-format = true
 
 [[language]]
 name = "html"
+language-servers = [
+  { name = "vscode-html-language-server", except-features = [
+    "format",
+  ] },
+  "oxfmt",
+]
+auto-format = true
 
 [[language]]
 name = "css"
+language-servers = [
+  { name = "vscode-css-language-server", except-features = [
+    "format",
+  ] },
+  "oxfmt",
+]
+auto-format = true
 
 [[language]]
 name = "javascript"

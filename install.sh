@@ -5,6 +5,7 @@ set -e
 dotfiles="$HOME/Code/dotfiles"
 dotfilesConfig="$dotfiles/config"
 homeConfig="$HOME/.config"
+piHome="$HOME/.pi"
 
 # Detect OS
 detect_os() {
@@ -135,7 +136,6 @@ main() {
   
   # Pi
   log_info "Setting up Pi"
-  piHome="$HOME/.pi"
   create_symlink "$dotfilesConfig/pi/agent/settings.json" "$piHome/agent/settings.json"
   create_symlink "$dotfilesConfig/pi/agent/mcp.json" "$piHome/agent/mcp.json"
   create_symlink "$dotfilesConfig/pi/agents/semble-search.md" "$piHome/agents/semble-search.md"
