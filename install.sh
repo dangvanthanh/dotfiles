@@ -33,20 +33,27 @@ log_error() {
 create_symlink() {
   local src="$1"
   local dest="$2"
-  
+
   # Check if source exists
   if [ ! -e "$src" ]; then
     log_error "Source not found: $src"
     return 1
   fi
-  
+
+  # Skip if this is already the correct link (idempotent)
+  if [ -L "$dest" ] && [ "$(readlink "$dest")" = "$src" ]; then
+    return 0
+  fi
+
   # Create parent directory if needed
   local dest_dir
   dest_dir=$(dirname "$dest")
   mkdir -p "$dest_dir"
-  
+
+  rm -rf "$dest"
+
   # Create symlink
-  if ln -svf "$src" "$dest"; then
+  if ln -s "$src" "$dest"; then
     log_success "Linked: $dest -> $src"
   else
     log_error "Failed to link: $dest"
@@ -67,18 +74,21 @@ link_files() {
 link_folder_contents() {
   local src_dir="$1"
   local dest_dir="$2"
-  
+
+  # Guard against linking a directory into itself, which would create
+  # recursive self-referential symlinks.
+  if [ "$src_dir" = "$dest_dir" ]; then
+    log_error "Source and destination are the same directory: $src_dir"
+    return 1
+  fi
+
   mkdir -p "$dest_dir"
-  
+
   for file in "$src_dir"/*; do
     [ -e "$file" ] || continue
     local basename
     basename=$(basename "$file")
-    local dest="$dest_dir/$basename"
-    if [ -d "$dest" ] && [ ! -L "$dest" ]; then
-      rm -rf "$dest"
-    fi
-    create_symlink "$file" "$dest"
+    create_symlink "$file" "$dest_dir/$basename"
   done
 }
 
@@ -121,12 +131,16 @@ main() {
 
   # GitUI
   log_info "Setting up GitUI"
-	create_symlink "$dotfilesConfig/gitui/theme.ron" "$homeConfig/gitui/theme.ron"
-	create_symlink "$dotfilesConfig/gitui/key_bindings.ron" "$homeConfig/gitui/key_bindings.ron"
+  link_folder_contents "$dotfilesConfig/gitui" "$homeConfig/gitui"
   
   # Pi
   log_info "Setting up Pi"
-  link_folder_contents "$dotfilesConfig/pi" "$HOME/.pi"
+  piHome="$HOME/.pi"
+  create_symlink "$dotfilesConfig/pi/agent/settings.json" "$piHome/agent/settings.json"
+  create_symlink "$dotfilesConfig/pi/agent/mcp.json" "$piHome/agent/mcp.json"
+  create_symlink "$dotfilesConfig/pi/agents/semble-search.md" "$piHome/agents/semble-search.md"
+  create_symlink "$dotfilesConfig/pi/web_search.json" "$piHome/web-search.json"
+  link_folder_contents "$dotfilesConfig/pi/agent/skills" "$piHome/agent/skills"
 
   log_info "Installation complete!"
 }

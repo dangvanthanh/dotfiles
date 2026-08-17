@@ -28,4 +28,4 @@
 ## PC
 
 - [] [Thinkpad X1 Carbon Gen 12](https://www.lenovo.com/us/en/p/laptops/thinkpad/thinkpadx1/thinkpad-x1-carbon-gen-12-14-inch-intel/len101t0083)
-- [x] [CyvberPower UPS](https://www.amazon.com/CyberPower-CP1500AVRLCD3-Intelligent-System-Outlets/dp/B0BCMLLSHL?ref_=ast_sto_dp&th=1)
+- [x] [CyvberPower UPS](https://www.amazon.com/CyberPower-CP1500AVRLCD3-Intelligent-System-Outlets/dp/B0BCMLLSHL)

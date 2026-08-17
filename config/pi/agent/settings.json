@@ -4,6 +4,7 @@
   "defaultProvider": "fireworks",
   "defaultModel": "accounts/fireworks/models/deepseek-v4-pro-0813",
   "packages": [
-    "npm:pi-web-access"
+    "npm:pi-web-access",
+    "npm:pi-mcp-extension"
   ]
 }
