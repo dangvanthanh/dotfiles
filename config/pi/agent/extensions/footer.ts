@@ -99,6 +99,7 @@ export default function (pi: ExtensionAPI) {
 						low: "thinkingLow",
 						medium: "thinkingMedium",
 						high: "thinkingHigh",
+						xhigh: "thinkingXhigh",
 						max: "thinkingXhigh",
 					};
 					const levelColor = levelColors[thinkingLevel] || "accent";
