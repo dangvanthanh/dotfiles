@@ -347,36 +347,6 @@ keybinds clear-defaults=true {
 				bind "Alt right" {
 						MoveFocusOrTab "right"
 				}
-				bind "Alt e" {
-						Run "hx" {
-								floating true
-								hold_on_close false
-								x "5%"
-								y "5%"
-								width "90%"
-								height "90%"
-						}
-				}
-				bind "Alt d" {
-						Run "hunk" "diff" {
-								floating true
-								hold_on_close false
-								x "8%"
-								y "8%"
-								width "80%"
-								height "80%"
-						}
-				}
-				bind "Alt g" {
-						Run "gitui" {
-								floating true
-								hold_on_close false
-								x "8%"
-								y "8%"
-								width "80%"
-								height "80%"
-						}
-				}
 				bind "Alt f" {
 						ToggleFloatingPanes
 				}
@@ -664,19 +634,17 @@ web_client {
 		font "monospace"
 }
 ui {
-    pane_frames {
-        hide_session_name true
-    }
+		pane_frames {
+				hide_session_name true
+		}
 }
-
 simplified_ui true
 theme "kanagawa"
 default_layout "compact"
 pane_frames false
-
 scroll_buffer_size 4000
 session_serialization true
 scrollback_lines_to_serialize 300
 serialization_interval 120
-
 show_startup_tips false
+

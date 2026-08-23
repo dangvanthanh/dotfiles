@@ -5,17 +5,32 @@ layout {
 						plugin location="zellij:compact-bar"
 				}
 		}
-		tab name="dev" focus=true {
+		tab name="CODE" focus=true {
 				pane split_direction="vertical" {
-						pane size="65%" command="pi" {
-								name "pi"
+						pane command="hx" size="68%" {
+								name "Helix"
 								focus true
 						}
-						pane split_direction="horizontal" {
+						pane split_direction="horizontal" size="32%" {
+								pane command="pi" size="65%" {
+										name "Pi"
+								}
 								pane {
-										name "term"
+										name "Shell"
 								}
 						}
 				}
 		}
+		tab name="REVIEW" {
+				pane command="hunk" {
+						args "diff" "--watch"
+						name "Hunk"
+				}
+		}
+		tab name="GIT" {
+				pane command="gitui" {
+						name "GitUI"
+				}
+		}
 }
+

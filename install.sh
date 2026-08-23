@@ -133,6 +133,10 @@ main() {
   # GitUI
   log_info "Setting up GitUI"
   link_folder_contents "$dotfilesConfig/gitui" "$homeConfig/gitui"
+
+  # Hunk
+  log_info "Setting up Hunk"
+  create_symlink "$dotfilesConfig/hunk/config.toml" "$homeConfig/hunk/config.toml"
   
   # Pi
   log_info "Setting up Pi"
