@@ -11,14 +11,7 @@ layout {
 								name "Helix"
 								focus true
 						}
-						pane split_direction="horizontal" size="32%" {
-								pane command="pi" size="65%" {
-										name "Pi"
-								}
-								pane {
-										name "Shell"
-								}
-						}
+						pane command="pi" size="32%"
 				}
 		}
 		tab name="REVIEW" {
@@ -30,6 +23,12 @@ layout {
 		tab name="GIT" {
 				pane command="gitui" {
 						name "GitUI"
+				}
+		}
+		tab name="RUN" {
+				pane split_direction="horizontal" {
+						pane
+						pane
 				}
 		}
 }
