@@ -1,5 +1,6 @@
-# Alias
+# Source
 source ~/.config/fish/aliases.fish
+source ~/.config/fish/secrets.fish
 
 # General
 set fish_getting ""

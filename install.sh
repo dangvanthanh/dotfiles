@@ -75,6 +75,7 @@ link_files() {
 link_folder_contents() {
   local src_dir="$1"
   local dest_dir="$2"
+  local entry basename found src_entry
 
   # Guard against linking a directory into itself, which would create
   # recursive self-referential symlinks.
@@ -85,9 +86,27 @@ link_folder_contents() {
 
   mkdir -p "$dest_dir"
 
+  # Remove dest entries whose basename no longer exists in src (stale links).
+  for entry in "$dest_dir"/*; do
+    # Skip the literal glob pattern when dest_dir is empty.
+    [ "$entry" = "$dest_dir/*" ] && [ ! -e "$entry" ] && continue
+    basename=$(basename "$entry")
+    found=0
+    for src_entry in "$src_dir"/*; do
+      [ -e "$src_entry" ] || continue
+      if [ "$(basename "$src_entry")" = "$basename" ]; then
+        found=1
+        break
+      fi
+    done
+    if [ "$found" -eq 0 ]; then
+      rm -rf "$entry"
+      log_info "Removed stale entry: $entry"
+    fi
+  done
+
   for file in "$src_dir"/*; do
     [ -e "$file" ] || continue
-    local basename
     basename=$(basename "$file")
     create_symlink "$file" "$dest_dir/$basename"
   done
@@ -101,7 +120,7 @@ main() {
   # Fish
   log_info "Setting up Fish"
   link_files "$dotfilesConfig/fish" "$homeConfig/fish" \
-    "config.fish" "aliases.fish"
+    "config.fish" "aliases.fish" "secrets.fish"
   
   # Helix
   log_info "Setting up Helix"
@@ -140,6 +159,7 @@ main() {
   
   # Pi
   log_info "Setting up Pi"
+  create_symlink "$dotfilesConfig/pi/agent/AGENTS.md" "$piHome/agent/AGENTS.md"
   create_symlink "$dotfilesConfig/pi/agent/settings.json" "$piHome/agent/settings.json"
   create_symlink "$dotfilesConfig/pi/agent/mcp.json" "$piHome/agent/mcp.json"
   create_symlink "$dotfilesConfig/pi/agents/semble-search.md" "$piHome/agents/semble-search.md"

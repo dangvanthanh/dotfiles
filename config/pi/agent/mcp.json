@@ -1,12 +1,5 @@
 {
-  "mcpServers": {
-    "semble": {
-      "command": "uvx",
-      "args": [
-        "--from",
-        "semble[mcp]==0.5.5",
-        "semble"
-      ]
-    }
-  }
+	"mcpServers": {
+		"semble": { "command": "uvx", "args": ["--from", "semble[mcp]==0.5.5", "semble"] }
+	}
 }

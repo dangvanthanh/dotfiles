@@ -1,5 +1,8 @@
 {
-	"provider": "exa",
+	"provider": "tinyfish",
+	"tinyfishApiKey": "$TINYFISH_API_KEY",
+	"searchProvider": "tinyfish",
+	"numResults": 5,
 	"allowBrowserCookies": false,
 	"summaryModel": "accounts/fireworks/models/deepseek-v4-flash-0731",
 	"workflow": "none",
