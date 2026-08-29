@@ -160,6 +160,7 @@ main() {
   # Pi
   log_info "Setting up Pi"
   create_symlink "$dotfilesConfig/pi/agent/AGENTS.md" "$piHome/agent/AGENTS.md"
+  create_symlink "$dotfilesConfig/pi/agent/AGENTS.LOCAL.md" "$piHome/agent/AGENTS.LOCAL.md"
   create_symlink "$dotfilesConfig/pi/agent/settings.json" "$piHome/agent/settings.json"
   create_symlink "$dotfilesConfig/pi/agent/mcp.json" "$piHome/agent/mcp.json"
   create_symlink "$dotfilesConfig/pi/agents/semble-search.md" "$piHome/agents/semble-search.md"

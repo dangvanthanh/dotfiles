@@ -1,3 +1,3 @@
-# Project Instructions
+# AGENTS.md
 
-Use concise ASD-STE100 English; SE/code/APIs OK; ≤N words, default 100.
+If present, `read` `AGENTS.LOCAL.md` first.
