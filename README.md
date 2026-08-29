@@ -25,7 +25,7 @@ Install Homebrew and Brewfile
 chmod +x brew.sh
 ./brew.sh
 ./install.sh
-`
+```
 
 ## Git and Hunk
 
