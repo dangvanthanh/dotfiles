@@ -77,66 +77,78 @@ create_symlink() {
   fi
 }
 
-# link_files <src_dir> <dest_dir> <file...>
-#
-# Links each listed file from src_dir into dest_dir. Files prefixed
-# with "?" are optional: when their source is missing they log a
-# warning and are skipped instead of aborting the install.
-link_files() {
-  local src_dir="$1"
-  local dest_dir="$2"
-  shift 2
+# Summary counters
+ok_count=0
+fail_count=0
 
-  local file name
-  for file in "$@"; do
-    if [[ "$file" == \?* ]]; then
-      name="${file#\?}"
-      create_symlink "$src_dir/$name" "$dest_dir/$name" 1
-    else
-      create_symlink "$src_dir/$file" "$dest_dir/$file"
-    fi
-  done
+# link_config <src> <dest> [optional]
+#
+# Wrapper around create_symlink that records each outcome and keeps the
+# install going past individual failures, instead of aborting the whole
+# script at the first conflict.
+link_config() {
+  if create_symlink "$@"; then
+    ok_count=$((ok_count + 1))
+  else
+    fail_count=$((fail_count + 1))
+  fi
 }
 
+# link_folder_contents <src_dir> <dest_dir>
+#
+# Mirrors every entry of src_dir into dest_dir as a symlink, and prunes
+# stale entries: a symlink in dest_dir whose name no longer exists in
+# src_dir is removed. Real files/directories in dest_dir are never
+# touched — they may be intentional local config — and are only
+# reported with a warning. Hidden entries (e.g. .DS_Store) are never
+# managed and are left alone.
 link_folder_contents() {
   local src_dir="$1"
   local dest_dir="$2"
-  local entry basename found src_entry
 
   # Guard against linking a directory into itself, which would create
   # recursive self-referential symlinks.
   if [ "$src_dir" = "$dest_dir" ]; then
     log_error "Source and destination are the same directory: $src_dir"
+    fail_count=$((fail_count + 1))
     return 1
   fi
 
-  mkdir -p "$dest_dir"
+  if ! mkdir -p "$dest_dir"; then
+    fail_count=$((fail_count + 1))
+    return 1
+  fi
 
-  # Remove stale dest entries whose basename no longer exists in src —
-  # but only symlinks. Real files or directories left over in dest are
-  # kept with a warning: they may be intentional local configuration.
+  # Prune stale symlinks whose name no longer exists in src
+  local entry name found src_entry
   for entry in "$dest_dir"/*; do
-    basename=$(basename "$entry")
+    name=$(basename "$entry")
+    case "$name" in
+      .*) continue ;;
+    esac
     found=0
     for src_entry in "$src_dir"/*; do
-      if [ "$(basename "$src_entry")" = "$basename" ]; then
+      if [ "$(basename "$src_entry")" = "$name" ]; then
         found=1
         break
       fi
     done
     if [ "$found" -eq 0 ]; then
       if [ -L "$entry" ]; then
-        rm -rf "$entry"
-        log_info "Removed stale entry: $entry"
+        if rm -rf "$entry"; then
+          log_info "Removed stale link: $entry"
+        else
+          fail_count=$((fail_count + 1))
+        fi
       else
-        log_warn "Leaving non-symlink stale entry: $entry"
+        log_warn "Leaving non-symlink stale entry in dest: $entry"
       fi
     fi
   done
 
+  # Link every source entry (nullglob: an empty src dir links nothing)
   for file in "$src_dir"/*; do
-    basename=$(basename "$file")
-    create_symlink "$file" "$dest_dir/$basename"
+    link_config "$file" "$dest_dir/$(basename "$file")"
   done
 }
 
@@ -147,58 +159,66 @@ main() {
 
   # Fish
   log_info "Setting up Fish"
-  # secrets.fish is gitignored, so it may not exist on a fresh clone —
-  # the "?" prefix marks it as optional.
-  link_files "$dotfilesConfig/fish" "$homeConfig/fish" \
-    "config.fish" "aliases.fish" "?secrets.fish"
+  # secrets.fish is gitignored, so it may not exist on a fresh clone.
+  link_config "$dotfilesConfig/fish/config.fish" "$homeConfig/fish/config.fish"
+  link_config "$dotfilesConfig/fish/aliases.fish" "$homeConfig/fish/aliases.fish"
+  link_config "$dotfilesConfig/fish/secrets.fish" "$homeConfig/fish/secrets.fish" 1
 
   # Helix
   log_info "Setting up Helix"
-  link_files "$dotfilesConfig/helix" "$homeConfig/helix" \
-    "config.toml" "languages.toml" "yazi-picker.fish"
+  link_config "$dotfilesConfig/helix/config.toml" "$homeConfig/helix/config.toml"
+  link_config "$dotfilesConfig/helix/languages.toml" "$homeConfig/helix/languages.toml"
+  link_config "$dotfilesConfig/helix/yazi-picker.fish" "$homeConfig/helix/yazi-picker.fish"
 
   # Zellij
   log_info "Setting up Zellij"
-  create_symlink "$dotfilesConfig/zellij/config.kdl" "$homeConfig/zellij/config.kdl"
+  link_config "$dotfilesConfig/zellij/config.kdl" "$homeConfig/zellij/config.kdl"
   link_folder_contents "$dotfilesConfig/zellij/layouts" "$homeConfig/zellij/layouts"
 
   # Bat
   log_info "Setting up Bat"
-  create_symlink "$dotfilesConfig/bat/config" "$homeConfig/bat/config"
+  link_config "$dotfilesConfig/bat/config" "$homeConfig/bat/config"
 
   # Ghostty
   log_info "Setting up Ghostty"
-  create_symlink "$dotfilesConfig/ghostty/config" "$homeConfig/ghostty/config"
+  link_config "$dotfilesConfig/ghostty/config" "$homeConfig/ghostty/config"
 
   # Yazi
   log_info "Setting up Yazi"
-  link_files "$dotfilesConfig/yazi" "$homeConfig/yazi" \
-    "yazi.toml" "keymap.toml" "theme.toml"
+  link_config "$dotfilesConfig/yazi/yazi.toml" "$homeConfig/yazi/yazi.toml"
+  link_config "$dotfilesConfig/yazi/keymap.toml" "$homeConfig/yazi/keymap.toml"
+  link_config "$dotfilesConfig/yazi/theme.toml" "$homeConfig/yazi/theme.toml"
 
   # Starship
   log_info "Setting up Starship"
-  create_symlink "$dotfilesConfig/starship/starship.toml" "$homeConfig/starship.toml"
+  link_config "$dotfilesConfig/starship/starship.toml" "$homeConfig/starship.toml"
 
   # GitUI
   log_info "Setting up GitUI"
-  link_folder_contents "$dotfilesConfig/gitui" "$homeConfig/gitui"
+  link_config "$dotfilesConfig/gitui/key_bindings.ron" "$homeConfig/gitui/key_bindings.ron"
+  link_config "$dotfilesConfig/gitui/theme.ron" "$homeConfig/gitui/theme.ron"
 
   # Hunk
   log_info "Setting up Hunk"
-  create_symlink "$dotfilesConfig/hunk/config.toml" "$homeConfig/hunk/config.toml"
+  link_config "$dotfilesConfig/hunk/config.toml" "$homeConfig/hunk/config.toml"
 
   # Pi
   log_info "Setting up Pi"
-  create_symlink "$dotfilesConfig/pi/agent/AGENTS.md" "$piHome/agent/AGENTS.md"
-  create_symlink "$dotfilesConfig/pi/agent/AGENTS.LOCAL.md" "$piHome/agent/AGENTS.LOCAL.md"
-  create_symlink "$dotfilesConfig/pi/agent/settings.json" "$piHome/agent/settings.json"
-  create_symlink "$dotfilesConfig/pi/agent/mcp.json" "$piHome/agent/mcp.json"
-  create_symlink "$dotfilesConfig/pi/agents/semble-search.md" "$piHome/agents/semble-search.md"
-  create_symlink "$dotfilesConfig/pi/web_search.json" "$piHome/web-search.json"
+  link_config "$dotfilesConfig/pi/agent/AGENTS.md" "$piHome/agent/AGENTS.md"
+  link_config "$dotfilesConfig/pi/agent/AGENTS.LOCAL.md" "$piHome/agent/AGENTS.LOCAL.md" 1
+  link_config "$dotfilesConfig/pi/agent/settings.json" "$piHome/agent/settings.json"
+  link_config "$dotfilesConfig/pi/agent/mcp.json" "$piHome/agent/mcp.json"
+  link_config "$dotfilesConfig/pi/web-search.json" "$piHome/web-search.json" 1
   link_folder_contents "$dotfilesConfig/pi/agent/skills" "$piHome/agent/skills"
   link_folder_contents "$dotfilesConfig/pi/agent/extensions" "$piHome/agent/extensions"
+  create_symlink "$dotfilesConfig/pi/agents/semble-search.md" "$piHome/gents/semble-search.md"
 
-  log_info "Installation complete!"
+  # Summary: never report success on a partial install
+  if [ "$fail_count" -gt 0 ]; then
+    log_error "Installation finished with $fail_count error(s) ($ok_count OK). Fix and re-run."
+    return 1
+  fi
+  log_success "Installation complete ($ok_count OK)."
 }
 
 main "$@"
