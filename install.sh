@@ -1,5 +1,5 @@
-#!/usr/bin/env sh
-set -eu
+#!/usr/bin/env bash
+set -euo pipefail
 
 DOTFILES=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 
@@ -7,9 +7,9 @@ CONFIG="$DOTFILES/config"
 XDG_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}"
 PI_HOME="$HOME/.pi"
 
-AVAILABLE_SETUPS="fish helix zellij bat ghostty yazi starship gitui hunk pi"
+AVAILABLE_SETUPS=(fish helix zellij bat ghostty yazi starship gitui hunk pi)
 
-if [ -t 1 ] && [ -z "${NO_COLOR:-}" ]; then
+if [ -t 1 ] && [ -z "${NO_COLOR:-}" ] && [[ " $* " != *" --no-color "* ]]; then
   C_INFO='\033[34m'; C_OK='\033[32m'; C_WARN='\033[33m'; C_ERR='\033[31m'; C_RST='\033[0m'
 else
   C_INFO=''; C_OK=''; C_WARN=''; C_ERR=''; C_RST=''
@@ -40,9 +40,9 @@ backup_path() {
 }
 
 link() {
-  src=$1
-  dest=$2
-  optional=${3:-false}
+  local src=$1
+  local dest=$2
+  local optional=${3:-false}
 
   if [ ! -e "$src" ] && [ ! -L "$src" ]; then
     if [ "$optional" = "true" ]; then
@@ -84,11 +84,15 @@ link() {
 }
 
 link_config() {
-  link "$CONFIG/$1" "$XDG_CONFIG/$1" "${2:-false}"
+  local name=$1
+  local optional=${2:-false}
+  link "$CONFIG/$name" "$XDG_CONFIG/$name" "$optional"
 }
 
 link_pi() {
-  link "$CONFIG/pi/$1" "$PI_HOME/$1" "${2:-false}"
+  local name=$1
+  local optional=${2:-false}
+  link "$CONFIG/pi/$name" "$PI_HOME/$name" "$optional"
 }
 
 setup_fish() {
@@ -157,16 +161,16 @@ setup_pi() {
 }
 
 run_setup() {
-  name=$1
-  fn="setup_$name"
-  if ! command -v "$fn" >/dev/null 2>&1; then
+  local name=$1
+  local fn="setup_$name"
+  if ! declare -F "$fn" >/dev/null 2>&1; then
     die "Unknown setup: $name (run with --list to see options)"
   fi
   "$fn"
 }
 
 usage() {
-  cat <<'EOF'
+  cat <<EOF
 Usage: install.sh [options] [setup ...]
 
 Symlinks dotfiles into place. Without arguments, installs everything.
@@ -177,8 +181,7 @@ Options:
   --dry-run      Print intended actions without changing anything
   --no-color     Disable colored output
 
-Setups:
-  fish helix zellij bat ghostty yazi starship gitui hunk pi
+Setups: ${AVAILABLE_SETUPS[*]}
 
 Examples:
   install.sh                 Install all dotfiles
@@ -197,17 +200,22 @@ validate() {
 
 main() {
   DRY_RUN=false
-  SELECTED=""
+  SELECTED=()
+  POSITIONAL=false
 
   for arg in "$@"; do
+    if [ "$POSITIONAL" = "true" ]; then
+      SELECTED+=("$arg")
+      continue
+    fi
     case "$arg" in
       -h|--help)    usage; exit 0 ;;
-      --list)      printf '%s\n' $AVAILABLE_SETUPS; exit 0 ;;
+      --list)      printf '%s\n' "${AVAILABLE_SETUPS[@]}"; exit 0 ;;
       --dry-run)   DRY_RUN=true ;;
       --no-color)  NO_COLOR=1 ;;
-      --)          shift; break ;;
+      --)          POSITIONAL=true ;;
       -*)          die "Unknown option: $arg (run with --help)" ;;
-      *)           SELECTED="$SELECTED $arg" ;;
+      *)           SELECTED+=("$arg") ;;
     esac
   done
 
@@ -221,10 +229,10 @@ main() {
   fi
   info "Installing dotfiles..."
 
-  if [ -n "$SELECTED" ]; then
-    for name in $SELECTED; do run_setup "$name"; done
+  if [ ${#SELECTED[@]} -gt 0 ]; then
+    for name in "${SELECTED[@]}"; do run_setup "$name"; done
   else
-    for name in $AVAILABLE_SETUPS; do run_setup "$name"; done
+    for name in "${AVAILABLE_SETUPS[@]}"; do run_setup "$name"; done
   fi
 
   success "Dotfiles installation complete."

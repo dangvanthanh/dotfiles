@@ -6,7 +6,9 @@
   "packages": [
     "npm:pi-web-access",
     "npm:pi-mcp-extension",
-    "npm:pi-diet-semble"
+    "npm:pi-diet-semble",
+    "npm:pi-memory",
+    "git:github.com/DietrichGebert/ponytail"
   ],
   "defaultThinkingLevel": "high"
 }
