@@ -2,19 +2,39 @@
  * Footer - shows only what matters.
  *
  * Left: input | output | reason | cost | usage token | speed
- * Right: provider model (thinking) • git:branch±
+ * Right: provider model (thinking) • git:branch
  */
 
 import type { AssistantMessage } from "@earendil-works/pi-ai";
 import type { ExtensionAPI } from "@earendil-works/pi-coding-agent";
 import { truncateToWidth, visibleWidth } from "@earendil-works/pi-tui";
 
+const fmt = (n: number) => {
+	if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(1)}M`;
+	if (n >= 1000) return `${(n / 1000).toFixed(1)}k`;
+	return `${n}`;
+};
+
+const levelColors: Record<string, string> = {
+	off: "thinkingOff",
+	minimal: "thinkingMinimal",
+	low: "thinkingLow",
+	medium: "thinkingMedium",
+	high: "thinkingHigh",
+	xhigh: "thinkingXhigh",
+	max: "thinkingMax",
+};
+
 export default function (pi: ExtensionAPI) {
 	pi.on("session_start", async (_event, ctx) => {
+		if (ctx.mode !== "tui") return;
+
+		let requestRender = () => {};
 		let thinkingLevel = ctx.thinkingLevel ?? pi.getThinkingLevel();
 
 		pi.on("thinking_level_select", async (event) => {
 			thinkingLevel = event.level;
+			requestRender();
 		});
 
 		let lastSpeed: number | null = null;
@@ -30,7 +50,9 @@ export default function (pi: ExtensionAPI) {
 			if (event.message.role === "assistant") {
 				const m = event.message as AssistantMessage;
 				const outputTokens = m.usage.output;
-				const elapsed = assistantStartTime ? (Date.now() - assistantStartTime) / 1000 : 0;
+				const elapsed = assistantStartTime
+					? (Date.now() - assistantStartTime) / 1000
+					: 0;
 
 				if (elapsed > 0.5 && outputTokens > 0) {
 					lastSpeed = Math.round(outputTokens / elapsed);
@@ -40,7 +62,8 @@ export default function (pi: ExtensionAPI) {
 		});
 
 		ctx.ui.setFooter((tui, theme, footer) => {
-			const unsub = footer.onBranchChange(() => tui.requestRender());
+			requestRender = () => tui.requestRender();
+			const unsub = footer.onBranchChange(requestRender);
 
 			return {
 				dispose: unsub,
@@ -51,20 +74,19 @@ export default function (pi: ExtensionAPI) {
 						cost = 0,
 						reasoning = 0;
 					for (const e of ctx.sessionManager.getBranch()) {
-						if (e.type === "message" && e.message.role === "assistant") {
-							const m = e.message as AssistantMessage;
-							input += m.usage.input;
-							output += m.usage.output;
-							cost += m.usage.cost.total;
-							reasoning += m.usage.reasoningTokens ?? 0;
-						}
+						if (e.type !== "message") continue;
+						const usage =
+							e.message.role === "assistant"
+								? (e.message as AssistantMessage).usage
+								: e.message.role === "toolResult"
+									? e.message.usage
+									: undefined;
+						if (!usage) continue;
+						input += usage.input;
+						output += usage.output;
+						cost += usage.cost.total;
+						reasoning += usage.reasoningTokens ?? 0;
 					}
-
-					const fmt = (n: number) => {
-						if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(1)}M`;
-						if (n >= 1000) return `${(n / 1000).toFixed(1)}k`;
-						return `${n}`;
-					};
 
 					const sep = ` ${theme.fg("dim", "│")} `;
 
@@ -83,25 +105,23 @@ export default function (pi: ExtensionAPI) {
 					const arrowUp = `${theme.fg("success", "↑")}${theme.fg("text", fmt(input))}`;
 					const arrowDown = `${theme.fg("error", "↓")}${theme.fg("text", fmt(output))}`;
 					const reasoningStr =
-						reasoning > 0 ? `${theme.fg("accent", "R")}${theme.fg("text", fmt(reasoning))}` : "";
+						reasoning > 0
+							? `${theme.fg("accent", "R")}${theme.fg("text", fmt(reasoning))}`
+							: "";
 					const costStr = theme.fg("warning", `$${cost.toFixed(3)}`);
-					const speedStr = lastSpeed !== null ? theme.fg("mdLink", `${fmt(lastSpeed)} t/s`) : "";
+					const speedStr =
+						lastSpeed !== null
+							? theme.fg("mdLink", `~${fmt(lastSpeed)} t/s`)
+							: "";
 
 					const model = ctx.model;
 					const modelStr = theme.fg(
 						"accent",
 						model ? model.id.split("/").pop() || model.id : "no-model",
 					);
-					const providerStr = model?.provider ? theme.fg("muted", model.provider) : "";
-					const levelColors: Record<string, string> = {
-						off: "thinkingOff",
-						minimal: "thinkingMinimal",
-						low: "thinkingLow",
-						medium: "thinkingMedium",
-						high: "thinkingHigh",
-						xhigh: "thinkingXhigh",
-						max: "thinkingXhigh",
-					};
+					const providerStr = model?.provider
+						? theme.fg("muted", model.provider)
+						: "";
 					const levelColor = levelColors[thinkingLevel] || "accent";
 					const levelStr = theme.fg(levelColor, `(${thinkingLevel})`);
 					const gitStr = branch ? theme.fg("toolDiffAdded", ` ${branch}`) : "";
@@ -115,16 +135,24 @@ export default function (pi: ExtensionAPI) {
 						speedStr,
 					].filter(Boolean);
 
-					const left = leftParts.join(sep);
-
 					const rightParts = [
-						providerStr ? `${providerStr} ${modelStr} ${levelStr}` : `${modelStr} ${levelStr}`,
+						providerStr
+							? `${providerStr} ${modelStr} ${levelStr}`
+							: `${modelStr} ${levelStr}`,
 						gitStr,
 					].filter(Boolean);
 
 					const right = rightParts.join(` ${theme.fg("dim", "•")} `);
-					const padNeeded = Math.max(1, width - visibleWidth(left) - visibleWidth(right));
-					const pad = " ".repeat(padNeeded);
+					while (
+						leftParts.length > 0 &&
+						visibleWidth(leftParts.join(sep)) + visibleWidth(right) + 1 > width
+					) {
+						leftParts.pop();
+					}
+					const left = leftParts.join(sep);
+					const pad = " ".repeat(
+						Math.max(0, width - visibleWidth(left) - visibleWidth(right)),
+					);
 
 					return [truncateToWidth(`${left}${pad}${right}`, width)];
 				},

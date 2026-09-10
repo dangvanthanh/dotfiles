@@ -7,11 +7,11 @@ layout {
 		}
 		tab name="CODE" focus=true {
 				pane split_direction="vertical" {
-						pane command="hx" size="68%" {
+						pane command="hx" size="65%" {
 								name "Helix"
 								focus true
 						}
-						pane command="pi" size="32%"
+						pane command="pi" size="35%"
 				}
 		}
 		tab name="REVIEW" {

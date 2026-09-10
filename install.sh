@@ -151,7 +151,6 @@ setup_hunk() {
 setup_pi() {
   info "Setting up Pi"
   link_pi "agent/AGENTS.md"
-  link_pi "agent/AGENTS.LOCAL.md" true
   link_pi "agent/settings.json"
   link_pi "agent/mcp.json"
   link_pi "agents/semble-search.md"

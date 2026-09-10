@@ -1,15 +1,14 @@
 {
-  "lastChangelogVersion": "0.84.4",
+  "lastChangelogVersion": "0.85.1",
   "theme": "dark",
-  "defaultProvider": "fireworks",
-  "defaultModel": "accounts/fireworks/routers/deepseek-flash-latest",
+  "defaultProvider": "commandcode",
+  "defaultModel": "deepseek/deepseek-v4.1-flash",
   "packages": [
     "npm:pi-web-access",
     "npm:pi-mcp-extension",
     "npm:pi-diet-semble",
     "npm:pi-memory",
-    "npm:pi-context-view",
-    "npm:pi-subagents"
+    "npm:@dietrichgebert/ponytail"
   ],
   "defaultThinkingLevel": "high"
 }
