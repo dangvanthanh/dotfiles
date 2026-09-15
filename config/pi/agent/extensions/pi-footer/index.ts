@@ -50,9 +50,7 @@ export default function (pi: ExtensionAPI) {
 			if (event.message.role === "assistant") {
 				const m = event.message as AssistantMessage;
 				const outputTokens = m.usage.output;
-				const elapsed = assistantStartTime
-					? (Date.now() - assistantStartTime) / 1000
-					: 0;
+				const elapsed = assistantStartTime ? (Date.now() - assistantStartTime) / 1000 : 0;
 
 				if (elapsed > 0.5 && outputTokens > 0) {
 					lastSpeed = Math.round(outputTokens / elapsed);
@@ -62,6 +60,11 @@ export default function (pi: ExtensionAPI) {
 		});
 
 		ctx.ui.setFooter((tui, theme, footer) => {
+			let usageLeaf: string | null | undefined;
+			let input = 0,
+				output = 0,
+				cost = 0,
+				reasoning = 0;
 			requestRender = () => tui.requestRender();
 			const unsub = footer.onBranchChange(requestRender);
 
@@ -69,23 +72,26 @@ export default function (pi: ExtensionAPI) {
 				dispose: unsub,
 				invalidate() {},
 				render(width: number): string[] {
-					let input = 0,
-						output = 0,
-						cost = 0,
-						reasoning = 0;
-					for (const e of ctx.sessionManager.getBranch()) {
-						if (e.type !== "message") continue;
-						const usage =
-							e.message.role === "assistant"
-								? (e.message as AssistantMessage).usage
-								: e.message.role === "toolResult"
-									? e.message.usage
-									: undefined;
-						if (!usage) continue;
-						input += usage.input;
-						output += usage.output;
-						cost += usage.cost.total;
-						reasoning += usage.reasoningTokens ?? 0;
+					const leaf = ctx.sessionManager.getLeafId();
+					// Streaming redraws do not change persisted usage. Recompute on a
+					// new entry or tree navigation, not on every token/keystroke.
+					if (usageLeaf !== leaf) {
+						usageLeaf = leaf;
+						input = output = cost = reasoning = 0;
+						for (const e of ctx.sessionManager.getBranch()) {
+							const usage =
+								e.type === "compaction" || e.type === "branch_summary"
+									? e.usage
+									: e.type === "message" &&
+										  (e.message.role === "assistant" || e.message.role === "toolResult")
+										? e.message.usage
+										: undefined;
+							if (!usage) continue;
+							input += usage.input;
+							output += usage.output;
+							cost += usage.cost.total;
+							reasoning += usage.reasoningTokens ?? 0;
+						}
 					}
 
 					const sep = ` ${theme.fg("dim", "│")} `;
@@ -105,23 +111,16 @@ export default function (pi: ExtensionAPI) {
 					const arrowUp = `${theme.fg("success", "↑")}${theme.fg("text", fmt(input))}`;
 					const arrowDown = `${theme.fg("error", "↓")}${theme.fg("text", fmt(output))}`;
 					const reasoningStr =
-						reasoning > 0
-							? `${theme.fg("accent", "R")}${theme.fg("text", fmt(reasoning))}`
-							: "";
+						reasoning > 0 ? `${theme.fg("accent", "R")}${theme.fg("text", fmt(reasoning))}` : "";
 					const costStr = theme.fg("warning", `$${cost.toFixed(3)}`);
-					const speedStr =
-						lastSpeed !== null
-							? theme.fg("mdLink", `~${fmt(lastSpeed)} t/s`)
-							: "";
+					const speedStr = lastSpeed !== null ? theme.fg("mdLink", `~${fmt(lastSpeed)} t/s`) : "";
 
 					const model = ctx.model;
 					const modelStr = theme.fg(
 						"accent",
 						model ? model.id.split("/").pop() || model.id : "no-model",
 					);
-					const providerStr = model?.provider
-						? theme.fg("muted", model.provider)
-						: "";
+					const providerStr = model?.provider ? theme.fg("muted", model.provider) : "";
 					const levelColor = levelColors[thinkingLevel] || "accent";
 					const levelStr = theme.fg(levelColor, `(${thinkingLevel})`);
 					const gitStr = branch ? theme.fg("toolDiffAdded", ` ${branch}`) : "";
@@ -136,9 +135,7 @@ export default function (pi: ExtensionAPI) {
 					].filter(Boolean);
 
 					const rightParts = [
-						providerStr
-							? `${providerStr} ${modelStr} ${levelStr}`
-							: `${modelStr} ${levelStr}`,
+						providerStr ? `${providerStr} ${modelStr} ${levelStr}` : `${modelStr} ${levelStr}`,
 						gitStr,
 					].filter(Boolean);
 
@@ -150,9 +147,7 @@ export default function (pi: ExtensionAPI) {
 						leftParts.pop();
 					}
 					const left = leftParts.join(sep);
-					const pad = " ".repeat(
-						Math.max(0, width - visibleWidth(left) - visibleWidth(right)),
-					);
+					const pad = " ".repeat(Math.max(0, width - visibleWidth(left) - visibleWidth(right)));
 
 					return [truncateToWidth(`${left}${pad}${right}`, width)];
 				},

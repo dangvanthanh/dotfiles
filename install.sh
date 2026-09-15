@@ -151,9 +151,9 @@ setup_hunk() {
 setup_pi() {
   info "Setting up Pi"
   link_pi "agent/AGENTS.md"
+  link_pi "agent/APPEND_SYSTEM.md"
   link_pi "agent/settings.json"
   link_pi "agent/mcp.json"
-  link_pi "agents/semble-search.md"
   link_pi "web-search.json"
   link_pi "agent/skills"
   link_pi "agent/extensions"

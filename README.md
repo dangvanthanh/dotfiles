@@ -16,7 +16,6 @@ git clone https://github.com/dangvanthanh/dotfiles.git
 - `$ chmod +x install.sh`
 - `$ ./install.sh`
 
-
 ## Homebrew
 
 Install Homebrew and Brewfile
@@ -56,6 +55,7 @@ All the applications I use:
 
 - [Ghostty](https://ghostty.org/) - macOS Terminal Replacement
 - [Helix](https://helix-editor.com/) - Post-modern Text Editor
+- [Pi](https://pi.dev/) - Minimal Agent Harness
 - [TablePro](https://tablepro.app/) - The database client for Mac
 
 ### TUI
@@ -83,7 +83,7 @@ All the applications I use:
 
 #### Others
 
-- [Raycast](https://www.raycast.com/) - Blazingly Fast, Totally Extendable Launcher
+- [Tinycast](https://abue-ammar.github.io/tinycast/) - Fully Native macOS Launcher, Hotkeys
 - [Asciinema](https://asciinema.org/) - Record And Share Terminal
 - [Rectangle](https://rectangleapp.com/) - Move And Resize Windows
 - [Hidden Bar](https://apps.apple.com/us/app/hidden-bar/id1452453066?mt=12) - Minimal Menu Bar Management

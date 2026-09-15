@@ -8,7 +8,9 @@
     "npm:pi-mcp-extension",
     "npm:pi-diet-semble",
     "npm:pi-memory",
-    "npm:@dietrichgebert/ponytail"
+    "npm:@dietrichgebert/ponytail",
+    "git:github.com/NVlabs/SoL-Pi",
+    "git:github.com/obra/superpowers"
   ],
   "defaultThinkingLevel": "high"
 }

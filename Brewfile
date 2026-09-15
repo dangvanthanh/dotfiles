@@ -62,7 +62,6 @@ cask 'discord'
 
 cask 'rectangle'
 cask 'karabiner-elements'
-cask 'raycast'
 cask 'powershell'
 cask 'nordvpn'
 cask 'pika'

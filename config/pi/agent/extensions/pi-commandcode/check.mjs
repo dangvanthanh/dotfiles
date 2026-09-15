@@ -22,6 +22,8 @@ try {
 	assert.equal(registered.models[1].api, "openai-completions");
 	assert.equal(registered.models[1].baseUrl, "https://api.commandcode.ai/provider/v1");
 	assert.equal(registered.models[1].contextWindow, 1000000);
+	assert.equal(registered.models[0].maxTokens, 64000);
+	assert.equal(registered.models[1].maxTokens, 384000);
 	assert.deepEqual(registered.models[0].input, ["text", "image"]);
 	assert.equal(registered.models[0].compat.forceAdaptiveThinking, true);
 	assert.equal(registered.models[0].cost.input, 3);

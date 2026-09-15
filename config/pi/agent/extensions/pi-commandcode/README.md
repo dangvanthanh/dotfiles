@@ -1,4 +1,4 @@
-# pi-commandcode
+# Pi Commandcode
 
 This extension connects Pi to the [Command Code Provider API](https://commandcode.ai/docs/provider).
 The extension has no additional dependencies.
@@ -78,7 +78,10 @@ pi -e ./config/pi/agent/extensions/pi-commandcode/index.ts
   Upstream routing, zero-data-retention settings, and offer changes can also change the charge.
   [Studio Usage](https://commandcode.ai/usage) is the authoritative source.
 - The API and website do not publish output limits.
-  The extension uses a conservative output limit of 8,192 tokens.
+  The extension uses 384,000 output tokens for DeepSeek models (the gateway accepts up to 393,216)
+  and 64,000 for all other models, the lowest published output cap among them.
+  Reasoning and the answer share this budget, so a smaller limit truncates thinking models
+  before they produce any text.
   For a new ID that is not in the snapshot, the extension gives a warning.
   It then uses text-only mode, no thinking controls, and an unknown cost shown as zero.
   A zero value does **not** mean that usage is free.

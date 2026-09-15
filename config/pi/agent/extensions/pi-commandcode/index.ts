@@ -39,6 +39,7 @@ export default async function (pi: ExtensionAPI) {
 				throw new Error("Command Code returned invalid model metadata");
 			}
 			const claude = model.id.startsWith("claude-");
+			const deepseek = model.id.startsWith("deepseek/");
 			const info = Object.hasOwn(metadata, model.id) ? metadata[model.id] : undefined;
 			if (!info)
 				console.warn(
@@ -62,8 +63,9 @@ export default async function (pi: ExtensionAPI) {
 				// Anthropic's SDK appends /v1/messages; OpenAI appends /chat/completions.
 				baseUrl: claude ? BASE_URL : `${BASE_URL}/v1`,
 				contextWindow: model.context_length,
-				// ponytail: output limits are unpublished; keep the conservative cap.
-				maxTokens: Math.min(8192, model.context_length),
+				// ponytail: output limits are unpublished; deepseek accepts 384k (range [1, 393216]),
+				// every other model's lowest published cap is 64k. Reasoning shares this budget.
+				maxTokens: Math.min(deepseek ? 384000 : 64000, model.context_length),
 				reasoning: info?.reasoning ?? false,
 				thinkingLevelMap,
 				input: info?.vision ? ["text", "image"] : ["text"],
