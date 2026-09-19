@@ -2,7 +2,7 @@
   "lastChangelogVersion": "0.85.1",
   "theme": "dark",
   "defaultProvider": "commandcode",
-  "defaultModel": "deepseek/deepseek-v4.1-flash",
+  "defaultModel": "z-ai/glm-5.3-flash",
   "packages": [
     "npm:pi-web-access",
     "npm:pi-mcp-extension",

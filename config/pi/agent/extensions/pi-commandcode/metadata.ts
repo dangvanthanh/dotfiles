@@ -17,11 +17,11 @@ export const metadata: Record<string, ModelMetadata> = {
 		efforts: [],
 		cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 },
 	},
-	"meituan/LongCat-2.0:free": {
+	"meituan/LongCat-2.0": {
 		reasoning: true,
 		vision: false,
 		efforts: [],
-		cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 },
+		cost: { input: 0.3, output: 1.2, cacheRead: 0.006, cacheWrite: 0 },
 	},
 	"inclusionai/ling-3.0-flash-sante:free": {
 		reasoning: true,
@@ -76,6 +76,12 @@ export const metadata: Record<string, ModelMetadata> = {
 		vision: true,
 		efforts: ["low", "high", "max"],
 		cost: { input: 0.15, output: 0.5, cacheRead: 0.03, cacheWrite: 0 },
+	},
+	"z-ai/glm-5.3-flashx": {
+		reasoning: true,
+		vision: true,
+		efforts: [],
+		cost: { input: 0.37, output: 1.25, cacheRead: 0.07, cacheWrite: 0 },
 	},
 	"zai-org/GLM-5.3": {
 		reasoning: true,
@@ -154,6 +160,12 @@ export const metadata: Record<string, ModelMetadata> = {
 		vision: false,
 		efforts: ["low", "high", "max"],
 		cost: { input: 0.28, output: 0.56, cacheRead: 0.07, cacheWrite: 0 },
+	},
+	"Qwen/Qwen3.8-Omni-Flash": {
+		reasoning: true,
+		vision: true,
+		efforts: ["low", "medium", "xhigh"],
+		cost: { input: 0.15, output: 0.47, cacheRead: 0.02, cacheWrite: 0 },
 	},
 	"Qwen/Qwen3.8-Max-0902": {
 		reasoning: true,

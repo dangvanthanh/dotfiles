@@ -46,12 +46,14 @@ pi -e ./config/pi/agent/extensions/pi-commandcode/index.ts
 - The extension uses the Pi functions for streaming, tool calls, cancellation, and API errors.
 - If catalog discovery fails, the extension reports a load error.
   The extension does not store a stale or offline catalog.
-- `metadata.ts` contains the **2026-09-09** snapshot of all 69 models on [the models page](https://commandcode.ai/models).
+- `metadata.ts` contains the **2026-09-18** snapshot of the 73 models: all 72 IDs in the current API catalog, plus GPT-6 Astra.
+  It covers the entries on [the models page](https://commandcode.ai/models).
   The snapshot includes reasoning support, vision support, published effort levels, and prices.
   Input, output, and cache prices are in US dollars for one million tokens.
   Effort levels come from the `reasoningEfforts` registry on the linked model pages.
 - The extension registers only IDs that the live API returns.
   GPT-6 Astra is in the snapshot, but it was not in the API catalog.
+  `node check.mjs` asserts that the snapshot has 73 entries.
   The Haiku API ID includes `-20251001`.
 - The thinking selector shows only published effort levels.
   Some models have gaps in their effort levels.
