@@ -1,6 +1,6 @@
 import type { ProviderModelConfig } from "@earendil-works/pi-coding-agent";
 
-// Snapshot: 2026-09-10. https://commandcode.ai/models and linked model pages.
+// Snapshot: 2026-09-21. https://commandcode.ai/models and linked model pages.
 // Prices are USD per million tokens, after deals; DeepSeek uses off-peak rates.
 // The public /v1/models endpoint does not publish this metadata.
 export type ModelMetadata = {
@@ -244,6 +244,12 @@ export const metadata: Record<string, ModelMetadata> = {
 			],
 		},
 	},
+	"stepfun/step-5-preview": {
+		reasoning: true,
+		vision: true,
+		efforts: [],
+		cost: { input: 1, output: 2.7, cacheRead: 0.05, cacheWrite: 0 },
+	},
 	"stepfun/Step-3.7-Flash": {
 		reasoning: true,
 		vision: true,
@@ -255,6 +261,24 @@ export const metadata: Record<string, ModelMetadata> = {
 		vision: false,
 		efforts: [],
 		cost: { input: 0.1, output: 0.3, cacheRead: 0.02, cacheWrite: 0 },
+	},
+	"xiaomi/mimo-v2.6-pro": {
+		reasoning: false,
+		vision: true,
+		efforts: [],
+		cost: { input: 0.435, output: 0.87, cacheRead: 0.0036, cacheWrite: 0 },
+	},
+	"xiaomi/mimo-v2.6-pro-ultraspeed": {
+		reasoning: false,
+		vision: true,
+		efforts: [],
+		cost: { input: 4.35, output: 8.7, cacheRead: 0.036, cacheWrite: 0 },
+	},
+	"xiaomi/mimo-v2.6-flash": {
+		reasoning: false,
+		vision: true,
+		efforts: [],
+		cost: { input: 0.14, output: 0.28, cacheRead: 0.0028, cacheWrite: 0 },
 	},
 	"xiaomi/mimo-v2.5-pro": {
 		reasoning: false,
@@ -467,6 +491,13 @@ export const metadata: Record<string, ModelMetadata> = {
 		vision: true,
 		efforts: ["low", "medium", "high", "xhigh"],
 		cost: { input: 1.25, output: 4.25, cacheRead: 0.15, cacheWrite: 0 },
+	},
+	// 40% off through 2026-09-27; standard rate is 2/6/0.5.
+	"xai/grok-4.7": {
+		reasoning: true,
+		vision: true,
+		efforts: [],
+		cost: { input: 1.2, output: 3.6, cacheRead: 0.3, cacheWrite: 0 },
 	},
 	"xai/grok-4.6": {
 		reasoning: true,

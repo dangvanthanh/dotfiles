@@ -86,6 +86,5 @@ All the applications I use:
 - [Tinycast](https://abue-ammar.github.io/tinycast/) - Fully Native macOS Launcher, Hotkeys
 - [Asciinema](https://asciinema.org/) - Record And Share Terminal
 - [Rectangle](https://rectangleapp.com/) - Move And Resize Windows
-- [Hidden Bar](https://apps.apple.com/us/app/hidden-bar/id1452453066?mt=12) - Minimal Menu Bar Management
 - [NordVPN](https://nordvpn.com/) - Online VPN Service for Speed
 - [Keka](https://www.keka.io/) - Unarchive Files

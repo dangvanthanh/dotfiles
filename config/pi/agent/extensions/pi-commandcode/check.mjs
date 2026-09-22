@@ -40,7 +40,7 @@ try {
 		id, context_length: 1000000,
 	})) });
 	await extension({ registerProvider(id, config) { registered = { id, ...config }; } });
-	assert.equal(registered.models.length, 72);
+	assert.equal(registered.models.length, 77);
 	for (const model of registered.models) {
 		const info = metadata[model.id];
 		assert.equal(model.reasoning, info.reasoning);
@@ -59,6 +59,9 @@ try {
 	assert.equal(metadata["z-ai/glm-5.3-flashx"].cost.input, 0.37);
 	assert.equal(metadata["MiniMaxAI/MiniMax-M3"].cost.input, 0.3);
 	assert.equal(metadata["xiaomi/mimo-v2.5-pro"].cost.cacheRead, 0.0036);
+	assert.equal(metadata["xiaomi/mimo-v2.6-pro-ultraspeed"].cost.output, 8.7);
+	assert.equal(metadata["stepfun/step-5-preview"].cost.cacheRead, 0.05);
+	assert.equal(metadata["xai/grok-4.7"].cost.input, 1.2);
 	assert.equal(metadata["meituan/LongCat-2.0"].cost.output, 1.2);
 	assert.equal(metadata["gpt-5.6-sol"].cost.tiers[0].inputTokensAbove, 272000);
 	assert.equal(metadata["gpt-5.6-sol"].cost.tiers[0].input, 10);
@@ -85,7 +88,7 @@ try {
 	await assert.rejects(() => extension({}), /HTTP 503/);
 	globalThis.fetch = async () => { throw new Error("timeout"); };
 	await assert.rejects(() => extension({}), /timeout/);
-	console.log("Command Code discovery, routing, pricing and effort checks passed (72 models)");
+	console.log("Command Code discovery, routing, pricing and effort checks passed (77 models)");
 } finally {
 	globalThis.fetch = originalFetch;
 }
