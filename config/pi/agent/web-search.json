@@ -1,10 +1,8 @@
 {
 	"provider": "tinyfish",
 	"tinyfishApiKey": "$TINYFISH_API_KEY",
-	"searchProvider": "tinyfish",
-	"numResults": 5,
 	"allowBrowserCookies": false,
-	"summaryModel": "accounts/fireworks/models/deepseek-v4-flash-0731",
+	"summaryModel": "commandcode/deepseek/deepseek-v4.1-flash",
 	"workflow": "none",
 	"curatorTimeoutSeconds": 20
 }

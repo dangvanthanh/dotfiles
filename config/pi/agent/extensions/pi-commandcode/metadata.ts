@@ -1,6 +1,6 @@
 import type { ProviderModelConfig } from "@earendil-works/pi-coding-agent";
 
-// Snapshot: 2026-09-21. https://commandcode.ai/models and linked model pages.
+// Snapshot: 2026-09-25. https://commandcode.ai/models and linked model pages.
 // Prices are USD per million tokens, after deals; DeepSeek uses off-peak rates.
 // The public /v1/models endpoint does not publish this metadata.
 export type ModelMetadata = {
@@ -81,7 +81,7 @@ export const metadata: Record<string, ModelMetadata> = {
 		reasoning: true,
 		vision: true,
 		efforts: [],
-		cost: { input: 0.37, output: 1.25, cacheRead: 0.07, cacheWrite: 0 },
+		cost: { input: 0.37, output: 1.25, cacheRead: 0.075, cacheWrite: 0 },
 	},
 	"zai-org/GLM-5.3": {
 		reasoning: true,
@@ -147,13 +147,13 @@ export const metadata: Record<string, ModelMetadata> = {
 		reasoning: true,
 		vision: false,
 		efforts: ["high", "max"],
-		cost: { input: 0.22, output: 0.66, cacheRead: 0.007, cacheWrite: 0 },
+		cost: { input: 0.15, output: 0.6, cacheRead: 0.003, cacheWrite: 0 },
 	},
 	"deepseek/deepseek-v4-flash-vision-exp": {
 		reasoning: true,
 		vision: true,
 		efforts: ["high", "max"],
-		cost: { input: 0.22, output: 0.66, cacheRead: 0.007, cacheWrite: 0 },
+		cost: { input: 0.15, output: 0.6, cacheRead: 0.003, cacheWrite: 0 },
 	},
 	"deepseek/deepseek-v4-flash-fast": {
 		reasoning: true,
@@ -165,7 +165,7 @@ export const metadata: Record<string, ModelMetadata> = {
 		reasoning: true,
 		vision: true,
 		efforts: ["low", "medium", "xhigh"],
-		cost: { input: 0.15, output: 0.47, cacheRead: 0.02, cacheWrite: 0 },
+		cost: { input: 0.15, output: 0.47, cacheRead: 0.016, cacheWrite: 0 },
 	},
 	"Qwen/Qwen3.8-Max-0902": {
 		reasoning: true,
@@ -244,7 +244,8 @@ export const metadata: Record<string, ModelMetadata> = {
 			],
 		},
 	},
-	"stepfun/step-5-preview": {
+	// Catalog serves the id capitalized; the website slug is lowercase.
+	"stepfun/Step-5-Preview": {
 		reasoning: true,
 		vision: true,
 		efforts: [],
@@ -260,7 +261,21 @@ export const metadata: Record<string, ModelMetadata> = {
 		reasoning: true,
 		vision: false,
 		efforts: [],
-		cost: { input: 0.1, output: 0.3, cacheRead: 0.02, cacheWrite: 0 },
+		cost: { input: 0.09, output: 0.3, cacheRead: 0.02, cacheWrite: 0 },
+	},
+	// Stealth model, free while the deal runs (no end date published).
+	// Page publishes no reasoning/effort/vision info; capabilities default to off.
+	"stealth/space-bunny-alpha": {
+		reasoning: false,
+		vision: false,
+		efforts: [],
+		cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 },
+	},
+	"stealth/pixel-canary": {
+		reasoning: false,
+		vision: false,
+		efforts: [],
+		cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 },
 	},
 	"xiaomi/mimo-v2.6-pro": {
 		reasoning: false,
@@ -297,6 +312,12 @@ export const metadata: Record<string, ModelMetadata> = {
 		vision: false,
 		efforts: [],
 		cost: { input: 0.6, output: 2.4, cacheRead: 0.12, cacheWrite: 0 },
+	},
+	"claude-opus-5-5": {
+		reasoning: true,
+		vision: true,
+		efforts: ["low", "medium", "high", "xhigh", "max"],
+		cost: { input: 4, output: 20, cacheRead: 0.2, cacheWrite: 5 },
 	},
 	"claude-fable-5-1": {
 		reasoning: true,
@@ -356,6 +377,32 @@ export const metadata: Record<string, ModelMetadata> = {
 			cacheRead: 1,
 			cacheWrite: 12.5,
 			tiers: [{ inputTokensAbove: 272000, input: 20, output: 75, cacheRead: 2, cacheWrite: 25 }],
+		},
+	},
+	"gpt-6-sol": {
+		reasoning: true,
+		vision: true,
+		efforts: ["low", "medium", "high", "xhigh", "max"],
+		cost: {
+			input: 2,
+			output: 10,
+			cacheRead: 0.2,
+			cacheWrite: 2.5,
+			tiers: [{ inputTokensAbove: 272000, input: 4, output: 15, cacheRead: 0.4, cacheWrite: 5 }],
+		},
+	},
+	"gpt-6-luna": {
+		reasoning: true,
+		vision: true,
+		efforts: ["low", "medium", "high", "xhigh", "max"],
+		cost: {
+			input: 0.1,
+			output: 0.5,
+			cacheRead: 0.01,
+			cacheWrite: 0.125,
+			tiers: [
+				{ inputTokensAbove: 272000, input: 0.2, output: 0.75, cacheRead: 0.02, cacheWrite: 0.25 },
+			],
 		},
 	},
 	"gpt-5.6-sol": {

@@ -1,0 +1,26 @@
+{
+	"name": "pi-commandcode",
+	"version": "0.1.0",
+	"description": "Extension connects Pi to the Command Code Provider API",
+	"keywords": [
+		"commandcode",
+		"pi",
+		"pi-extension"
+	],
+	"license": "MIT",
+	"author": "Dang Van Thanh",
+	"type": "module",
+	"peerDependencies": {
+		"@earendil-works/pi-coding-agent": "*"
+	},
+	"peerDependenciesMeta": {
+		"@earendil-works/pi-coding-agent": {
+			"optional": true
+		}
+	},
+	"pi": {
+		"extensions": [
+			"./index.ts"
+		]
+	}
+}
