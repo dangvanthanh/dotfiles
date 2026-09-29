@@ -18,6 +18,7 @@ type CatalogModel = {
 	id: string;
 	name?: string;
 	contextWindow: number;
+	supportedEndpoints?: string[];
 };
 
 type ThinkingLevelMap = NonNullable<ProviderModelConfig["thinkingLevelMap"]>;
@@ -42,6 +43,10 @@ function parseCatalogModel(value: unknown): CatalogModel {
 		name:
 			"name" in value && typeof value.name === "string"
 				? value.name
+				: undefined,
+		supportedEndpoints:
+			"supported_endpoints" in value && Array.isArray(value.supported_endpoints)
+				? value.supported_endpoints
 				: undefined,
 		contextWindow: value.context_length,
 	};
@@ -105,8 +110,15 @@ function buildThinkingLevelMap(
 	return thinkingLevelMap;
 }
 
-function usesAnthropicApi(modelId: string): boolean {
-	return modelId.startsWith("claude-");
+function usesAnthropicApi(model: CatalogModel): boolean {
+	// Docs: prefer the catalog's supported_endpoints; prefix heuristic as fallback.
+	if (model.supportedEndpoints) {
+		return (
+			!model.supportedEndpoints.includes("/chat/completions") &&
+			model.supportedEndpoints.includes("/messages")
+		);
+	}
+	return model.id.startsWith("claude-");
 }
 
 function isDeepSeek(modelId: string): boolean {
@@ -114,11 +126,11 @@ function isDeepSeek(modelId: string): boolean {
 }
 
 function buildCompatibility(
-	modelId: string,
+	model: CatalogModel,
 	modelMetadata: ModelMetadata | undefined,
 ): ProviderModelConfig["compat"] {
 	const supportsReasoningEffort = (modelMetadata?.efforts.length ?? 0) > 0;
-	if (usesAnthropicApi(modelId)) {
+	if (usesAnthropicApi(model)) {
 		return {
 			supportsEagerToolInputStreaming: false,
 			forceAdaptiveThinking: supportsReasoningEffort,
@@ -128,7 +140,7 @@ function buildCompatibility(
 		supportsStore: false,
 		supportsDeveloperRole: false,
 		supportsReasoningEffort,
-		thinkingFormat: isDeepSeek(modelId) ? "deepseek" : "openai",
+		thinkingFormat: isDeepSeek(model.id) ? "deepseek" : "openai",
 		supportsStrictMode: false,
 		// Usage is always emitted; no stream_options opt-in is required.
 		supportsUsageInStreaming: false,
@@ -145,7 +157,7 @@ function maxOutputTokens(modelId: string, contextWindow: number): number {
 
 function buildProviderModel(model: CatalogModel): ProviderModelConfig {
 	const modelMetadata = getMetadata(model.id);
-	const anthropicApi = usesAnthropicApi(model.id);
+	const anthropicApi = usesAnthropicApi(model);
 
 	return {
 		id: model.id,
@@ -164,7 +176,7 @@ function buildProviderModel(model: CatalogModel): ProviderModelConfig {
 			cacheRead: 0,
 			cacheWrite: 0,
 		},
-		compat: buildCompatibility(model.id, modelMetadata),
+		compat: buildCompatibility(model, modelMetadata),
 	};
 }
 

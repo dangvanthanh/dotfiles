@@ -1,6 +1,6 @@
 import type { ProviderModelConfig } from "@earendil-works/pi-coding-agent";
 
-// Snapshot: 2026-09-25. https://commandcode.ai/models and linked model pages.
+// Snapshot: 2026-09-28. https://commandcode.ai/models and linked model pages.
 // Prices are USD per million tokens, after deals; DeepSeek uses off-peak rates.
 // The public /v1/models endpoint does not publish this metadata.
 export type ModelMetadata = {
@@ -136,6 +136,13 @@ export const metadata: Record<string, ModelMetadata> = {
 		vision: true,
 		efforts: ["low", "high", "max"],
 		cost: { input: 0.15, output: 0.6, cacheRead: 0.003, cacheWrite: 0 },
+	},
+	// Peak rates (Mon–Fri 01–04 & 06–10 UTC) are 2× the off-peak rates recorded here.
+	"deepseek/deepseek-v4.1-flash-fast": {
+		reasoning: true,
+		vision: true,
+		efforts: ["low", "high", "max"],
+		cost: { input: 0.16, output: 0.58, cacheRead: 0.02, cacheWrite: 0 },
 	},
 	"deepseek/deepseek-v4-pro": {
 		reasoning: true,
@@ -350,6 +357,12 @@ export const metadata: Record<string, ModelMetadata> = {
 		cost: { input: 5, output: 25, cacheRead: 0.5, cacheWrite: 6.25 },
 	},
 	"claude-sonnet-5": {
+		reasoning: true,
+		vision: true,
+		efforts: ["low", "medium", "high", "xhigh", "max"],
+		cost: { input: 2, output: 10, cacheRead: 0.2, cacheWrite: 2.5 },
+	},
+	"claude-sonnet-5-5": {
 		reasoning: true,
 		vision: true,
 		efforts: ["low", "medium", "high", "xhigh", "max"],

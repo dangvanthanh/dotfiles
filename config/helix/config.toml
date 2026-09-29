@@ -47,5 +47,11 @@ layout = ["diagnostics", "line-numbers"]
 [editor.search]
 smart-case = true
 
-[keys.normal.C-y]
-y = ":sh zellij run -f -x 10%% -y 10%% --width 80%% --height 80%% -- fish ~/.config/helix/yazi-picker.fish $ZELLIJ_PANE_ID"
+[keys.normal]
+C-y = [
+  ":sh rm -f /tmp/yazi-chooser",
+  ":insert-output yazi %{buffer_name} --chooser-file=/tmp/yazi-chooser",
+  ":sh printf '\\x1b[?1049h\\x1b[?2004h' > /dev/tty",
+  ":open %sh{cat /tmp/yazi-chooser 2>/dev/null}",
+  ":redraw",
+]

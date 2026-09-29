@@ -30,6 +30,7 @@ clipboard-write = allow
 cursor-style = block
 cursor-style-blink = false
 mouse-hide-while-typing = true
+mouse-shift-capture = true
 
 theme = Kanagawabones
 

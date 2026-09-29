@@ -106,7 +106,6 @@ setup_helix() {
   info "Setting up Helix"
   link_config "helix/config.toml"
   link_config "helix/languages.toml"
-  link_config "helix/yazi-picker.fish"
 }
 
 setup_zellij() {
