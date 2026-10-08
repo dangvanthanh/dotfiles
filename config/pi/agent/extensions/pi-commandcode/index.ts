@@ -1,27 +1,45 @@
-import type {
-	ExtensionAPI,
-	ProviderModelConfig,
-} from "@earendil-works/pi-coding-agent";
+import type { ExtensionAPI, ProviderModelConfig } from "@earendil-works/pi-coding-agent";
 import { metadata, type ModelMetadata } from "./metadata.ts";
 
-const THINKING_LEVELS = [
-	"minimal",
-	"low",
-	"medium",
-	"high",
-	"xhigh",
-	"max",
-] as const;
+const THINKING_LEVELS = ["minimal", "low", "medium", "high", "xhigh", "max"] as const;
 const BASE_URL = "https://api.commandcode.ai/provider";
 const OPENAI_BASE_URL = `${BASE_URL}/v1`;
+// ponytail: the root only exports the ProviderModelConfig union, so these structural copies
+// mirror pi 1.1.0's ProviderChatModelConfig fields instead of indexing the union.
+type ThinkingLevelMap = Partial<
+	Record<"off" | "minimal" | "low" | "medium" | "high" | "xhigh" | "max", string | null>
+>;
+type OpenAiCompat = {
+	supportsStore?: boolean;
+	supportsDeveloperRole?: boolean;
+	supportsReasoningEffort?: boolean;
+	thinkingFormat?:
+		| "openai"
+		| "openrouter"
+		| "together"
+		| "baseten"
+		| "deepseek"
+		| "zai"
+		| "qwen"
+		| "chat-template"
+		| "qwen-chat-template"
+		| "string-thinking"
+		| "ant-ling";
+	supportsStrictMode?: boolean;
+	supportsUsageInStreaming?: boolean;
+	supportsFinishReason?: boolean;
+	maxTokensField?: "max_tokens" | "max_completion_tokens";
+};
+type AnthropicCompat = {
+	supportsEagerToolInputStreaming?: boolean;
+	forceAdaptiveThinking?: boolean;
+};
 type CatalogModel = {
 	id: string;
 	name?: string;
 	contextWindow: number;
 	supportedEndpoints?: string[];
 };
-
-type ThinkingLevelMap = NonNullable<ProviderModelConfig["thinkingLevelMap"]>;
 
 function parseCatalogModel(value: unknown): CatalogModel {
 	if (
@@ -40,10 +58,7 @@ function parseCatalogModel(value: unknown): CatalogModel {
 
 	return {
 		id: value.id,
-		name:
-			"name" in value && typeof value.name === "string"
-				? value.name
-				: undefined,
+		name: "name" in value && typeof value.name === "string" ? value.name : undefined,
 		supportedEndpoints:
 			"supported_endpoints" in value && Array.isArray(value.supported_endpoints)
 				? value.supported_endpoints
@@ -71,17 +86,13 @@ async function discoverModels(): Promise<CatalogModel[]> {
 		signal: AbortSignal.timeout(10_000),
 	});
 	if (!response.ok) {
-		throw new Error(
-			`Command Code model discovery failed: HTTP ${response.status}`,
-		);
+		throw new Error(`Command Code model discovery failed: HTTP ${response.status}`);
 	}
 	return parseCatalog(await response.json());
 }
 
 function getMetadata(modelId: string): ModelMetadata | undefined {
-	const modelMetadata = Object.hasOwn(metadata, modelId)
-		? metadata[modelId]
-		: undefined;
+	const modelMetadata = Object.hasOwn(metadata, modelId) ? metadata[modelId] : undefined;
 	if (!modelMetadata) {
 		console.warn(
 			`Command Code: ${modelId} has no metadata snapshot; costs are unknown (shown as zero).`,
@@ -90,17 +101,12 @@ function getMetadata(modelId: string): ModelMetadata | undefined {
 	return modelMetadata;
 }
 
-function buildThinkingLevelMap(
-	modelMetadata: ModelMetadata | undefined,
-): ThinkingLevelMap {
+function buildThinkingLevelMap(modelMetadata: ModelMetadata | undefined): ThinkingLevelMap {
 	const efforts = modelMetadata?.efforts ?? [];
 	const thinkingLevelMap: ThinkingLevelMap = {
 		off: null,
 		...Object.fromEntries(
-			THINKING_LEVELS.map((level) => [
-				level,
-				efforts.includes(level) ? level : null,
-			]),
+			THINKING_LEVELS.map((level) => [level, efforts.includes(level) ? level : null]),
 		),
 	};
 	// No published effort controls: expose only the server's default reasoning.
@@ -128,7 +134,7 @@ function isDeepSeek(modelId: string): boolean {
 function buildCompatibility(
 	model: CatalogModel,
 	modelMetadata: ModelMetadata | undefined,
-): ProviderModelConfig["compat"] {
+): OpenAiCompat | AnthropicCompat {
 	const supportsReasoningEffort = (modelMetadata?.efforts.length ?? 0) > 0;
 	if (usesAnthropicApi(model)) {
 		return {

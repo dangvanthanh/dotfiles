@@ -1,6 +1,6 @@
 import type { ProviderModelConfig } from "@earendil-works/pi-coding-agent";
 
-// Snapshot: 2026-09-28. https://commandcode.ai/models and linked model pages.
+// Snapshot: 2026-10-07. https://commandcode.ai/models and linked model pages.
 // Prices are USD per million tokens, after deals; DeepSeek uses off-peak rates.
 // The public /v1/models endpoint does not publish this metadata.
 export type ModelMetadata = {
@@ -24,6 +24,12 @@ export const metadata: Record<string, ModelMetadata> = {
 		cost: { input: 0.3, output: 1.2, cacheRead: 0.006, cacheWrite: 0 },
 	},
 	"inclusionai/ling-3.0-flash-sante:free": {
+		reasoning: true,
+		vision: false,
+		efforts: [],
+		cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 },
+	},
+	"inclusionai/ling-3.1-flash:free": {
 		reasoning: true,
 		vision: false,
 		efforts: [],
@@ -251,7 +257,6 @@ export const metadata: Record<string, ModelMetadata> = {
 			],
 		},
 	},
-	// Catalog serves the id capitalized; the website slug is lowercase.
 	"stepfun/Step-5-Preview": {
 		reasoning: true,
 		vision: true,
@@ -270,8 +275,7 @@ export const metadata: Record<string, ModelMetadata> = {
 		efforts: [],
 		cost: { input: 0.09, output: 0.3, cacheRead: 0.02, cacheWrite: 0 },
 	},
-	// Stealth model, free while the deal runs (no end date published).
-	// Page publishes no reasoning/effort/vision info; capabilities default to off.
+
 	"stealth/space-bunny-alpha": {
 		reasoning: false,
 		vision: false,
@@ -282,6 +286,12 @@ export const metadata: Record<string, ModelMetadata> = {
 		reasoning: false,
 		vision: false,
 		efforts: [],
+		cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 },
+	},
+	"stealth/glyph-cluster:free": {
+		reasoning: true,
+		vision: false,
+		efforts: ["low", "medium", "high", "xhigh"],
 		cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 },
 	},
 	"xiaomi/mimo-v2.6-pro": {
@@ -374,6 +384,21 @@ export const metadata: Record<string, ModelMetadata> = {
 		efforts: ["low", "medium", "high", "xhigh", "max"],
 		cost: { input: 3, output: 15, cacheRead: 0.3, cacheWrite: 3.75 },
 	},
+	"claude-haiku-5-5": {
+		reasoning: true,
+		vision: true,
+		efforts: ["low", "medium", "high", "xhigh", "max"],
+		// Long-context band (>100K) is published; cache write follows the 1.25x input rule used here.
+		cost: {
+			input: 0.1,
+			output: 0.5,
+			cacheRead: 0.01,
+			cacheWrite: 0.125,
+			tiers: [
+				{ inputTokensAbove: 100000, input: 0.5, output: 2.5, cacheRead: 0.05, cacheWrite: 0.625 },
+			],
+		},
+	},
 	"claude-haiku-4-5-20251001": {
 		reasoning: false,
 		vision: true,
@@ -390,6 +415,18 @@ export const metadata: Record<string, ModelMetadata> = {
 			cacheRead: 1,
 			cacheWrite: 12.5,
 			tiers: [{ inputTokensAbove: 272000, input: 20, output: 75, cacheRead: 2, cacheWrite: 25 }],
+		},
+	},
+	"gpt-6.1-sol": {
+		reasoning: true,
+		vision: true,
+		efforts: ["low", "medium", "high", "xhigh", "max"],
+		cost: {
+			input: 2,
+			output: 10,
+			cacheRead: 0.1,
+			cacheWrite: 1.25,
+			tiers: [{ inputTokensAbove: 272000, input: 4, output: 15, cacheRead: 0.2, cacheWrite: 2.5 }],
 		},
 	},
 	"gpt-6-sol": {
@@ -552,7 +589,6 @@ export const metadata: Record<string, ModelMetadata> = {
 		efforts: ["low", "medium", "high", "xhigh"],
 		cost: { input: 1.25, output: 4.25, cacheRead: 0.15, cacheWrite: 0 },
 	},
-	// 40% off through 2026-09-27; standard rate is 2/6/0.5.
 	"xai/grok-4.7": {
 		reasoning: true,
 		vision: true,
@@ -588,5 +624,11 @@ export const metadata: Record<string, ModelMetadata> = {
 		vision: true,
 		efforts: [],
 		cost: { input: 0.5, output: 1.2, cacheRead: 0.1, cacheWrite: 0 },
+	},
+	"mistral/mistral-large-4": {
+		reasoning: true,
+		vision: true,
+		efforts: ["low", "medium", "high"],
+		cost: { input: 1.36, output: 4.18, cacheRead: 0.14, cacheWrite: 0 },
 	},
 };

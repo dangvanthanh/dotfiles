@@ -46,15 +46,18 @@ pi -e ./config/pi/agent/extensions/pi-commandcode/index.ts
 - The extension uses the Pi functions for streaming, tool calls, cancellation, and API errors.
 - If catalog discovery fails, the extension reports a load error.
   The extension does not store a stale or offline catalog.
-- `metadata.ts` contains the **2026-09-18** snapshot of the 73 models: all 72 IDs in the current API catalog, plus GPT-6 Astra.
+- `metadata.ts` contains the **2026-10-07** snapshot of the 89 models: all 87 IDs in the current API catalog,
+  plus the retired stealth/pixel-canary and stealth/space-bunny-alpha.
   It covers the entries on [the models page](https://commandcode.ai/models).
   The snapshot includes reasoning support, vision support, published effort levels, and prices.
   Input, output, and cache prices are in US dollars for one million tokens.
   Effort levels come from the `reasoningEfforts` registry on the linked model pages.
+  `node check.mjs` asserts that the snapshot has 89 entries and rebuilds provider models from mock catalog data.
 - The extension registers only IDs that the live API returns.
-  GPT-6 Astra is in the snapshot, but it was not in the API catalog.
-  `node check.mjs` asserts that the snapshot has 73 entries.
-  The Haiku API ID includes `-20251001`.
+  The two retired stealth IDs are in the snapshot, but they were not in the API catalog.
+  The Haiku 4.5 API ID includes `-20251001`; the Haiku 5.5 API ID has no date suffix.
+  Claude Haiku 5.5 has a published long-context band: above 100K tokens it costs $0.50/M input,
+  $2.50/M output, and $0.05/M cache reads.
 - The thinking selector shows only published effort levels.
   Some models have gaps in their effort levels.
   For example, Qwen has low, medium, and xhigh.

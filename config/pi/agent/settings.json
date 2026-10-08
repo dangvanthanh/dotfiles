@@ -1,16 +1,18 @@
 {
-  "lastChangelogVersion": "0.87.1",
+  "lastChangelogVersion": "1.1.0",
   "theme": "dark",
   "defaultProvider": "commandcode",
   "defaultModel": "z-ai/glm-5.3-flash",
   "packages": [
     "npm:pi-web-access",
-    "npm:pi-mcp-extension",
     "npm:pi-diet-semble",
     "npm:pi-memory",
     "npm:@dietrichgebert/ponytail",
     "git:github.com/NVlabs/SoL-Pi",
-    "git:github.com/obra/superpowers"
+    "git:github.com/obra/superpowers",
+    "npm:pi-claude-bridge",
+    "npm:@abhishek944/pi-image-gen"
   ],
-  "defaultThinkingLevel": "high"
+  "defaultThinkingLevel": "high",
+  "deviceId": "deb2b181-6eb9-4317-97b7-6a108c7b82dc"
 }
