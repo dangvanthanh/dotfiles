@@ -46,7 +46,7 @@ pi -e ./config/pi/agent/extensions/pi-commandcode/index.ts
 - The extension uses the Pi functions for streaming, tool calls, cancellation, and API errors.
 - If catalog discovery fails, the extension reports a load error.
   The extension does not store a stale or offline catalog.
-- `metadata.ts` contains the **2026-10-07** snapshot of the 89 models: all 87 IDs in the current API catalog,
+- `metadata.ts` contains the **2026-10-12** snapshot of the 90 models: all 88 IDs in the current API catalog,
   plus the retired stealth/pixel-canary and stealth/space-bunny-alpha.
   It covers the entries on [the models page](https://commandcode.ai/models).
   The snapshot includes reasoning support, vision support, published effort levels, and prices.

@@ -1,6 +1,6 @@
 import type { ProviderModelConfig } from "@earendil-works/pi-coding-agent";
 
-// Snapshot: 2026-10-07. https://commandcode.ai/models and linked model pages.
+// Snapshot: 2026-10-12. https://commandcode.ai/models and linked model pages.
 // Prices are USD per million tokens, after deals; DeepSeek uses off-peak rates.
 // The public /v1/models endpoint does not publish this metadata.
 export type ModelMetadata = {
@@ -558,6 +558,12 @@ export const metadata: Record<string, ModelMetadata> = {
 		vision: true,
 		efforts: ["high", "xhigh"],
 		cost: { input: 5, output: 30, cacheRead: 0.5, cacheWrite: 0 },
+	},
+	"meta/muse-wonder-1.0": {
+		reasoning: true,
+		vision: true,
+		efforts: ["low", "medium", "high", "xhigh"],
+		cost: { input: 4, output: 20, cacheRead: 0.2, cacheWrite: 0 },
 	},
 	"meta/muse-spark-1.3": {
 		reasoning: true,
