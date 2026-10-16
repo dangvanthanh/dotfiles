@@ -46,15 +46,18 @@ pi -e ./config/pi/agent/extensions/pi-commandcode/index.ts
 - The extension uses the Pi functions for streaming, tool calls, cancellation, and API errors.
 - If catalog discovery fails, the extension reports a load error.
   The extension does not store a stale or offline catalog.
-- `metadata.ts` contains the **2026-10-12** snapshot of the 90 models: all 88 IDs in the current API catalog,
-  plus the retired stealth/pixel-canary and stealth/space-bunny-alpha.
+- `metadata.ts` contains the **2026-10-15** snapshot of the 92 models: every ID in the current API catalog.
+  The retired `ling-3.1-flash:free` ID was removed; the live catalog ID is the paid `ling-3.1-flash`.
+  `ling-3.0-flash-sante:free` was retired on a later refresh and replaced by
+  new IDs `meta/muse-spark-open`, `nvidia/nemotron-3.5-super-vl`, and `stealth/cat-jam:free`.
+  Grok 4.7 gained effort levels and a long-context band: above 200K tokens it costs
+  $4.00/M input, $12.00/M output, and $1.00/M cache reads.
   It covers the entries on [the models page](https://commandcode.ai/models).
   The snapshot includes reasoning support, vision support, published effort levels, and prices.
   Input, output, and cache prices are in US dollars for one million tokens.
   Effort levels come from the `reasoningEfforts` registry on the linked model pages.
-  `node check.mjs` asserts that the snapshot has 89 entries and rebuilds provider models from mock catalog data.
+  `node check.mjs` asserts that the snapshot has 92 entries and rebuilds provider models from mock catalog data.
 - The extension registers only IDs that the live API returns.
-  The two retired stealth IDs are in the snapshot, but they were not in the API catalog.
   The Haiku 4.5 API ID includes `-20251001`; the Haiku 5.5 API ID has no date suffix.
   Claude Haiku 5.5 has a published long-context band: above 100K tokens it costs $0.50/M input,
   $2.50/M output, and $0.05/M cache reads.

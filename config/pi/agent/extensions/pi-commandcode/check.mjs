@@ -3,7 +3,7 @@
 // Uses mock discovery data; makes no network calls.
 import { metadata } from "./metadata.ts";
 
-const SNAPSHOT_COUNT = 90;
+const SNAPSHOT_COUNT = 92;
 const entryCount = Object.keys(metadata).length;
 assert(entryCount === SNAPSHOT_COUNT, `snapshot has ${entryCount} entries, expected ${SNAPSHOT_COUNT}`);
 

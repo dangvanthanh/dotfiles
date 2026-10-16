@@ -1,6 +1,6 @@
 import type { ProviderModelConfig } from "@earendil-works/pi-coding-agent";
 
-// Snapshot: 2026-10-12. https://commandcode.ai/models and linked model pages.
+// Snapshot: 2026-10-15. https://commandcode.ai/models and linked model pages.
 // Prices are USD per million tokens, after deals; DeepSeek uses off-peak rates.
 // The public /v1/models endpoint does not publish this metadata.
 export type ModelMetadata = {
@@ -23,17 +23,11 @@ export const metadata: Record<string, ModelMetadata> = {
 		efforts: [],
 		cost: { input: 0.3, output: 1.2, cacheRead: 0.006, cacheWrite: 0 },
 	},
-	"inclusionai/ling-3.0-flash-sante:free": {
+	"inclusionai/ling-3.1-flash": {
 		reasoning: true,
 		vision: false,
 		efforts: [],
-		cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 },
-	},
-	"inclusionai/ling-3.1-flash:free": {
-		reasoning: true,
-		vision: false,
-		efforts: [],
-		cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 },
+		cost: { input: 0.3, output: 0.9, cacheRead: 0.06, cacheWrite: 0 },
 	},
 	"tencent/hy4-preview": {
 		reasoning: true,
@@ -180,6 +174,13 @@ export const metadata: Record<string, ModelMetadata> = {
 		efforts: ["low", "medium", "xhigh"],
 		cost: { input: 0.15, output: 0.47, cacheRead: 0.016, cacheWrite: 0 },
 	},
+	"Qwen/Qwen3.8-Max-Prime": {
+		reasoning: true,
+		vision: true,
+		efforts: ["low", "medium", "xhigh"],
+		// High-speed Qwen 3.8 Max; cache write follows the 1.25x input rule.
+		cost: { input: 4, output: 12, cacheRead: 0.5, cacheWrite: 5 },
+	},
 	"Qwen/Qwen3.8-Max-0902": {
 		reasoning: true,
 		vision: true,
@@ -276,16 +277,10 @@ export const metadata: Record<string, ModelMetadata> = {
 		cost: { input: 0.09, output: 0.3, cacheRead: 0.02, cacheWrite: 0 },
 	},
 
-	"stealth/space-bunny-alpha": {
-		reasoning: false,
+	"stealth/cat-jam:free": {
+		reasoning: true,
 		vision: false,
-		efforts: [],
-		cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 },
-	},
-	"stealth/pixel-canary": {
-		reasoning: false,
-		vision: false,
-		efforts: [],
+		efforts: ["low", "medium", "high", "xhigh", "max"],
 		cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 },
 	},
 	"stealth/glyph-cluster:free": {
@@ -323,6 +318,12 @@ export const metadata: Record<string, ModelMetadata> = {
 		vision: true,
 		efforts: [],
 		cost: { input: 0.14, output: 0.28, cacheRead: 0.0028, cacheWrite: 0 },
+	},
+	"nvidia/nemotron-3.5-super-vl": {
+		reasoning: true,
+		vision: true,
+		efforts: ["low", "medium", "high"],
+		cost: { input: 0.2, output: 0.5, cacheRead: 0.04, cacheWrite: 0 },
 	},
 	"nvidia/nemotron-3-ultra-550b-a55b": {
 		reasoning: true,
@@ -517,6 +518,12 @@ export const metadata: Record<string, ModelMetadata> = {
 		efforts: ["low", "medium", "high", "xhigh"],
 		cost: { input: 2, output: 8, cacheRead: 0.5, cacheWrite: 0 },
 	},
+	"google/gemini-4-argon": {
+		reasoning: true,
+		vision: true,
+		efforts: ["low", "medium", "high"],
+		cost: { input: 2, output: 10, cacheRead: 0.1, cacheWrite: 0 },
+	},
 	"google/gemini-3.8-flash": {
 		reasoning: true,
 		vision: true,
@@ -565,6 +572,12 @@ export const metadata: Record<string, ModelMetadata> = {
 		efforts: ["low", "medium", "high", "xhigh"],
 		cost: { input: 4, output: 20, cacheRead: 0.2, cacheWrite: 0 },
 	},
+	"meta/muse-spark-open": {
+		reasoning: true,
+		vision: true,
+		efforts: ["low", "medium", "high"],
+		cost: { input: 1.25, output: 4.25, cacheRead: 0.15, cacheWrite: 0 },
+	},
 	"meta/muse-spark-1.3": {
 		reasoning: true,
 		vision: true,
@@ -598,8 +611,14 @@ export const metadata: Record<string, ModelMetadata> = {
 	"xai/grok-4.7": {
 		reasoning: true,
 		vision: true,
-		efforts: [],
-		cost: { input: 1.2, output: 3.6, cacheRead: 0.3, cacheWrite: 0 },
+		efforts: ["low", "medium", "high", "xhigh"],
+		cost: {
+			input: 2,
+			output: 6,
+			cacheRead: 0.5,
+			cacheWrite: 0,
+			tiers: [{ inputTokensAbove: 200000, input: 4, output: 12, cacheRead: 1, cacheWrite: 0 }],
+		},
 	},
 	"xai/grok-4.6": {
 		reasoning: true,
