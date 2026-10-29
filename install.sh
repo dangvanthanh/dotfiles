@@ -7,7 +7,7 @@ CONFIG="$DOTFILES/config"
 XDG_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}"
 PI_HOME="$HOME/.pi"
 
-AVAILABLE_SETUPS=(fish helix zellij bat ghostty yazi starship gitui hunk pi)
+AVAILABLE_SETUPS=(fish helix zellij rex bat ghostty yazi starship gitui hunk pi)
 
 if [ -t 1 ] && [ -z "${NO_COLOR:-}" ] && [[ " $* " != *" --no-color "* ]]; then
   C_INFO='\033[34m'; C_OK='\033[32m'; C_WARN='\033[33m'; C_ERR='\033[31m'; C_RST='\033[0m'
@@ -112,6 +112,11 @@ setup_zellij() {
   info "Setting up Zellij"
   link_config "zellij/config.kdl"
   link_config "zellij/layouts"
+}
+
+setup_rex() {
+  info "Setting up Rex"
+  link_config "rex/init.lua"
 }
 
 setup_bat() {
