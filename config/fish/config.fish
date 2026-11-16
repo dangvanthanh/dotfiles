@@ -16,3 +16,4 @@ zoxide init fish | source
 
 # Path
 fish_add_path ~/.local/bin
+fish_add_path $HOME/.grok/bin
